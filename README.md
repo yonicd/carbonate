@@ -1,4 +1,4 @@
-# carbonate
+# carbonate <img src="inst/figures/hex_black.png" align="right" />
 `R6` api for [carbon.js](https://carbon.now.sh/about)
 
 
