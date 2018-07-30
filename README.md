@@ -1,5 +1,5 @@
 # carbonate
-`R6` api for carbon.js
+`R6` api for [carbon.js](https://carbon.now.sh/about)
 
 
 ## Installation
@@ -36,7 +36,7 @@ This function depends on RSelenium
 x$carbonate(file = 'example.png') # can be either png or svg
 ```
 
-!()[misc/example.png]
+![](https://raw.githubusercontent.com/yonicd/carbonate/master/misc/example.png)
 
 
 ### Closing the browser
@@ -51,11 +51,19 @@ x$stop()
 
 ```r
 x$get_templates()
+
+ [1] "3024-night"            "blackboard"            "base16-dark"           "base16-light"          "cobalt"                "dracula"              
+ [7] "duotone"               "hopscotch"             "material"              "monokai"               "night-owl"             "oceanic-next"         
+[13] "one-dark"              "panda"                 "paraiso"               "seti"                  "solarized dark"        "solarized light"      
+[19] "tomorrow-night-bright" "lucario"               "twilight"              "verminal"              "yeti"                  "zenburn"  
+```
+
+```r
 x$template <- "panda"
 x$carbonate(file = 'myfile.png')
 ```
 
-!()[misc/myfile.png]
+![](https://raw.githubusercontent.com/yonicd/carbonate/master/misc/myfile.png)
 
 
 ### Creating gifs
@@ -68,5 +76,5 @@ printing the list will create a gif
 x$carbons
 ```
 
-!()[misc/preview.gif]
+![](https://raw.githubusercontent.com/yonicd/carbonate/master/misc/preview.gif)
 
