@@ -19,7 +19,7 @@ carbon <- R6::R6Class(classname = 'Carbon',
                         add_line_number              = FALSE, 
                         font_family                  = 'Hack',
                         font_size                    = 14, 
-                        line_height                  = 133.25,
+                        line_height_percent          = 133,
                         square_image                 = FALSE, 
                         relative_export_size         = 1,
                         add_watermark                = FALSE,
@@ -167,7 +167,7 @@ carbon <- R6::R6Class(classname = 'Carbon',
                           private$var_names[[name]]
                         },
                         add_percent     = function(value){
-                          gsub('\\.','%',value)
+                          sprintf('%s%%25',value)
                         },
                         convert_logical = function(value){
                           tolower(as.character(value))
@@ -180,7 +180,7 @@ carbon <- R6::R6Class(classname = 'Carbon',
                             if(x=='palette')
                               val <- private$rgba(self[[x]])
                             
-                            if(x=='line_height')
+                            if(x=='line_height_percent')
                               val <- private$add_percent(self[[x]])
                             
                             if(x%in%'relative_export_size')
@@ -227,7 +227,7 @@ carbon <- R6::R6Class(classname = 'Carbon',
                         add_line_number = 'ln',
                         font_family = 'fm',
                         font_size = 'fs',
-                        line_height = 'lh',
+                        line_height_percent = 'lh',
                         square_image = 'si',
                         relative_export_size = 'es',
                         add_watermark = 'wm'
