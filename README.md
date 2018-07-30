@@ -19,7 +19,7 @@ library(carbonate)
 ```r
 x <- carbon$new() # default code is the clipboard
 
-x$code <- 'x <- 1' # code can be a character object of any length
+x$code <- readLines('DESCRIPTION') # code can be a character object of any length
 ```
 
 ### open code in browser window
@@ -33,10 +33,10 @@ x$browse()
 This function depends on RSelenium
 
 ```r
-x$carbonate(file = 'example.png') # can be either png or svg
+x$carbonate(file = 'myfile.png') # can be either png or svg
 ```
 
-![](https://raw.githubusercontent.com/yonicd/carbonate/master/misc/example.png)
+![](https://raw.githubusercontent.com/yonicd/carbonate/master/misc/myfile.png)
 
 
 ### Closing the browser
@@ -59,11 +59,11 @@ x$get_templates()
 ```
 
 ```r
-x$template <- "panda"
-x$carbonate(file = 'myfile.png')
+x$template <- "lucario"
+x$carbonate(file = 'example.png')
 ```
 
-![](https://raw.githubusercontent.com/yonicd/carbonate/master/misc/myfile.png)
+![](https://raw.githubusercontent.com/yonicd/carbonate/master/misc/example.png)
 
 
 ### Creating gifs
