@@ -3,7 +3,13 @@
 
 # carbonate <img src="inst/figures/hex_black_small.png" align="right" />
 
-`R6` api for [carbon.js](https://carbon.now.sh/about)
+“[carbon.js](https://carbon.now.sh/about) is the easiest way to create
+beautiful images of your source code.”
+
+This package uses an `R6` api to interact with carbon.js and create
+directly from the console carbon images. Like the image below:
+
+![](tools/readme/README-unnamed-chunk-12-1.png)
 
 ## Installation
 
