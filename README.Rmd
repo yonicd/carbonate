@@ -1,0 +1,143 @@
+---
+output: github_document
+always_allow_html: yes
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "tools/readme/README-"
+)
+```
+
+# carbonate <img src="inst/figures/hex_black_small.png" align="right" />
+`R6` api for [carbon.js](https://carbon.now.sh/about)
+
+
+## Installation
+
+```{r,eval= FALSE}
+remotes::install_github('yonicd/carbonate')
+```
+
+## Usage
+
+### Initialize new carbon object
+
+```{r}
+library(carbonate)
+```
+
+The default code in the carbon object is taken from the clipboard.
+
+```{r,eval = FALSE}
+x <- carbon$new()
+```
+
+But can also be defined inline. Code can be a character object of any length.
+
+```{r}
+x <- carbon$new(readLines('DESCRIPTION'))
+```
+
+The code is kept in the object and can be changed at any time.
+
+```{r}
+x$code
+```
+
+The main job of the R6 object is to convert all the options into a uri that is sent to the carbon url page, where it is processed. 
+
+```{r}
+x$uri()
+```
+
+### Manipulate carbon object
+
+Aesthetics of the carbon object that can be manipulated
+
+|Carbon Variable  |Carbonate Variable |Description | Default | 
+|:------:|:-----------------------|:-----------|:----:|
+|l      |language                |language          |r|
+|bg     |palette                 |layout pallete (vector with c(r,g,b,a)|c(r=171,g=184,b=195,a=1)|
+|t      |template                |layout template (listed in get_templates()) |'seti'|
+|wc     |add_window_control      |add/remove window controls (circles on top left corner) |TRUE|
+|wt     |window_control_theme    |change window control themes  (listed in get_windows_control_themes())        |'none'|
+|ds     |add_drop_shadow         |add/remove dropshadow     |TRUE|
+|dsyoff |drop_shadow_offset_y    |shadow vertical offset (px) |20|
+|dsblur |drop_shadow_blur_radius |shadow blur radius (px) |68|
+|wa     |auto_adjust_width       |auto-audjust output width          |TRUE|
+|pv     |padding_vertical        |vertical padding (px)          |48|
+|ph     |padding_horizontal      |horizontal padding (px)          |32|
+|ln     |add_line_number         |add/remove line numbers          |FALSE|
+|fm     |font_family             |layout font family (listed in get_font_families())          |'Hack'|
+|fs     |font_size               |font size (px)         |14|
+|lh     |line_height_percent     |relative space between lines (percent)          |133|
+|si     |square_image            |output image is square     |FALSE|
+|es     |relative_export_size    |image size in export relative to what is in the preview (1,2 or 4)    |1|
+|wm     |add_watermark           |add official carbon.js watermark          |FALSE|
+
+```{r}
+x$get_templates()
+```
+
+```{r}
+x$get_font_families()
+```
+
+```{r}
+x$get_windows_control_themes()
+```
+
+### Open carbon code in browser
+
+```{r,eval=FALSE}
+x$browse()
+```
+
+### Carbonate code directly to file
+
+This function depends on RSelenium
+
+```{r,message=FALSE,warning=FALSE,eval = FALSE}
+x$carbonate(file = 'myfile.png')
+```
+
+![](tools/readme/README-unnamed-chunk-12-1.png)
+
+```{r,message=FALSE,warning=FALSE,eval = FALSE}
+x$template <-'cobalt'
+x$carbonate(file = 'new_template.png')
+```
+
+![](tools/readme/README-unnamed-chunk-13-1.png)
+
+```{r,message=FALSE,warning=FALSE,eval=FALSE}
+x$font_family <-'IBM Plex Mono'
+x$carbonate(file = 'new_font.png')
+```
+
+![](tools/readme/README-unnamed-chunk-14-1.png)
+
+### Closing Browsers
+
+Closing all instances of open browsers used by RSelenium.
+
+```r
+x$stop_all()
+```
+
+### Creating gifs
+
+All carbon outputs are collected and saved in the list `x$carbons`
+
+printing the list will create a gif
+
+```{r,eval = FALSE}
+x$carbons
+```
+
+![](https://raw.githubusercontent.com/yonicd/carbonate/master/misc/preview.gif)

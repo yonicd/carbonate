@@ -1,4 +1,8 @@
 #' @export
+#' @importFrom R6 R6Class
+#' @importFrom RSelenium makeFirefoxProfile rsDriver
+#' @importFrom wdman chrome
+#' @importFrom clipr read_clip
 carbon <- R6::R6Class(classname = 'Carbon',
                       public = list(
                         initialize = function(code = clipr::read_clip()){
@@ -77,17 +81,17 @@ carbon <- R6::R6Class(classname = 'Carbon',
                         },
                         start = function(eCap = self$chromeOptions()) {
 
-                          if(is.null(self$cDrv)){
-                            self$chrome_start()  
-                          }
                           
-                          
-                          self$rD <- RSelenium::rsDriver(browser = "chrome",
-                                                         verbose = FALSE, 
-                                                         port = 4567L,
-                                                         extraCapabilities = list(
-                                                           chromeOptions = eCap)
-                                                         )
+                            if(is.null(self$cDrv)){
+                              self$chrome_start()  
+                            }
+                            
+                            self$rD <- RSelenium::rsDriver(browser = "chrome",
+                                                           verbose = FALSE, 
+                                                           port = 4567L,
+                                                           extraCapabilities = list(
+                                                             chromeOptions = eCap)
+                            )
                           },
                         stop = function(){
                           self$rD$client$close()
@@ -98,14 +102,17 @@ carbon <- R6::R6Class(classname = 'Carbon',
                           self$chrome_stop()
                           },
                         carbonate = function(file = 'carbon.png',code = self$code,rD = self$rD,...){
-                          
+
                           if(is.null(rD)){
                             message('starting headless browser...')
                             self$start()
-                          }else{
-                            invisible(rD$client$open())
+                            rD <- self$rD
                           }
+                          
+                          if(length(rD$client$getSessions())==0)
+                            invisible(rD$client$open())
                             
+                          on.exit(rD$client$close(),add = TRUE)
                           
                           remDr <- rD$client
                           
