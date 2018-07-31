@@ -7,7 +7,9 @@
 beautiful images of your source code.”
 
 This package uses an `R6` api to interact with carbon.js and create
-directly from the console carbon images. Like the image below:
+directly from the console carbon images.
+
+Like the image below:
 
 ![](tools/readme/README-unnamed-chunk-12-1.png)
 
