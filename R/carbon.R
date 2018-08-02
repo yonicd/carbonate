@@ -8,7 +8,6 @@
 #' @section Initialization:
 #' A new 'Carbon'-object is initialized using the `new()` method on the generator:
 #' 
-#' \strong{Usage}
 #' \tabular{l}{
 #'  `x <- carbon$new(code = clipr::read_clip())`
 #' }

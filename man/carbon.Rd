@@ -14,7 +14,6 @@ contrast to the more well known S3 and S4 systems.
 
 A new 'Carbon'-object is initialized using the \code{new()} method on the generator:
 
-\strong{Usage}
 \tabular{l}{
 \code{x <- carbon$new(code = clipr::read_clip())}
 }
