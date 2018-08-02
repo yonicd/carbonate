@@ -12,17 +12,48 @@
 #'  `x <- carbon$new(code = clipr::read_clip())`
 #' }
 #' 
-#' @section Carbon Fields:
+#' \if{html}{
+#' \out{
+#' <br>
+#' <details open>
+#' <summary> Carbon Fields </summary>
+#' }
+#' }
+#' 
 #' Description of fields of the R6 object that can be set by the user can be found
 #'  in the following [page][carbonate::.carbon_fields].
 #'
-#' @section Main Methods:
+#' \if{html}{
+#' \out{
+#' </details>
+#' }
+#' }
+#'
+#' \if{html}{
+#' \out{
+#' <details open>
+#' <summary> Main Methods </summary>
+#' }
+#' }
+#' 
 #' \tabular{ll}{
 #' [$carbonate][carbonate::.carbonate] \tab Using RSelenium fetch the carbon image output \cr
 #' [$browse][carbonate::.browse] \tab open [$uri][carbonate::.uri] in the browser \cr
 #' }
 #'
-#' @section Aesthetic Methods:
+#' \if{html}{
+#' \out{
+#' </details>
+#' }
+#' }
+#'
+#'
+#' \if{html}{
+#' \out{
+#' <details open>
+#' <summary> Aesthetic Methods </summary>
+#' }
+#' }
 #' \tabular{ll}{
 #' [$set_template][carbonate::.set_template] \tab set $template \cr
 #' [$get_templates][carbonate::.get_templates] \tab get a list of possible templates \cr
@@ -32,14 +63,36 @@
 #' [$get_font_families][carbonate::.get_font_families] \tab get a list of possible fonts \cr
 #' }
 #' 
-#' @section URI Methods:
+#' \if{html}{
+#' \out{
+#' </details>
+#' }
+#' }
+#'
+#' \if{html}{
+#' \out{
+#' <details open>
+#' <summary> URI Methods </summary>
+#' }
+#' }
 #' \tabular{ll}{
 #' [$uri][carbonate::.uri] \tab construct valid carbon.js uri \cr
 #' [$options][carbonate::.options] \tab return all current carbon options\cr
 #' [$encode][carbonate::.encode] \tab URL encode a string for the $uri  \cr
 #' }
 #' 
-#' @section Webdriver Methods:
+#' \if{html}{
+#' \out{
+#' </details>
+#' }
+#' }
+#'
+#' \if{html}{
+#' \out{
+#' <details open>
+#' <summary> Webdriver Methods </summary>
+#' }
+#' }
 #' \tabular{ll}{
 #' [$chromeOptions][carbonate::.chromeOptions] \tab construct a chromeOptions object \cr
 #' [$chrome_start][carbonate::.chrome_start] \tab start a chrome session \cr
@@ -47,6 +100,12 @@
 #' [$start][carbonate::.start] \tab start a RSelenium session \cr
 #' [$stop][carbonate::.stop] \tab stop a RSelenium session \cr
 #' [$stop_all][carbonate::.stop_all] \tab stop all active RSelenium sessions \cr
+#' }
+#' 
+#' \if{html}{
+#' \out{
+#' </details>
+#' }
 #' }
 #' 
 #' 

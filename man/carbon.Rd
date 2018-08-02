@@ -17,24 +17,48 @@ A new 'Carbon'-object is initialized using the \code{new()} method on the genera
 \tabular{l}{
 \code{x <- carbon$new(code = clipr::read_clip())}
 }
-}
 
-\section{Carbon Fields}{
+\if{html}{
+\out{
+<br>
+<details open>
+<summary> Carbon Fields </summary>
+}
+}
 
 Description of fields of the R6 object that can be set by the user can be found
 in the following \link[carbonate:.carbon_fields]{page}.
+
+\if{html}{
+\out{
+</details>
+}
 }
 
-\section{Main Methods}{
+\if{html}{
+\out{
+<details open>
+<summary> Main Methods </summary>
+}
+}
 
 \tabular{ll}{
 \link[carbonate:.carbonate]{$carbonate} \tab Using RSelenium fetch the carbon image output \cr
 \link[carbonate:.browse]{$browse} \tab open \link[carbonate:.uri]{$uri} in the browser \cr
 }
+
+\if{html}{
+\out{
+</details>
+}
 }
 
-\section{Aesthetic Methods}{
-
+\if{html}{
+\out{
+<details open>
+<summary> Aesthetic Methods </summary>
+}
+}
 \tabular{ll}{
 \link[carbonate:.set_template]{$set_template} \tab set $template \cr
 \link[carbonate:.get_templates]{$get_templates} \tab get a list of possible templates \cr
@@ -43,19 +67,37 @@ in the following \link[carbonate:.carbon_fields]{page}.
 \link[carbonate:.set_font_family]{$set_font_family} \tab set $font_family\cr
 \link[carbonate:.get_font_families]{$get_font_families} \tab get a list of possible fonts \cr
 }
+
+\if{html}{
+\out{
+</details>
+}
 }
 
-\section{URI Methods}{
-
+\if{html}{
+\out{
+<details open>
+<summary> URI Methods </summary>
+}
+}
 \tabular{ll}{
 \link[carbonate:.uri]{$uri} \tab construct valid carbon.js uri \cr
 \link[carbonate:.options]{$options} \tab return all current carbon options\cr
 \link[carbonate:.encode]{$encode} \tab URL encode a string for the $uri  \cr
 }
+
+\if{html}{
+\out{
+</details>
+}
 }
 
-\section{Webdriver Methods}{
-
+\if{html}{
+\out{
+<details open>
+<summary> Webdriver Methods </summary>
+}
+}
 \tabular{ll}{
 \link[carbonate:.chromeOptions]{$chromeOptions} \tab construct a chromeOptions object \cr
 \link[carbonate:.chrome_start]{$chrome_start} \tab start a chrome session \cr
@@ -63,6 +105,12 @@ in the following \link[carbonate:.carbon_fields]{page}.
 \link[carbonate:.start]{$start} \tab start a RSelenium session \cr
 \link[carbonate:.stop]{$stop} \tab stop a RSelenium session \cr
 \link[carbonate:.stop_all]{$stop_all} \tab stop all active RSelenium sessions \cr
+}
+
+\if{html}{
+\out{
+</details>
+}
 }
 }
 
