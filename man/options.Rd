@@ -2,6 +2,7 @@
 % Please edit documentation in R/uri_functions.R
 \name{.options}
 \alias{.options}
+\alias{carbon-options}
 \title{concatenate the carbon options to a string}
 \usage{
 .options(self, private, code)
@@ -18,4 +19,7 @@ OUTPUT_DESCRIPTION
 }
 \description{
 combine all the carbon options into a carbon.js valid string
+}
+\seealso{
+\link[carbonate:carbon]{carbon}
 }

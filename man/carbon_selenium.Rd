@@ -2,6 +2,7 @@
 % Please edit documentation in R/selenium_functions.R
 \name{.start}
 \alias{.start}
+\alias{carbon-selenium}
 \alias{.stop}
 \alias{.stop_all}
 \title{RSelenium webdriver functions}
@@ -17,8 +18,11 @@
 
 \item{private}{carbon private object}
 
-\item{eCap}{Rselenium options}
+\item{eCap}{chromeOptions passed into \link[RSelenium:rsDriver]{rsDriver}}
 }
 \description{
 Functions to open,stop, stop_all RSelenium sessions
+}
+\seealso{
+\link[carbonate:carbon]{carbon}
 }

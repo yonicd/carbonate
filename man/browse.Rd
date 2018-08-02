@@ -2,6 +2,7 @@
 % Please edit documentation in R/uri_functions.R
 \name{.browse}
 \alias{.browse}
+\alias{carbon-browse}
 \title{open $uri to in browser window}
 \usage{
 .browse(self, private)
@@ -19,4 +20,7 @@ x <- carbon$new('x <- 1')
 if(interactive())
  x$browse()
  
+}
+\seealso{
+\link[carbonate:carbon]{carbon}
 }

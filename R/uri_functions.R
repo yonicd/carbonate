@@ -5,6 +5,9 @@
 #' @param code character, script to embbed into the uri
 #' @return OUTPUT_DESCRIPTION
 #' @rdname options
+#' @aliases carbon-options
+#' @seealso 
+#'  [carbon][carbonate::carbon]
 
 .options <- function(self,private,code){
   
@@ -32,6 +35,9 @@
 #' x$uri(code = 'x <- y + 3')
 
 #' @rdname uri 
+#' @aliases carbon-uri
+#' @seealso 
+#'  [carbon][carbonate::carbon]
 .uri <- function(self,private,code){
   sprintf('https://carbon.now.sh?%s',self$options(code = code))
 }
@@ -46,7 +52,10 @@
 #'  x$browse()
 #'  
 #' @rdname browse
+#' @aliases carbon-browse
 #' @importFrom utils browseURL
+#' @seealso 
+#'  [carbon][carbonate::carbon]
 .browse = function(self,private){
     utils::browseURL(self$uri())
 }
@@ -60,8 +69,9 @@
 #' @param reserved boolean, should ‘reserved’ characters be encoded?
 #' @param repeated boolean, should apparently already-encoded URLs be encoded again?
 #' @return character
-#' @seealso [URLencode][utils::URLencode]
+#' @seealso [URLencode][utils::URLencode], [carbon][carbonate::carbon]
 #' @rdname encode
+#' @aliases carbon-encode
 
 .encode <- function(self, private, URL, reserved, repeated){
   if (!repeated && grepl("%[[:xdigit:]]{2}", URL, useBytes = TRUE)) 

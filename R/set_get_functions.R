@@ -6,6 +6,9 @@
 #' @param theme character, theme to set $theme to
 #' @param family character, font family to set $font_family to
 #' @rdname set_carbon
+#' @aliases carbon-set-fields
+#' @seealso 
+#'  [carbon][carbonate::carbon]
 .set_template <- function(self,private,template){
   self$template <- template
 }
@@ -25,6 +28,9 @@
 #' @param self carbon self object
 #' @param private carbon private object
 #' @rdname get_carbon
+#' @aliases carbon-get-fields
+#' @seealso 
+#'  [carbon][carbonate::carbon]
 .get_windows_control_themes <-function(self,private){
   c('none','sharp','bw')
 }

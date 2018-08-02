@@ -2,6 +2,7 @@
 % Please edit documentation in R/set_get_functions.R
 \name{.set_template}
 \alias{.set_template}
+\alias{carbon-set-fields}
 \alias{.set_window_control_theme}
 \alias{.set_font_family}
 \title{carbon set functions}
@@ -25,4 +26,7 @@
 }
 \description{
 function that set the aesthetics of the carbon image output
+}
+\seealso{
+\link[carbonate:carbon]{carbon}
 }

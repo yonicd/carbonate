@@ -13,8 +13,9 @@
 #'  x$carbonate()
 #'  }
 #' @seealso 
-#'  \code{\link[magick]{editing}}
+#'  [editing][magick::editing], [carbon][carbonate::carbon]
 #' @rdname carbonate
+#' @aliases carbon-carbonate
 #' @importFrom magick image_read
 .carbonate <- function(self,private,file,code,rD){
   

@@ -2,6 +2,7 @@
 % Please edit documentation in R/uri_functions.R
 \name{.encode}
 \alias{.encode}
+\alias{carbon-encode}
 \title{encode uri for carbon.js}
 \usage{
 .encode(self, private, URL, reserved, repeated)
@@ -25,5 +26,5 @@ encode uri string for carbon.js.
 Augmented version of than \link[utils:URLencode]{URLencode}
 }
 \seealso{
-\link[utils:URLencode]{URLencode}
+\link[utils:URLencode]{URLencode}, \link[carbonate:carbon]{carbon}
 }

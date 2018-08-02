@@ -29,32 +29,9 @@
 #'   list("profile.default_content_settings.popups" = 0L,"download.prompt_for_download" = FALSE,"download.default_directory" = tempdir())
 #' @param rD RSelenium Driver object
 #' @param cDrv Chrome Driver object from wdman
+#' @name carbon_fields
 #' @rdname carbon_fields
-.carbon_fields <- function(
-  code,
-  palette,
-  template,
-  window_control_theme,
-  language,
-  add_drop_shadow,
-  drop_shadow_offset_y,
-  drop_shadow_blur_radius,
-  add_window_control,
-  auto_adjust_width,
-  padding_vertical,
-  padding_horizontal,
-  add_line_number,
-  font_family,
-  font_size,
-  line_height_percent,
-  square_image,
-  relative_export_size,
-  add_watermark,
-  carbons,
-  chrome_args,
-  chrom_pref,
-  rD,
-  cDrv
-){
-  NULL
-}
+#' @aliases carbon-fields
+#' @seealso 
+#'  [carbon][carbonate::carbon]
+NULL

@@ -17,55 +17,43 @@ A new 'Carbon'-object is initialized using the \code{new()} method on the genera
 \tabular{l}{
 \code{x <- carbon$new(code = clipr::read_clip())}
 }
+}
+
+\section{Fields}{
+
 
 \if{html}{
 \out{
 <br>
 <details open>
-<summary> Carbon Fields </summary>
+<summary> <big> Public Fields </big> </summary>
 }
 }
 
 Description of fields of the R6 object that can be set by the user can be found
-in the following \link[carbonate:.carbon_fields]{page}.
+in the following \link[carbonate:carbon-fields]{page}.
 
 \if{html}{
 \out{
 </details>
 }
 }
+}
+
+\section{Methods}{
+
 
 \if{html}{
 \out{
+<br>
 <details open>
-<summary> Main Methods </summary>
+<summary> <big> Interacting with Browser </big> </summary>
 }
 }
 
 \tabular{ll}{
-\link[carbonate:.carbonate]{$carbonate} \tab Using RSelenium fetch the carbon image output \cr
-\link[carbonate:.browse]{$browse} \tab open \link[carbonate:.uri]{$uri} in the browser \cr
-}
-
-\if{html}{
-\out{
-</details>
-}
-}
-
-\if{html}{
-\out{
-<details open>
-<summary> Aesthetic Methods </summary>
-}
-}
-\tabular{ll}{
-\link[carbonate:.set_template]{$set_template} \tab set $template \cr
-\link[carbonate:.get_templates]{$get_templates} \tab get a list of possible templates \cr
-\link[carbonate:.set_window_control_theme]{$set_window_control_theme} \tab  set $windows_control_theme \cr
-\link[carbonate:.get_windows_control_themes]{$get_windows_control_themes} \tab get a list of possible window control themes\cr
-\link[carbonate:.set_font_family]{$set_font_family} \tab set $font_family\cr
-\link[carbonate:.get_font_families]{$get_font_families} \tab get a list of possible fonts \cr
+\link[carbonate:carbon-carbonate]{$carbonate} \tab Using RSelenium fetch the carbon image output \cr
+\link[carbonate:.browse]{$browse} \tab open \link[carbonate:carbon-uri]{$uri} in the browser \cr
 }
 
 \if{html}{
@@ -76,14 +64,18 @@ in the following \link[carbonate:.carbon_fields]{page}.
 
 \if{html}{
 \out{
+<br>
 <details open>
-<summary> URI Methods </summary>
+<summary> <big> Aesthetics </big> </summary>
 }
 }
 \tabular{ll}{
-\link[carbonate:.uri]{$uri} \tab construct valid carbon.js uri \cr
-\link[carbonate:.options]{$options} \tab return all current carbon options\cr
-\link[carbonate:.encode]{$encode} \tab URL encode a string for the $uri  \cr
+\link[carbonate:carbon-set-fields]{$set_template} \tab set $template \cr
+\link[carbonate:carbon-get-fields]{$get_templates} \tab get a list of possible templates \cr
+\link[carbonate:carbon-set-fields]{$set_window_control_theme} \tab  set $windows_control_theme \cr
+\link[carbonate:carbon-get-fields]{$get_windows_control_themes} \tab get a list of possible window control themes\cr
+\link[carbonate:carbon-set-fields]{$set_font_family} \tab set $font_family\cr
+\link[carbonate:carbon-get-fields]{$get_font_families} \tab get a list of possible fonts \cr
 }
 
 \if{html}{
@@ -94,17 +86,37 @@ in the following \link[carbonate:.carbon_fields]{page}.
 
 \if{html}{
 \out{
+<br>
 <details open>
-<summary> Webdriver Methods </summary>
+<summary> <big> URI Building </big> </summary>
 }
 }
 \tabular{ll}{
-\link[carbonate:.chromeOptions]{$chromeOptions} \tab construct a chromeOptions object \cr
-\link[carbonate:.chrome_start]{$chrome_start} \tab start a chrome session \cr
-\link[carbonate:.chrome_stop]{$chrome_stop} \tab stop a chrome session \cr
-\link[carbonate:.start]{$start} \tab start a RSelenium session \cr
-\link[carbonate:.stop]{$stop} \tab stop a RSelenium session \cr
-\link[carbonate:.stop_all]{$stop_all} \tab stop all active RSelenium sessions \cr
+\link[carbonate:carbon-uri]{$uri} \tab construct valid carbon.js uri \cr
+\link[carbonate:carbon-options]{$options} \tab return all current carbon options\cr
+\link[carbonate:carbon-encode]{$encode} \tab URL encode a string for the $uri  \cr
+}
+
+\if{html}{
+\out{
+</details>
+}
+}
+
+\if{html}{
+\out{
+<br>
+<details open>
+<summary> <big> Webdriver Settings </big> </summary>
+}
+}
+\tabular{ll}{
+\link[carbonate:carbon-chrome]{$chromeOptions} \tab construct a chromeOptions object \cr
+\link[carbonate:carbon-chrome]{$chrome_start} \tab start a chrome session \cr
+\link[carbonate:carbon-chrome]{$chrome_stop} \tab stop a chrome session \cr
+\link[carbonate:carbon-selenium]{$start} \tab start a RSelenium session \cr
+\link[carbonate:carbon-selenium]{$stop} \tab stop a RSelenium session \cr
+\link[carbonate:carbon-selenium]{$stop_all} \tab stop all active RSelenium sessions \cr
 }
 
 \if{html}{

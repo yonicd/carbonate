@@ -2,6 +2,7 @@
 % Please edit documentation in R/uri_functions.R
 \name{.uri}
 \alias{.uri}
+\alias{carbon-uri}
 \title{URI constructor}
 \usage{
 .uri(self, private, code)
@@ -24,4 +25,7 @@ x$uri()
 
 # enter manually
 x$uri(code = 'x <- y + 3')
+}
+\seealso{
+\link[carbonate:carbon]{carbon}
 }

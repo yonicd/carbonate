@@ -2,6 +2,7 @@
 % Please edit documentation in R/selenium_functions.R
 \name{.chromeOptions}
 \alias{.chromeOptions}
+\alias{carbon-chrome}
 \alias{.chrome_start}
 \alias{.chrome_stop}
 \title{chrome webdriver functions}
@@ -19,4 +20,7 @@
 }
 \description{
 Functions to open,close,set chrome webdriver
+}
+\seealso{
+\link[carbonate:carbon]{carbon}, \link[wdman:chrome]{chrome}
 }

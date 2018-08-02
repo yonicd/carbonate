@@ -2,6 +2,7 @@
 % Please edit documentation in R/set_get_functions.R
 \name{.get_windows_control_themes}
 \alias{.get_windows_control_themes}
+\alias{carbon-get-fields}
 \alias{.get_font_families}
 \alias{.get_templates}
 \title{carbon get functions}
@@ -19,4 +20,7 @@
 }
 \description{
 function that gets the available list of aesthetic values of fields
+}
+\seealso{
+\link[carbonate:carbon]{carbon}
 }

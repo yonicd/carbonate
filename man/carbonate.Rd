@@ -2,6 +2,7 @@
 % Please edit documentation in R/carbonate.R
 \name{.carbonate}
 \alias{.carbonate}
+\alias{carbon-carbonate}
 \title{carbonate script}
 \usage{
 .carbonate(self, private, file, code, rD)
@@ -31,5 +32,5 @@ if(interactive()){
  }
 }
 \seealso{
-\code{\link[magick]{editing}}
+\link[magick:editing]{editing}, \link[carbonate:carbon]{carbon}
 }

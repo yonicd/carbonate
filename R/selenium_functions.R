@@ -3,7 +3,10 @@
 #' @param self carbon self object
 #' @param private carbon private object
 #' @rdname carbon_chrome
+#' @aliases carbon-chrome
 #' @export 
+#' @seealso 
+#'  [carbon][carbonate::carbon], [chrome][wdman::chrome]
 
 .chromeOptions <- function(self, private){
   
@@ -12,6 +15,7 @@
 }
 
 #' @rdname carbon_chrome
+#' @importFrom wdman chrome
 .chrome_start <- function(self, private){
   self$cDrv <- wdman::chrome()
 }
@@ -26,8 +30,12 @@
 #' @description Functions to open,stop, stop_all RSelenium sessions
 #' @param self carbon self object
 #' @param private carbon private object
-#' @param eCap Rselenium options
+#' @param eCap chromeOptions passed into [rsDriver][RSelenium::rsDriver]
 #' @rdname carbon_selenium
+#' @aliases carbon-selenium
+#' @seealso 
+#'  [carbon][carbonate::carbon]
+#' @importFrom RSelenium rsDriver
 .start = function(self, private, eCap) {
   
   
