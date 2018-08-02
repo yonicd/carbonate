@@ -23,7 +23,7 @@ A new 'Carbon'-object is initialized using the \code{new()} method on the genera
 \section{Carbon Fields}{
 
 Description of fields of the R6 object that can be set by the user can be found
-\link[carbonate:.carbon_fields]{here}
+in the following \link[carbonate:.carbon_fields]{page}.
 }
 
 \section{Main Methods}{

@@ -14,8 +14,8 @@
 #' }
 #' 
 #' @section Carbon Fields:
-#' Description of fields of the R6 object that can be set by the user can be found 
-#' [here][carbonate::.carbon_fields]
+#' Description of fields of the R6 object that can be set by the user can be found
+#'  in the following [page][carbonate::.carbon_fields].
 #'
 #' @section Main Methods:
 #' \tabular{ll}{

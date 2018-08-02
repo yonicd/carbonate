@@ -3,18 +3,10 @@
 \name{.carbon_fields}
 \alias{.carbon_fields}
 \title{Carbon object fields}
-\usage{
-.carbon_fields(code, palette, template, window_control_theme, language,
-  add_drop_shadow, drop_shadow_offset_y, drop_shadow_blur_radius,
-  add_window_control, auto_adjust_width, padding_vertical, padding_horizontal,
-  add_line_number, font_family, font_size, line_height_percent, square_image,
-  relative_export_size, add_watermark, carbons, chrome_args, chrom_pref, rD,
-  cDrv)
-}
 \arguments{
 \item{code}{character, script to embbed, Default: NULL}
 
-\item{palette}{character, layout pallete, Default: c(r=171,g=184,b=195,a=1)}
+\item{palette}{numeric, layout pallete, Default: c(r=171,g=184,b=195,a=1)}
 
 \item{template}{character, layout template, Default: 'seti'}
 

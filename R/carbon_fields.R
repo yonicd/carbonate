@@ -1,7 +1,8 @@
 #' @title Carbon object fields
 #' @description Fields that can be changed in the Carbon object
+#' @usage NULL
 #' @param code character, script to embbed, Default: NULL
-#' @param palette character, layout pallete, Default: c(r=171,g=184,b=195,a=1)
+#' @param palette numeric, layout pallete, Default: c(r=171,g=184,b=195,a=1)
 #' @param template character, layout template, Default: 'seti'
 #' @param add_window_control boolean, add/remove window controls (circles on top left corner),
 #'  Default: TRUE
