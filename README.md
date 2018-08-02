@@ -1,6 +1,10 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+    ## Linking to ImageMagick 6.9.9.39
+    ## Enabled features: cairo, fontconfig, freetype, lcms, pango, rsvg, webp
+    ## Disabled features: fftw, ghostscript, x11
+
 # carbonate <img src="inst/figures/hex_black_small.png" align="right" />
 
 “[carbon.js](https://carbon.now.sh/about) is the easiest way to create
@@ -49,12 +53,13 @@ x$code
 #>  [3] "Version: 0.0.0.9000"                                                                                
 #>  [4] "Authors@R: person(\"Jonathan\", \"Sidi\", email = \"yonicd@gmail.com\", role = c(\"aut\", \"cre\"))"
 #>  [5] "Description: Create 'carbon.js' image outputs directly from the 'R' console."                       
-#>  [6] "Depends: R (>= 3.5.0)"                                                                              
+#>  [6] "Depends: R (>= 3.2.0)"                                                                              
 #>  [7] "License: MIT + file LICENSE"                                                                        
 #>  [8] "Encoding: UTF-8"                                                                                    
 #>  [9] "LazyData: true"                                                                                     
 #> [10] "RoxygenNote: 6.0.1"                                                                                 
-#> [11] "Imports: R6,clipr,wdman,RSelenium,magick"
+#> [11] "Imports: R6,clipr,wdman,RSelenium,magick"                                                           
+#> [12] "Remotes: ropensci/RSelenium"
 ```
 
 The main job of the R6 object is to convert all the options into a uri
@@ -62,7 +67,7 @@ that is sent to the carbon url page, where it is processed.
 
 ``` r
 x$uri()
-#> [1] "https://carbon.now.sh?bg=rgba(171,184,195,1)&t=seti&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520'carbon.js'%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9000%250AAuthors@R%253A%2520person(%2522Jonathan%2522,%2520%2522Sidi%2522,%2520email%2520%253D%2520%2522yonicd@gmail.com%2522,%2520role%2520%253D%2520c(%2522aut%2522,%2520%2522cre%2522))%250ADescription%253A%2520Create%2520'carbon.js'%2520image%2520outputs%2520directly%2520from%2520the%2520'R'%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.5.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6,clipr,wdman,RSelenium,magick"
+#> [1] "https://carbon.now.sh?bg=rgba(171,184,195,1)&t=seti&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520'carbon.js'%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9000%250AAuthors@R%253A%2520person(%2522Jonathan%2522,%2520%2522Sidi%2522,%2520email%2520%253D%2520%2522yonicd@gmail.com%2522,%2520role%2520%253D%2520c(%2522aut%2522,%2520%2522cre%2522))%250ADescription%253A%2520Create%2520'carbon.js'%2520image%2520outputs%2520directly%2520from%2520the%2520'R'%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6,clipr,wdman,RSelenium,magick%250ARemotes%253A%2520ropensci/RSelenium"
 ```
 
 ### Manipulate carbon object
@@ -134,21 +139,197 @@ This function depends on RSelenium
 x$carbonate(file = 'myfile.png')
 ```
 
-![](tools/readme/README-unnamed-chunk-12-1.png)
+![](tools/readme/README-unnamed-chunk-12-1.png)<!-- -->
+
+<!-- ![](tools/readme/README-unnamed-chunk-12-1.png) -->
 
 ``` r
 x$template <-'cobalt'
 x$carbonate(file = 'new_template.png')
+#> [1] "Connecting to remote server"
+#> $acceptInsecureCerts
+#> [1] FALSE
+#> 
+#> $acceptSslCerts
+#> [1] FALSE
+#> 
+#> $applicationCacheEnabled
+#> [1] FALSE
+#> 
+#> $browserConnectionEnabled
+#> [1] FALSE
+#> 
+#> $browserName
+#> [1] "chrome"
+#> 
+#> $chrome
+#> $chrome$chromedriverVersion
+#> [1] "2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db)"
+#> 
+#> $chrome$userDataDir
+#> [1] "/var/folders/kx/t4h_mm1910sb7vhm_gnfnx2c0000gn/T/.org.chromium.Chromium.4lPJZp"
+#> 
+#> 
+#> $cssSelectorsEnabled
+#> [1] TRUE
+#> 
+#> $databaseEnabled
+#> [1] FALSE
+#> 
+#> $`goog:chromeOptions`
+#> $`goog:chromeOptions`$debuggerAddress
+#> [1] "localhost:60077"
+#> 
+#> 
+#> $handlesAlerts
+#> [1] TRUE
+#> 
+#> $hasTouchScreen
+#> [1] FALSE
+#> 
+#> $javascriptEnabled
+#> [1] TRUE
+#> 
+#> $locationContextEnabled
+#> [1] TRUE
+#> 
+#> $mobileEmulationEnabled
+#> [1] FALSE
+#> 
+#> $nativeEvents
+#> [1] TRUE
+#> 
+#> $networkConnectionEnabled
+#> [1] FALSE
+#> 
+#> $pageLoadStrategy
+#> [1] "normal"
+#> 
+#> $platform
+#> [1] "Mac OS X"
+#> 
+#> $rotatable
+#> [1] FALSE
+#> 
+#> $setWindowRect
+#> [1] TRUE
+#> 
+#> $takesHeapSnapshot
+#> [1] TRUE
+#> 
+#> $takesScreenshot
+#> [1] TRUE
+#> 
+#> $unexpectedAlertBehaviour
+#> [1] ""
+#> 
+#> $version
+#> [1] "67.0.3396.99"
+#> 
+#> $webStorageEnabled
+#> [1] TRUE
+#> 
+#> $id
+#> [1] "ab06e411e8bcc676273d44f7fef9c74c"
 ```
 
-![](tools/readme/README-unnamed-chunk-13-1.png)
+![](tools/readme/README-unnamed-chunk-13-1.png)<!-- -->
+
+<!-- ![](tools/readme/README-unnamed-chunk-13-1.png) -->
 
 ``` r
 x$font_family <-'IBM Plex Mono'
 x$carbonate(file = 'new_font.png')
+#> [1] "Connecting to remote server"
+#> $acceptInsecureCerts
+#> [1] FALSE
+#> 
+#> $acceptSslCerts
+#> [1] FALSE
+#> 
+#> $applicationCacheEnabled
+#> [1] FALSE
+#> 
+#> $browserConnectionEnabled
+#> [1] FALSE
+#> 
+#> $browserName
+#> [1] "chrome"
+#> 
+#> $chrome
+#> $chrome$chromedriverVersion
+#> [1] "2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db)"
+#> 
+#> $chrome$userDataDir
+#> [1] "/var/folders/kx/t4h_mm1910sb7vhm_gnfnx2c0000gn/T/.org.chromium.Chromium.5eCHSb"
+#> 
+#> 
+#> $cssSelectorsEnabled
+#> [1] TRUE
+#> 
+#> $databaseEnabled
+#> [1] FALSE
+#> 
+#> $`goog:chromeOptions`
+#> $`goog:chromeOptions`$debuggerAddress
+#> [1] "localhost:60115"
+#> 
+#> 
+#> $handlesAlerts
+#> [1] TRUE
+#> 
+#> $hasTouchScreen
+#> [1] FALSE
+#> 
+#> $javascriptEnabled
+#> [1] TRUE
+#> 
+#> $locationContextEnabled
+#> [1] TRUE
+#> 
+#> $mobileEmulationEnabled
+#> [1] FALSE
+#> 
+#> $nativeEvents
+#> [1] TRUE
+#> 
+#> $networkConnectionEnabled
+#> [1] FALSE
+#> 
+#> $pageLoadStrategy
+#> [1] "normal"
+#> 
+#> $platform
+#> [1] "Mac OS X"
+#> 
+#> $rotatable
+#> [1] FALSE
+#> 
+#> $setWindowRect
+#> [1] TRUE
+#> 
+#> $takesHeapSnapshot
+#> [1] TRUE
+#> 
+#> $takesScreenshot
+#> [1] TRUE
+#> 
+#> $unexpectedAlertBehaviour
+#> [1] ""
+#> 
+#> $version
+#> [1] "67.0.3396.99"
+#> 
+#> $webStorageEnabled
+#> [1] TRUE
+#> 
+#> $id
+#> [1] "a622805b94e77680c45bcafa74f0b433"
 ```
 
-![](tools/readme/README-unnamed-chunk-14-1.png)
+![](tools/readme/README-unnamed-chunk-14-1.png)<!-- -->
+
+<!-- ![](tools/readme/README-unnamed-chunk-14-1.png) -->
 
 ### Closing Browsers
 
@@ -158,15 +339,34 @@ Closing all instances of open browsers used by RSelenium.
 x$stop_all()
 ```
 
-### Creating gifs
+### Post image processing
 
 All carbon outputs are collected and saved in the list `x$carbons`
 
-printing the list will create a
-gif
+#### Combining
 
 ``` r
-x$carbons
+x$carbons%>%
+  magick::image_scale('300')%>%
+  magick::image_append()
 ```
 
-![](https://raw.githubusercontent.com/yonicd/carbonate/master/misc/preview.gif)
+![](tools/readme/README-unnamed-chunk-15-1.png)<!-- -->
+
+``` r
+
+x$carbons%>%
+  magick::image_scale('300')%>%
+  magick::image_append(stack = TRUE)
+```
+
+![](tools/readme/README-unnamed-chunk-15-2.png)<!-- -->
+
+#### GIFs
+
+``` r
+x$carbons%>%
+  magick::image_animate(fps = 1)
+```
+
+![](tools/readme/README-unnamed-chunk-16-1.gif)<!-- -->

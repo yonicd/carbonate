@@ -5,12 +5,14 @@ always_allow_html: yes
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r, echo = FALSE,message=FALSE,warning=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "tools/readme/README-"
 )
+
+library(magick)
 ```
 
 # carbonate <img src="inst/figures/hex_black_small.png" align="right" />
@@ -108,25 +110,25 @@ x$browse()
 
 This function depends on RSelenium
 
-```{r,message=FALSE,warning=FALSE,eval = FALSE}
+```{r,echo=FALSE,results='hide',fig.keep='all'}
 x$carbonate(file = 'myfile.png')
 ```
 
-![](tools/readme/README-unnamed-chunk-12-1.png)
+<!-- ![](tools/readme/README-unnamed-chunk-12-1.png) -->
 
-```{r,message=FALSE,warning=FALSE,eval = FALSE}
+```{r,echo=FALSE,results='hide',fig.keep='all'}
 x$template <-'cobalt'
 x$carbonate(file = 'new_template.png')
 ```
 
-![](tools/readme/README-unnamed-chunk-13-1.png)
+<!-- ![](tools/readme/README-unnamed-chunk-13-1.png) -->
 
-```{r,message=FALSE,warning=FALSE,eval=FALSE}
+```{r,echo=FALSE,results='hide',fig.keep='all'}
 x$font_family <-'IBM Plex Mono'
 x$carbonate(file = 'new_font.png')
 ```
 
-![](tools/readme/README-unnamed-chunk-14-1.png)
+<!-- ![](tools/readme/README-unnamed-chunk-14-1.png) -->
 
 ### Closing Browsers
 
@@ -136,14 +138,25 @@ Closing all instances of open browsers used by RSelenium.
 x$stop_all()
 ```
 
-### Creating gifs
+### Post image processing
 
 All carbon outputs are collected and saved in the list `x$carbons`
 
-printing the list will create a gif
+#### Combining
 
-```{r,eval = FALSE}
-x$carbons
+```{r,eval = TRUE}
+x$carbons%>%
+  magick::image_scale('300')%>%
+  magick::image_append()
+
+x$carbons%>%
+  magick::image_scale('300')%>%
+  magick::image_append(stack = TRUE)
 ```
 
-![](https://raw.githubusercontent.com/yonicd/carbonate/master/misc/preview.gif)
+#### GIFs
+
+```{r}
+x$carbons%>%
+  magick::image_animate(fps = 1)
+```
