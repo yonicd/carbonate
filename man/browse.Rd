@@ -13,7 +13,7 @@
 \item{private}{carbon private object}
 }
 \description{
-opens the uri address in $uri in the browser window.
+opens the uri address in \link[carbonate:carbon-uri]{$uri} in the browser window.
 }
 \examples{
 x <- carbon$new('x <- 1')

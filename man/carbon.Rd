@@ -53,7 +53,7 @@ in the following \link[carbonate:carbon-fields]{page}.
 
 \tabular{ll}{
 \link[carbonate:carbon-carbonate]{$carbonate} \tab Using RSelenium fetch the carbon image output \cr
-\link[carbonate:.browse]{$browse} \tab open \link[carbonate:carbon-uri]{$uri} in the browser \cr
+\link[carbonate:.browse]{$browse} \tab open \link[carbonate:carbon-uri]{$uri} in the browser
 }
 
 \if{html}{
@@ -75,7 +75,7 @@ in the following \link[carbonate:carbon-fields]{page}.
 \link[carbonate:carbon-set-fields]{$set_window_control_theme} \tab  set $windows_control_theme \cr
 \link[carbonate:carbon-get-fields]{$get_windows_control_themes} \tab get a list of possible window control themes\cr
 \link[carbonate:carbon-set-fields]{$set_font_family} \tab set $font_family\cr
-\link[carbonate:carbon-get-fields]{$get_font_families} \tab get a list of possible fonts \cr
+\link[carbonate:carbon-get-fields]{$get_font_families} \tab get a list of possible fonts
 }
 
 \if{html}{
@@ -94,7 +94,7 @@ in the following \link[carbonate:carbon-fields]{page}.
 \tabular{ll}{
 \link[carbonate:carbon-uri]{$uri} \tab construct valid carbon.js uri \cr
 \link[carbonate:carbon-options]{$options} \tab return all current carbon options\cr
-\link[carbonate:carbon-encode]{$encode} \tab URL encode a string for the $uri  \cr
+\link[carbonate:carbon-encode]{$encode} \tab URL encode a string for the $uri
 }
 
 \if{html}{
@@ -116,7 +116,7 @@ in the following \link[carbonate:carbon-fields]{page}.
 \link[carbonate:carbon-chrome]{$chrome_stop} \tab stop a chrome session \cr
 \link[carbonate:carbon-selenium]{$start} \tab start a RSelenium session \cr
 \link[carbonate:carbon-selenium]{$stop} \tab stop a RSelenium session \cr
-\link[carbonate:carbon-selenium]{$stop_all} \tab stop all active RSelenium sessions \cr
+\link[carbonate:carbon-selenium]{$stop_all} \tab stop all active RSelenium sessions
 }
 
 \if{html}{

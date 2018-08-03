@@ -4,7 +4,6 @@
 #' @param private carbon private object
 #' @rdname carbon_chrome
 #' @aliases carbon-chrome
-#' @export 
 #' @seealso 
 #'  [carbon][carbonate::carbon], [chrome][wdman::chrome]
 

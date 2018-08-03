@@ -43,7 +43,7 @@
 }
 
 #' @title open $uri to in browser window
-#' @description opens the uri address in $uri in the browser window.
+#' @description opens the uri address in [$uri][carbonate::carbon-uri] in the browser window.
 #' @param self carbon self object
 #' @param private carbon private object
 #' @examples 

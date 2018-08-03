@@ -18,11 +18,11 @@
 
 \item{private}{carbon private object}
 
-\item{template}{character, name of template to set $template to}
+\item{template}{character, name of template to set \link[carbonate:carbon-fields]{$template} to}
 
-\item{theme}{character, theme to set $theme to}
+\item{theme}{character, theme to set \link[carbonate:carbon-fields]{$theme} to}
 
-\item{family}{character, font family to set $font_family to}
+\item{family}{character, font family to set \link[carbonate:carbon-fields]{$font_family} to}
 }
 \description{
 function that set the aesthetics of the carbon image output

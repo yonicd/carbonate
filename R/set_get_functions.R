@@ -2,9 +2,9 @@
 #' @description function that set the aesthetics of the carbon image output
 #' @param self carbon self object
 #' @param private carbon private object
-#' @param template character, name of template to set $template to
-#' @param theme character, theme to set $theme to
-#' @param family character, font family to set $font_family to
+#' @param template character, name of template to set [$template][carbonate::carbon-fields] to
+#' @param theme character, theme to set [$theme][carbonate::carbon-fields] to
+#' @param family character, font family to set [$font_family][carbonate::carbon-fields] to
 #' @rdname set_carbon
 #' @aliases carbon-set-fields
 #' @seealso 
