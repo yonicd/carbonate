@@ -1,4 +1,4 @@
-#' @title carbonate script 
+#' @title Carbonate script lines to a carbon image
 #' @description Main function of the package that invokes RSelenium to open
 #'  a browser to the carbon.js uri, create an image and download the file.
 #' @param self carbon self object
@@ -6,6 +6,7 @@
 #' @param file character, name of file to save image as
 #' @param code character, lines of script to make carbon image from
 #' @param rD RSelenium driver
+#' @details Script is passed to <https://carbon.now.sh/> is downloaded to the `tempdir()` and appended to the list [$carbons][carbonate::carbon-fields] using RSelenium and Chrome. 
 #' @return image object
 #' @examples 
 #' if(interactive()){
@@ -13,9 +14,9 @@
 #'  x$carbonate()
 #'  }
 #' @seealso 
-#'  [editing][magick::editing], [carbon][carbonate::carbon]
+#'  [carbon][carbonate::carbon], [rsDriver][RSelenium::rsDriver]
 #' @rdname carbonate
-#' @aliases carbon-carbonate
+#' @aliases carbon-carbonate carbonate
 #' @importFrom magick image_read
 .carbonate <- function(self,private,file,code,rD){
   
@@ -26,7 +27,7 @@
   }
   
   if(length(rD$client$getSessions())==0)
-    rD$client$open()
+    invisible(capture.output(rD$client$open()))
   
   on.exit(rD$client$close(),add = TRUE)
   
@@ -34,7 +35,7 @@
   
   path <- rD$client$extraCapabilities$chromeOptions$prefs$download.default_directory  
   
-  device <- gsub('^(.*?)\\.','',file)
+  device <- gsub('^(.*?)\\.','',basename(file))
   
   remDr$navigate(self$uri(code = code))
   

@@ -10,7 +10,7 @@
 
 .chromeOptions <- function(self, private){
   
-  list(args = self$chrome_args,prefs = self$chrom_pref)
+  list(args = self$chrome_args,prefs = self$chrome_pref)
   
 }
 

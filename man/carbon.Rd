@@ -3,7 +3,7 @@
 \docType{data}
 \name{carbon}
 \alias{carbon}
-\title{carbon object}
+\title{Carbon R6 class}
 \description{
 The Carbon generator creates a new \code{Carbon}-object, which is the class containing
 all the app logic. The class is based on the \link[R6:R6Class]{R6} OO-system and
@@ -25,8 +25,8 @@ A new 'Carbon'-object is initialized using the \code{new()} method on the genera
 \if{html}{
 \out{
 <br>
-<details open>
-<summary> <big> Public Fields </big> </summary>
+<details>
+<summary> <span title='Click to Expand'> <big> Public Fields </big> </span> </summary>
 }
 }
 
@@ -46,8 +46,8 @@ in the following \link[carbonate:carbon-fields]{page}.
 \if{html}{
 \out{
 <br>
-<details open>
-<summary> <big> Interacting with Browser </big> </summary>
+<details>
+<summary> <span title='Click to Expand'> <big> Interacting with Browser </big> </span> </summary>
 }
 }
 
@@ -65,8 +65,8 @@ in the following \link[carbonate:carbon-fields]{page}.
 \if{html}{
 \out{
 <br>
-<details open>
-<summary> <big> Aesthetics </big> </summary>
+<details>
+<summary> <span title='Click to Expand'> <big> Aesthetics </big> </span> </summary>
 }
 }
 \tabular{ll}{
@@ -87,8 +87,8 @@ in the following \link[carbonate:carbon-fields]{page}.
 \if{html}{
 \out{
 <br>
-<details open>
-<summary> <big> URI Building </big> </summary>
+<details>
+<summary> <span title='Click to Expand'> <big> URI Building </big> </span> </summary>
 }
 }
 \tabular{ll}{
@@ -106,8 +106,8 @@ in the following \link[carbonate:carbon-fields]{page}.
 \if{html}{
 \out{
 <br>
-<details open>
-<summary> <big> Webdriver Settings </big> </summary>
+<details>
+<summary> <span title='Click to Expand'> <big> Webdriver Settings </big> </span> </summary>
 }
 }
 \tabular{ll}{

@@ -23,7 +23,7 @@ This package uses an `R6` api to interact with carbon.js and create directly fro
 
 Like the image below:
 
-![](tools/readme/README-unnamed-chunk-12-1.png)
+![](tools/temp/myfile.png)
 
 ## Installation
 
@@ -106,24 +106,38 @@ x$get_windows_control_themes()
 x$browse()
 ```
 
+### Set the download directory
+
+```{r}
+x$chrome_pref$download.default_directory <- normalizePath("tools/temp")
+```
+
 ### Carbonate code directly to file
 
 This function depends on RSelenium
 
-```{r,echo=FALSE,results='hide',fig.keep='all'}
+```{r}
 x$carbonate(file = 'myfile.png')
 ```
 
 <!-- ![](tools/readme/README-unnamed-chunk-12-1.png) -->
 
-```{r,echo=FALSE,results='hide',fig.keep='all'}
+```{r,echo=FALSE}
+Sys.sleep(2)
+```
+
+```{r}
 x$template <-'cobalt'
 x$carbonate(file = 'new_template.png')
 ```
 
 <!-- ![](tools/readme/README-unnamed-chunk-13-1.png) -->
 
-```{r,echo=FALSE,results='hide',fig.keep='all'}
+```{r,echo=FALSE}
+Sys.sleep(2)
+```
+
+```{r}
 x$font_family <-'IBM Plex Mono'
 x$carbonate(file = 'new_font.png')
 ```

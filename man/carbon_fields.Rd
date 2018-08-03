@@ -50,7 +50,7 @@ the preview (1,2 or 4), Default: 1}
 \item{chrome_args}{character, arguments passed to chrome browser, Default:
 c('--disable-gpu', '--window-size=1280,800')}
 
-\item{chrom_pref}{list, preferences passed to chrome browser, Default:
+\item{chrome_pref}{list, preferences passed to chrome browser, Default:
 list("profile.default_content_settings.popups" = 0L,"download.prompt_for_download" = FALSE,"download.default_directory" = tempdir())}
 
 \item{rD}{RSelenium Driver object}

@@ -1,4 +1,4 @@
-#' @title carbon object
+#' @title Carbon R6 class
 #' @description The Carbon generator creates a new `Carbon`-object, which is the class containing
 #' all the app logic. The class is based on the [R6][R6::R6Class] OO-system and
 #' is thus reference-based with methods and data attached to each object, in
@@ -12,13 +12,14 @@
 #'  `x <- carbon$new(code = clipr::read_clip())`
 #' }
 #' 
+#' 
 #' @section Fields:
 #' 
 #' \if{html}{
 #' \out{
 #' <br>
-#' <details open>
-#' <summary> <big> Public Fields </big> </summary>
+#' <details>
+#' <summary> <span title='Click to Expand'> <big> Public Fields </big> </span> </summary>
 #' }
 #' }
 #' 
@@ -36,8 +37,8 @@
 #' \if{html}{
 #' \out{
 #' <br>
-#' <details open>
-#' <summary> <big> Interacting with Browser </big> </summary>
+#' <details>
+#' <summary> <span title='Click to Expand'> <big> Interacting with Browser </big> </span> </summary>
 #' }
 #' }
 #' 
@@ -56,8 +57,8 @@
 #' \if{html}{
 #' \out{
 #' <br>
-#' <details open>
-#' <summary> <big> Aesthetics </big> </summary>
+#' <details>
+#' <summary> <span title='Click to Expand'> <big> Aesthetics </big> </span> </summary>
 #' }
 #' }
 #' \tabular{ll}{
@@ -78,8 +79,8 @@
 #' \if{html}{
 #' \out{
 #' <br>
-#' <details open>
-#' <summary> <big> URI Building </big> </summary>
+#' <details>
+#' <summary> <span title='Click to Expand'> <big> URI Building </big> </span> </summary>
 #' }
 #' }
 #' \tabular{ll}{
@@ -97,8 +98,8 @@
 #' \if{html}{
 #' \out{
 #' <br>
-#' <details open>
-#' <summary> <big> Webdriver Settings </big> </summary>
+#' <details>
+#' <summary> <span title='Click to Expand'> <big> Webdriver Settings </big> </span> </summary>
 #' }
 #' }
 #' \tabular{ll}{
@@ -147,7 +148,7 @@ carbon <- R6::R6Class(classname = 'Carbon',
                         add_watermark                = FALSE,
                         carbons = list(),
                         chrome_args                  = c('--disable-gpu', '--window-size=1280,800'),
-                        chrom_pref                   = list(
+                        chrome_pref                   = list(
                           "profile.default_content_settings.popups" = 0L,
                           "download.prompt_for_download" = FALSE,
                           "download.default_directory" = tempdir()

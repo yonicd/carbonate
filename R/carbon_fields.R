@@ -25,7 +25,7 @@
 #' @param carbons list, storage of rendered carbon images, Default: NULL
 #' @param chrome_args character, arguments passed to chrome browser, Default:
 #'   c('--disable-gpu', '--window-size=1280,800')
-#' @param chrom_pref list, preferences passed to chrome browser, Default: 
+#' @param chrome_pref list, preferences passed to chrome browser, Default: 
 #'   list("profile.default_content_settings.popups" = 0L,"download.prompt_for_download" = FALSE,"download.default_directory" = tempdir())
 #' @param rD RSelenium Driver object
 #' @param cDrv Chrome Driver object from wdman
