@@ -37,3 +37,4 @@ rsconnect/
 .Rproj.user
 
 *.DS_Store
+misc/hex

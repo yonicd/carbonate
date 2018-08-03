@@ -44,7 +44,7 @@
 #' 
 #' \tabular{ll}{
 #' [$carbonate][carbonate::carbon-carbonate] \tab Using RSelenium fetch the carbon image output \cr
-#' [$browse][carbonate::.browse] \tab open [$uri][carbonate::carbon-uri] in the browser \cr
+#' [$browse][carbonate::.browse] \tab open [$uri][carbonate::carbon-uri] in the browser
 #' }
 #'
 #' \if{html}{
@@ -67,7 +67,7 @@
 #' [$set_window_control_theme][carbonate::carbon-set-fields] \tab  set $windows_control_theme \cr
 #' [$get_windows_control_themes][carbonate::carbon-get-fields] \tab get a list of possible window control themes\cr
 #' [$set_font_family][carbonate::carbon-set-fields] \tab set $font_family\cr
-#' [$get_font_families][carbonate::carbon-get-fields] \tab get a list of possible fonts \cr
+#' [$get_font_families][carbonate::carbon-get-fields] \tab get a list of possible fonts
 #' }
 #' 
 #' \if{html}{
@@ -86,7 +86,7 @@
 #' \tabular{ll}{
 #' [$uri][carbonate::carbon-uri] \tab construct valid carbon.js uri \cr
 #' [$options][carbonate::carbon-options] \tab return all current carbon options\cr
-#' [$encode][carbonate::carbon-encode] \tab URL encode a string for the $uri  \cr
+#' [$encode][carbonate::carbon-encode] \tab URL encode a string for the $uri
 #' }
 #' 
 #' \if{html}{
@@ -108,7 +108,7 @@
 #' [$chrome_stop][carbonate::carbon-chrome] \tab stop a chrome session \cr
 #' [$start][carbonate::carbon-selenium] \tab start a RSelenium session \cr
 #' [$stop][carbonate::carbon-selenium] \tab stop a RSelenium session \cr
-#' [$stop_all][carbonate::carbon-selenium] \tab stop all active RSelenium sessions \cr
+#' [$stop_all][carbonate::carbon-selenium] \tab stop all active RSelenium sessions
 #' }
 #' 
 #' \if{html}{
