@@ -10,4 +10,6 @@ LazyData: true
 RoxygenNote: 6.0.1
 Imports: R6,clipr,magick,wdman,RSelenium,utils
 Remotes: ropensci/RSelenium
+URL: https://github.com/yonicd/carbonate
+BugReports: https://github.com/yonicd/carbonate/issues
 Roxygen: list(markdown = TRUE)
