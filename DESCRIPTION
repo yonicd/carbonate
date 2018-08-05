@@ -1,6 +1,6 @@
 Package: carbonate
 Title: Interact with 'carbon.js' directly from R
-Version: 0.0.0.9100
+Version: 0.0.0.9200
 Authors@R: person("Jonathan", "Sidi", email = "yonicd@gmail.com", role = c("aut", "cre"))
 Description: Create 'carbon.js' image outputs directly from the 'R' console.
 Depends: R (>= 3.2.0)

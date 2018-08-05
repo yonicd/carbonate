@@ -200,7 +200,7 @@ carbon <- R6::R6Class(classname = 'Carbon',
                         stop_all = function(){
                           .stop_all(self,private)
                         },
-                        carbonate = function(file = 'carbon.png',code = self$code,rD = self$rD){
+                        carbonate = function(file = 'rcarbon.png',code = self$code,rD = self$rD){
 
                          .carbonate(self,private,file,code,rD)
                           

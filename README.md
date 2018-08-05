@@ -46,7 +46,7 @@ The code is kept in the object and can be changed at any time.
 x$code
 #>  [1] "Package: carbonate"                                                                                 
 #>  [2] "Title: Interact with 'carbon.js' directly from R"                                                   
-#>  [3] "Version: 0.0.0.9100"                                                                                
+#>  [3] "Version: 0.0.0.9200"                                                                                
 #>  [4] "Authors@R: person(\"Jonathan\", \"Sidi\", email = \"yonicd@gmail.com\", role = c(\"aut\", \"cre\"))"
 #>  [5] "Description: Create 'carbon.js' image outputs directly from the 'R' console."                       
 #>  [6] "Depends: R (>= 3.2.0)"                                                                              
@@ -66,7 +66,7 @@ that is sent to the carbon url page, where it is processed.
 
 ``` r
 x$uri()
-#> [1] "https://carbon.now.sh?bg=rgba(171,184,195,1)&t=seti&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520'carbon.js'%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9100%250AAuthors@R%253A%2520person(%2522Jonathan%2522,%2520%2522Sidi%2522,%2520email%2520%253D%2520%2522yonicd@gmail.com%2522,%2520role%2520%253D%2520c(%2522aut%2522,%2520%2522cre%2522))%250ADescription%253A%2520Create%2520'carbon.js'%2520image%2520outputs%2520directly%2520from%2520the%2520'R'%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6,clipr,magick,wdman,RSelenium,utils%250ARemotes%253A%2520ropensci/RSelenium%250AURL%253A%2520https%253A//github.com/yonicd/carbonate%250ABugReports%253A%2520https%253A//github.com/yonicd/carbonate/issues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)"
+#> [1] "https://carbon.now.sh?bg=rgba(171,184,195,1)&t=seti&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520'carbon.js'%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9200%250AAuthors@R%253A%2520person(%2522Jonathan%2522,%2520%2522Sidi%2522,%2520email%2520%253D%2520%2522yonicd@gmail.com%2522,%2520role%2520%253D%2520c(%2522aut%2522,%2520%2522cre%2522))%250ADescription%253A%2520Create%2520'carbon.js'%2520image%2520outputs%2520directly%2520from%2520the%2520'R'%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6,clipr,magick,wdman,RSelenium,utils%250ARemotes%253A%2520ropensci/RSelenium%250AURL%253A%2520https%253A//github.com/yonicd/carbonate%250ABugReports%253A%2520https%253A//github.com/yonicd/carbonate/issues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)"
 ```
 
 ### Manipulate carbon object

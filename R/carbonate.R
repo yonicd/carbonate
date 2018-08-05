@@ -39,22 +39,28 @@
   
   remDr$navigate(self$uri(code = code))
   
-  Sys.sleep(2)
+  asyncr(remDr,
+         using = 'xpath',
+         value = '//*[@id="toolbar"]/div[5]/div')
+
+  asyncr(remDr,
+         using = 'xpath',
+         value = sprintf('//*[@id="downshift-2-item-%s"]',as.numeric(device=='svg')))
+
+  if(file.exists(file.path(path,sprintf('carbon.%s',device))))
+    unlink(file.path(path,sprintf('carbon.%s',device)),force = TRUE)
   
-  webElem <- remDr$findElement(using = 'xpath',value = '//*[@id="toolbar"]/div[5]/div')
+  file_found <- FALSE
   
-  webElem$clickElement()
-  
-  Sys.sleep(2)
-  
-  webSubElem <- remDr$findElement(using = 'xpath',value = sprintf('//*[@id="downshift-2-item-%s"]',as.numeric(device=='svg')))
-  
-  webSubElem$clickElement()
-  
-  Sys.sleep(3)
-  
+  while(!file_found){
+    file_found <- file.exists(file.path(path,sprintf('carbon.%s',device)))
+  }
+
+  if(file.exists(file.path(path,sprintf('rcarbon.%s',device))))
+    unlink(file.path(path,sprintf('rcarbon.%s',device)),force = TRUE)
+      
   file.rename(file.path(path,sprintf('carbon.%s',device)),file.path(path,sprintf('rcarbon.%s',device)))
-  
+
   file.rename(file.path(path,sprintf('rcarbon.%s',device)),file.path(path,file))
   
   img <- magick::image_read(file.path(path,file))

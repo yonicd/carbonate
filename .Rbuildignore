@@ -4,3 +4,5 @@
 misc
 tools
 README.Rmd
+^_pkgdown\.yml$
+^docs$
