@@ -117,12 +117,18 @@ asyncr <- function(remDr,using,value,action = NULL,maxiter = 20){
     elem <- tryCatch(
       {remDr$findElement(using = using, value = value)},
       error = function(e){NULL})
-    #loop until element with name <value> is found in <webpage url>
-    
-    Sys.sleep(.002)
+
+    Sys.sleep(0.02*(i+1))
     
     i <- i + 1
   }  
+  
+  if (is.null(elem) && i >= maxiter) {
+    # assuming this means timed out
+    stop("attempt to fetch image from carbon servers failed, 
+         please check network connectivity and try again",
+         call. = FALSE)
+  }
   
   elem$clickElement()
   
