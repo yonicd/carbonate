@@ -106,17 +106,22 @@
 }
 
 # https://goo.gl/jFqKfS
-asyncr <- function(remDr,using,value,action = NULL){
+asyncr <- function(remDr,using,value,action = NULL,maxiter = 20){
   
   elem <- NULL
   
-  while(is.null(elem)){
+  i <- 0
+  
+  while( is.null(elem) & (i <= maxiter) ){
     
     elem <- tryCatch(
       {remDr$findElement(using = using, value = value)},
       error = function(e){NULL})
     #loop until element with name <value> is found in <webpage url>
     
+    Sys.sleep(.002)
+    
+    i <- i + 1
   }  
   
   elem$clickElement()
