@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 library(magick)
 ```
 
-# carbonate <img src="tools/temp/hex.gif" align="right" />
+# carbonate
 
 "[carbon.js](https://carbon.now.sh/about) is the easiest way to create beautiful images of your source code."
 

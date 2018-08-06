@@ -53,6 +53,7 @@
   file_found <- FALSE
   
   while(!file_found){
+    Sys.sleep(0.05)
     file_found <- file.exists(file.path(path,sprintf('carbon.%s',device)))
   }
 
