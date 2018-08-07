@@ -66,6 +66,16 @@
   
   img <- magick::image_read(file.path(path,file))
   
+  if(self$add_tinyurl){
+
+    img <- img%>%
+      magick::image_annotate(text = private$tiny(),gravity = self$tinyurl_location)
+    
+    img%>%
+      image_write(file.path(path,file))
+    
+  }
+  
   self$carbons <- append(self$carbons,img)
   
   print(img, info = FALSE)
