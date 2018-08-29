@@ -146,6 +146,9 @@ carbon <- R6::R6Class(classname = 'Carbon',
                         square_image                 = FALSE, 
                         relative_export_size         = 1,
                         add_watermark                = FALSE,
+                        add_tinyurl                  = FALSE,
+                        tinyurl_location             = 'southeast',
+                        add_timestamp                = FALSE,
                         carbons = list(),
                         chrome_args                  = c('--disable-gpu', '--window-size=1280,800'),
                         chrome_pref                   = list(
@@ -220,7 +223,8 @@ carbon <- R6::R6Class(classname = 'Carbon',
                                             'auto_adjust_width',
                                             'add_line_number',
                                             'square_image',
-                                            'add_watermark'),
+                                            'add_watermark',
+                                            'add_timestamp'),
                         var_names = c( 
                           palette = 'bg',
                           template = 't',
@@ -239,7 +243,8 @@ carbon <- R6::R6Class(classname = 'Carbon',
                           line_height_percent = 'lh',
                           square_image = 'si',
                           relative_export_size = 'es',
-                          add_watermark = 'wm'
+                          add_watermark = 'wm',
+                          add_timestamp = 'ts'
                         ),
                         rgba = function(x){
                           .rgba(self,private,x)
@@ -258,6 +263,9 @@ carbon <- R6::R6Class(classname = 'Carbon',
                         },
                         map = function(){
                           .map(self,private)
+                        },
+                        tiny = function(){
+                          .tiny(self,private)
                         }
         )
         )

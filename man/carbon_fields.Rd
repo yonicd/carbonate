@@ -45,6 +45,14 @@ the preview (1,2 or 4), Default: 1}
 
 \item{add_watermark}{boolean, add official carbon.js watermark, Default: FALSE}
 
+\item{add_tinyurl}{boolean, add tinyurl link to image directing to the carbon page that
+created the image, Default: FALSE}
+
+\item{tinyurl_location}{character, string with \link[magick:options]{gravity} value to place the annotate tinyurl
+address on image, Default: 'southeast'}
+
+\item{add_timestamp}{boolean, add timestamp to output filename, Default: FALSE}
+
 \item{carbons}{list, storage of rendered carbon images, Default: NULL}
 
 \item{chrome_args}{character, arguments passed to chrome browser, Default:

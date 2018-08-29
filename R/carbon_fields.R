@@ -22,6 +22,11 @@
 #' @param relative_export_size numeric, image size in export relative to what is in
 #'  the preview (1,2 or 4), Default: 1
 #' @param add_watermark boolean, add official carbon.js watermark, Default: FALSE
+#' @param add_tinyurl boolean, add tinyurl link to image directing to the carbon page that 
+#' created the image, Default: FALSE
+#' @param tinyurl_location character, string with [gravity][magick::options] value to place the annotate tinyurl 
+#' address on image, Default: 'southeast'
+#' @param add_timestamp boolean, add timestamp to output filename, Default: FALSE
 #' @param carbons list, storage of rendered carbon images, Default: NULL
 #' @param chrome_args character, arguments passed to chrome browser, Default:
 #'   c('--disable-gpu', '--window-size=1280,800')
