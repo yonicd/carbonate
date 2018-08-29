@@ -105,13 +105,6 @@
   
 }
 
-#' @importFrom httr GET content
-.tiny <- function(self,private){
-  
-  base <- 'http://tinyurl.com/api-create.php'
-  
-  httr::content(httr::GET(sprintf('%s?url=%s',base,self$uri())))
-}
 
 # https://goo.gl/jFqKfS
 asyncr <- function(remDr,using,value,action = NULL,maxiter = 20){

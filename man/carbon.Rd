@@ -94,7 +94,8 @@ in the following \link[carbonate:carbon-fields]{page}.
 \tabular{ll}{
 \link[carbonate:carbon-uri]{$uri} \tab construct valid carbon.js uri \cr
 \link[carbonate:carbon-options]{$options} \tab return all current carbon options\cr
-\link[carbonate:carbon-encode]{$encode} \tab URL encode a string for the $uri
+\link[carbonate:carbon-encode]{$encode} \tab URL encode a string for the $uri \cr
+\link[carbonate:carbon-tinyurl]{$tiny}  \tab Create tinyurl from \link[carbonate:carbon-uri]{$uri}
 }
 
 \if{html}{
