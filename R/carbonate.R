@@ -18,6 +18,7 @@
 #' @rdname carbonate
 #' @aliases carbon-carbonate carbonate
 #' @importFrom magick image_read
+#' @importFrom utils capture.output
 .carbonate <- function(self,private,file,code,rD){
   
   if(is.null(rD)){
@@ -27,7 +28,7 @@
   }
   
   if(length(rD$client$getSessions())==0)
-    invisible(capture.output(rD$client$open()))
+    invisible(utils::capture.output(rD$client$open()))
   
   on.exit(rD$client$close(),add = TRUE)
   
@@ -68,11 +69,9 @@
   
   if(self$add_tinyurl){
 
-    img <- img%>%
-      magick::image_annotate(text = private$tiny(),gravity = self$tinyurl_location)
+    img <- magick::image_annotate(img, text = private$tiny(),gravity = self$tinyurl_location)
     
-    img%>%
-      image_write(file.path(path,file))
+    magick::image_write(img, file.path(path,file))
     
   }
   

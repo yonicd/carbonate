@@ -110,8 +110,7 @@
   
   base <- 'http://tinyurl.com/api-create.php'
   
-  httr::GET(sprintf('%s?url=%s',base,self$uri()))%>%
-    httr::content()
+  httr::content(httr::GET(sprintf('%s?url=%s',base,self$uri())))
 }
 
 # https://goo.gl/jFqKfS
