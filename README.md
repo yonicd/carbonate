@@ -54,11 +54,12 @@ x$code
 #>  [8] "Encoding: UTF-8"                                                                                    
 #>  [9] "LazyData: true"                                                                                     
 #> [10] "RoxygenNote: 6.0.1"                                                                                 
-#> [11] "Imports: R6,clipr,magick,wdman,RSelenium,utils"                                                     
+#> [11] "Imports: R6,clipr,magick,wdman,RSelenium,utils, httr"                                               
 #> [12] "Remotes: ropensci/RSelenium"                                                                        
 #> [13] "URL: https://github.com/yonicd/carbonate"                                                           
 #> [14] "BugReports: https://github.com/yonicd/carbonate/issues"                                             
-#> [15] "Roxygen: list(markdown = TRUE)"
+#> [15] "Roxygen: list(markdown = TRUE)"                                                                     
+#> [16] "HexURL: https://github.com/yonicd/carbonate/raw/master/tools/temp/hex.gif"
 ```
 
 The main job of the R6 object is to convert all the options into a uri
@@ -66,7 +67,7 @@ that is sent to the carbon url page, where it is processed.
 
 ``` r
 x$uri()
-#> [1] "https://carbon.now.sh?bg=rgba(171,184,195,1)&t=seti&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520'carbon.js'%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9200%250AAuthors@R%253A%2520person(%2522Jonathan%2522,%2520%2522Sidi%2522,%2520email%2520%253D%2520%2522yonicd@gmail.com%2522,%2520role%2520%253D%2520c(%2522aut%2522,%2520%2522cre%2522))%250ADescription%253A%2520Create%2520'carbon.js'%2520image%2520outputs%2520directly%2520from%2520the%2520'R'%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6,clipr,magick,wdman,RSelenium,utils%250ARemotes%253A%2520ropensci/RSelenium%250AURL%253A%2520https%253A//github.com/yonicd/carbonate%250ABugReports%253A%2520https%253A//github.com/yonicd/carbonate/issues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)"
+#> [1] "https://carbon.now.sh?bg=rgba(171,184,195,1)&t=seti&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520'carbon.js'%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9200%250AAuthors@R%253A%2520person(%2522Jonathan%2522,%2520%2522Sidi%2522,%2520email%2520%253D%2520%2522yonicd@gmail.com%2522,%2520role%2520%253D%2520c(%2522aut%2522,%2520%2522cre%2522))%250ADescription%253A%2520Create%2520'carbon.js'%2520image%2520outputs%2520directly%2520from%2520the%2520'R'%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6,clipr,magick,wdman,RSelenium,utils,%2520httr%250ARemotes%253A%2520ropensci/RSelenium%250AURL%253A%2520https%253A//github.com/yonicd/carbonate%250ABugReports%253A%2520https%253A//github.com/yonicd/carbonate/issues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250AHexURL%253A%2520https%253A//github.com/yonicd/carbonate/raw/master/tools/temp/hex.gif"
 ```
 
 ### Manipulate carbon object
