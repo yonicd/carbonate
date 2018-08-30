@@ -84,7 +84,11 @@
   
   if(self$tweet){
     
-    rtweet::post_tweet(status = self$tweet_status, media = file.path(path,file))
+    if(length(Sys.getenv("TWITTER_SCREEN_NAME"))==0){
+      message("missing Environment Variable: 'TWITTER_SCREEN_NAME'\nskipping tweet \U0001f622")
+    }else{
+      rtweet::post_tweet(status = self$tweet_status, media = file.path(path,file))  
+    }
     
   }
   
