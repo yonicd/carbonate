@@ -80,6 +80,15 @@
     
     val <- self[[x]]
     
+    if(x=='template'){
+      if(!self[[x]]%in%self$get_templates())
+      stop(sprintf('template not valid: %s\nUse the method get_templates() to choose a valid one',
+                   self[[x]]))
+      
+      val <- gsub('\\s','%20',self[[x]])
+    }
+      
+    
     if(x=='font_family')
       val <- gsub('\\s','%20',self[[x]])
     

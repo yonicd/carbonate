@@ -51,6 +51,12 @@ created the image, Default: FALSE}
 \item{tinyurl_location}{character, string with \link[magick:options]{gravity} value to place the annotate tinyurl
 address on image, Default: 'southeast'}
 
+\item{tweet}{boolean, tweet out the image using \link[rtweet:post_tweet]{post_tweet}}
+
+\item{tweet_status}{character, status to add to the tweet. If add_tinyurl is TRUE then
+a link to the url will be appended to the status automatically,
+Default: 'Created in R using the Carbonate (Package Icon)'}
+
 \item{add_timestamp}{boolean, add timestamp to output filename, Default: FALSE}
 
 \item{carbons}{list, storage of rendered carbon images, Default: NULL}

@@ -19,7 +19,10 @@
 #' @aliases carbon-carbonate carbonate
 #' @importFrom magick image_read
 #' @importFrom utils capture.output
+#' @importFrom rtweet post_tweet
 .carbonate <- function(self,private,file,code,rD){
+  
+  this_uri <- self$uri(code = code)
   
   if(is.null(rD)){
     message('starting chrome session...')
@@ -38,7 +41,7 @@
   
   device <- gsub('^(.*?)\\.','',basename(file))
   
-  remDr$navigate(self$uri(code = code))
+  remDr$navigate(this_uri)
   
   asyncr(remDr,
          using = 'xpath',
@@ -69,9 +72,19 @@
   
   if(self$add_tinyurl){
 
-    img <- magick::image_annotate(img, text = self$tiny(),gravity = self$tinyurl_location)
+    tiny_uri <- self$tiny()
+    
+    img <- magick::image_annotate(img, text = tiny_uri, gravity = self$tinyurl_location)
     
     magick::image_write(img, file.path(path,file))
+    
+    self$tweet_status <- sprintf('Check out this script at \U0001f517 %s\n%s',tiny_uri, self$tweet_status)
+    
+  }
+  
+  if(self$tweet){
+    
+    rtweet::post_tweet(status = self$tweet_status, media = file.path(path,file))
     
   }
   

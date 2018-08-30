@@ -26,6 +26,10 @@
 #' created the image, Default: FALSE
 #' @param tinyurl_location character, string with [gravity][magick::options] value to place the annotate tinyurl 
 #' address on image, Default: 'southeast'
+#' @param tweet boolean, tweet out the image using [post_tweet][rtweet::post_tweet]
+#' @param tweet_status character, status to add to the tweet. If add_tinyurl is TRUE then 
+#' a link to the url will be appended to the status automatically, 
+#' Default: 'Created in R using the Carbonate (Package Icon)'
 #' @param add_timestamp boolean, add timestamp to output filename, Default: FALSE
 #' @param carbons list, storage of rendered carbon images, Default: NULL
 #' @param chrome_args character, arguments passed to chrome browser, Default:
