@@ -88,3 +88,28 @@
   }
   paste(x, collapse = "")
 }
+
+#' @title convert carbon uri to tinyurl
+#' @description convert carbon uri to tinyurl with option to attach to clipboard.
+#' @param self carbon self object
+#' @param private carbon private object
+#' @details If clip is set to TRUE [write_clip][clipr::write_clip] will put the 
+#' tinyurl on the clipboard. 
+#' @return character
+#' @importFrom httr GET content
+#' @importFrom clipr write_clip
+#' @rdname tinyurl
+#' @aliases carbon-tinyurl
+.tiny <- function(self,private,clip = FALSE){
+  
+  base <- 'http://tinyurl.com/api-create.php'
+  
+  RET <- httr::content(httr::GET(sprintf('%s?url=%s',base,self$uri())))
+  
+  if(clip){
+    clipr::write_clip(RET)
+  }
+  
+  return(RET)
+  
+}

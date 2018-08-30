@@ -86,7 +86,8 @@
 #' \tabular{ll}{
 #' [$uri][carbonate::carbon-uri] \tab construct valid carbon.js uri \cr
 #' [$options][carbonate::carbon-options] \tab return all current carbon options\cr
-#' [$encode][carbonate::carbon-encode] \tab URL encode a string for the $uri
+#' [$encode][carbonate::carbon-encode] \tab URL encode a string for the $uri \cr
+#' [$tiny][carbonate::carbon-tinyurl]  \tab Create tinyurl from [$uri][carbonate::carbon-uri]
 #' }
 #' 
 #' \if{html}{
@@ -210,6 +211,9 @@ carbon <- R6::R6Class(classname = 'Carbon',
                         },
                         encode = function(URL, reserved = FALSE, repeated = FALSE){
                          .encode(self,private,URL,reserved,repeated)
+                        },
+                        tiny = function(clip = FALSE){
+                          .tiny(self,private,clip)
                         }
                       ),
                       private = list(
@@ -263,9 +267,6 @@ carbon <- R6::R6Class(classname = 'Carbon',
                         },
                         map = function(){
                           .map(self,private)
-                        },
-                        tiny = function(){
-                          .tiny(self,private)
                         }
         )
         )

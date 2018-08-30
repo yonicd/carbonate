@@ -69,7 +69,7 @@
   
   if(self$add_tinyurl){
 
-    img <- magick::image_annotate(img, text = private$tiny(),gravity = self$tinyurl_location)
+    img <- magick::image_annotate(img, text = self$tiny(),gravity = self$tinyurl_location)
     
     magick::image_write(img, file.path(path,file))
     
