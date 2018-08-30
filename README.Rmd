@@ -142,6 +142,29 @@ x$font_family <-'IBM Plex Mono'
 x$carbonate(file = 'new_font.png')
 ```
 
+### Sharing
+
+You can also put a tinyurl link as a watermark on the image produced that will open to the carbon.now.sh page that has the code in the image.
+
+```{r}
+x$add_tinyurl <- TRUE
+x$carbonate(file = 'tiny_url.png')
+```
+
+If you just want the tinyurl link without the image to use in a tweet you can create it using
+
+```{r}
+x$tiny()
+```
+
+Or you can put the link directly on your clipboard
+
+```{r}
+x$tiny(clip = TRUE)
+clipr::read_clip()
+```
+
+
 <!-- ![](tools/readme/README-unnamed-chunk-14-1.png) -->
 
 ### Closing Browsers
