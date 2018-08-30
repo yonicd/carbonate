@@ -39,7 +39,7 @@
 #' @seealso 
 #'  [carbon][carbonate::carbon]
 .uri <- function(self,private,code){
-  sprintf('https://carbon.now.sh?%s',self$options(code = code))
+  sprintf('https://carbon.now.sh/?%s',self$options(code = code))
 }
 
 #' @title open $uri to in browser window
@@ -77,13 +77,18 @@
   if (!repeated && grepl("%[[:xdigit:]]{2}", URL, useBytes = TRUE)) 
     return(URL)
   OK <- paste0("[^", if (!reserved) 
-    "][!$&'()*+,;/?@#", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz0123456789._~-", 
+    "][!()*+;?#", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz0123456789._~-", 
     "]")
   x <- strsplit(URL, "")[[1L]]
   z <- grep(OK, x)
+  
+  z <- sort(c(z,which(x%in%c('[',']'))))
+  
   if (length(z)) {
     y <- sapply(x[z], function(x) paste0("%25", toupper(as.character(charToRaw(x))), 
                                          collapse = ""))
+    y <- gsub('%2527','%27',y)
+    
     x[z] <- y
   }
   paste(x, collapse = "")

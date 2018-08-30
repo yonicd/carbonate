@@ -80,8 +80,11 @@
     
     val <- self[[x]]
     
+    if(x=='font_family')
+      val <- gsub('\\s','%20',self[[x]])
+    
     if(x=='palette')
-      val <- private$rgba(self[[x]])
+      val <- gsub('[,]','%2C',private$rgba(self[[x]]))
     
     if(x=='line_height_percent')
       val <- private$add_percent(self[[x]])

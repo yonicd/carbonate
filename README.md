@@ -46,7 +46,7 @@ The code is kept in the object and can be changed at any time.
 x$code
 #>  [1] "Package: carbonate"                                                                                 
 #>  [2] "Title: Interact with 'carbon.js' directly from R"                                                   
-#>  [3] "Version: 0.0.0.9300"                                                                                
+#>  [3] "Version: 0.0.0.9400"                                                                                
 #>  [4] "Authors@R: person(\"Jonathan\", \"Sidi\", email = \"yonicd@gmail.com\", role = c(\"aut\", \"cre\"))"
 #>  [5] "Description: Create 'carbon.js' image outputs directly from the 'R' console."                       
 #>  [6] "Depends: R (>= 3.2.0)"                                                                              
@@ -67,7 +67,7 @@ that is sent to the carbon url page, where it is processed.
 
 ``` r
 x$uri()
-#> [1] "https://carbon.now.sh?bg=rgba(171,184,195,1)&t=seti&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520'carbon.js'%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9300%250AAuthors@R%253A%2520person(%2522Jonathan%2522,%2520%2522Sidi%2522,%2520email%2520%253D%2520%2522yonicd@gmail.com%2522,%2520role%2520%253D%2520c(%2522aut%2522,%2520%2522cre%2522))%250ADescription%253A%2520Create%2520'carbon.js'%2520image%2520outputs%2520directly%2520from%2520the%2520'R'%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6,clipr,magick,wdman,RSelenium,utils,httr%250ARemotes%253A%2520ropensci/RSelenium%250AURL%253A%2520https%253A//github.com/yonicd/carbonate%250ABugReports%253A%2520https%253A//github.com/yonicd/carbonate/issues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250AHexURL%253A%2520https%253A//github.com/yonicd/carbonate/raw/master/tools/temp/hex.gif"
+#> [1] "https://carbon.now.sh/?bg=rgba(171%2C184%2C195%2C1)&t=seti&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9400%250AAuthors%2540R%253A%2520person(%2522Jonathan%2522%252C%2520%2522Sidi%2522%252C%2520email%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%2520role%2520%253D%2520c(%2522aut%2522%252C%2520%2522cre%2522))%250ADescription%253A%2520Create%2520%27carbon.js%27%2520image%2520outputs%2520directly%2520from%2520the%2520%27R%27%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6%252Cclipr%252Cmagick%252Cwdman%252CRSelenium%252Cutils%252Chttr%250ARemotes%253A%2520ropensci%252FRSelenium%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250AHexURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fraw%252Fmaster%252Ftools%252Ftemp%252Fhex.gif"
 ```
 
 ### Manipulate carbon object
@@ -170,6 +170,35 @@ x$carbonate(file = 'new_font.png')
 
 ![](tools/readme/README-unnamed-chunk-17-1.png)<!-- -->
 
+### Sharing
+
+You can also put a tinyurl link as a watermark on the image produced
+that will open to the carbon.now.sh page that has the code in the image.
+
+``` r
+x$add_tinyurl <- TRUE
+x$carbonate(file = 'tiny_url.png')
+```
+
+![](tools/readme/README-unnamed-chunk-18-1.png)<!-- -->
+
+If you just want the tinyurl link without the image to use in a tweet
+you can create it using
+
+``` r
+x$tiny()
+#> [1] "http://tinyurl.com/y8tx5zgv"
+```
+
+Or you can put the link directly on your clipboard
+
+``` r
+x$tiny(clip = TRUE)
+#> [1] "http://tinyurl.com/y8tx5zgv"
+clipr::read_clip()
+#> [1] "http://tinyurl.com/y8tx5zgv"
+```
+
 <!-- ![](tools/readme/README-unnamed-chunk-14-1.png) -->
 
 ### Closing Browsers
@@ -192,7 +221,7 @@ x$carbons%>%
   magick::image_append()
 ```
 
-![](tools/readme/README-unnamed-chunk-18-1.png)<!-- -->
+![](tools/readme/README-unnamed-chunk-21-1.png)<!-- -->
 
 ``` r
 
@@ -201,7 +230,7 @@ x$carbons%>%
   magick::image_append(stack = TRUE)
 ```
 
-![](tools/readme/README-unnamed-chunk-18-2.png)<!-- -->
+![](tools/readme/README-unnamed-chunk-21-2.png)<!-- -->
 
 #### GIFs
 
@@ -210,4 +239,4 @@ x$carbons%>%
   magick::image_animate(fps = 1)
 ```
 
-![](tools/readme/README-unnamed-chunk-19-1.gif)<!-- -->
+![](tools/readme/README-unnamed-chunk-22-1.gif)<!-- -->

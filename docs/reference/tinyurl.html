@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>concatenate the carbon options to a string — .options • carbonate</title>
+<title>convert carbon uri to tinyurl — .tiny • carbonate</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="concatenate the carbon options to a string — .options" />
+<meta property="og:title" content="convert carbon uri to tinyurl — .tiny" />
 
-<meta property="og:description" content="combine all the carbon options into a carbon.js valid string" />
+<meta property="og:description" content="convert carbon uri to tinyurl with option to attach to clipboard." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -97,18 +97,18 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>concatenate the carbon options to a string</h1>
+    <h1>convert carbon uri to tinyurl</h1>
     <small class="dont-index">Source: <a href='https://github.com/yonicd/carbonate/blob/master/R/uri_functions.R'><code>R/uri_functions.R</code></a></small>
-    <div class="hidden name"><code>options.Rd</code></div>
+    <div class="hidden name"><code>tinyurl.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>combine all the carbon options into a carbon.js valid string</p>
+    <p>convert carbon uri to tinyurl with option to attach to clipboard.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>.options</span>(<span class='no'>self</span>, <span class='no'>private</span>, <span class='no'>code</span>)</pre>
+    <pre class="usage"><span class='fu'>.tiny</span>(<span class='no'>self</span>, <span class='no'>private</span>, <span class='kw'>clip</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -121,19 +121,16 @@
       <th>private</th>
       <td><p>carbon private object</p></td>
     </tr>
-    <tr>
-      <th>code</th>
-      <td><p>character, script to embbed into the uri</p></td>
-    </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>OUTPUT_DESCRIPTION</p>
+    <p>character</p>
     
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <div class='dont-index'><p><a href='carbon.html'>carbon</a></p></div>
+    <p>If clip is set to TRUE <a href='http://www.rdocumentation.org/packages/clipr/topics/write_clip'>write_clip</a> will put the
+tinyurl on the clipboard.</p>
     
 
   </div>
@@ -144,7 +141,7 @@
       
       <li><a href="#value">Value</a></li>
 
-      <li><a href="#see-also">See also</a></li>
+      <li><a href="#details">Details</a></li>
           </ul>
 
   </div>
