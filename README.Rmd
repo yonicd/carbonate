@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 library(magick)
 ```
 
-# carbonate <img src="tools/temp/hex.gif" align="right" />
+# carbonate
 
 "[carbon.js](https://carbon.now.sh/about) is the easiest way to create beautiful images of your source code."
 
@@ -144,6 +144,8 @@ x$carbonate(file = 'new_font.png')
 
 ### Sharing
 
+#### Tinyurl
+
 You can also put a tinyurl link as a watermark on the image produced that will open to the carbon.now.sh page that has the code in the image.
 
 ```{r}
@@ -164,6 +166,24 @@ x$tiny(clip = TRUE)
 clipr::read_clip()
 ```
 
+#### Twitter
+
+You can also directly tweet the image. An automatic status is created with two options
+
+  - Default
+    - `r 'Created in R using the Carbonate \U0001f4e6'`
+    
+  - When `add_tinyurl <- TRUE`
+    - `r sprintf('%s\nCheck out this script at \U0001f517 %s', 'Created in R using the Carbonate \U0001f4e6', x$tiny())`
+
+  - Manual
+    - Using `tweet_status` you can write your own status. 
+
+```{r,eval=FALSE}
+x <- carbonate::carbon$new()
+x$tweet <- TRUE
+x$carbonate()
+```
 
 <!-- ![](tools/readme/README-unnamed-chunk-14-1.png) -->
 
