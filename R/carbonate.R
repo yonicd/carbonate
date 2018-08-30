@@ -78,7 +78,7 @@
     
     magick::image_write(img, file.path(path,file))
     
-    self$tweet_status <- sprintf('Check out this script at \U0001f517 %s\n%s',tiny_uri, self$tweet_status)
+    self$tweet_status <- sprintf('%s\nCheck out this script at \U0001f517 %s', self$tweet_status,tiny_uri)
     
   }
   
