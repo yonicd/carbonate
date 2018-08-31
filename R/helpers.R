@@ -169,11 +169,13 @@ asyncr <- function(remDr,using,value,action = NULL,maxiter = 20){
       y <- y[idx]
       
       for(i in seq_along(y)){
-        self[[ny[i]]] <- y[i]
+        self[[ny[i]]] <- y[[i]]
       }
+      
       if(!silent){
         cat(sprintf("Set via '%s'\n",yml),yaml::as.yaml(y),sep='')
       }
+      
     }
   }
 }
