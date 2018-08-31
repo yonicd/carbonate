@@ -151,16 +151,23 @@ asyncr <- function(remDr,using,value,action = NULL,maxiter = 20){
 .parse_yml <- function(self, private, yml = '~/carbon.yml', silent = FALSE){
   if(file.exists(yml)){
     y <- yaml::read_yaml(yml)
+    
     ny <- names(y)
     idx <- which(ny%in%names(self))
     
     if(length(idx)>0){
     
       if('palette'%in%ny){
-        y[['palette']] <- check_palette_yml(self, x = y[['palette']])
+        y[['palette']] <- check_palette_yml(x = y[['palette']], self)
       }
-        
+      
+      y <- check_get(y, self, silent = silent)
+      
+      ny <- names(y)
+      idx <- which(ny%in%names(self))
+      
       y <- y[idx]
+      
       for(i in seq_along(y)){
         self[[ny[i]]] <- y[i]
       }
@@ -171,7 +178,7 @@ asyncr <- function(remDr,using,value,action = NULL,maxiter = 20){
   }
 }
 
-check_palette_yml <- function(self,x){
+check_palette_yml <- function(x,self=self){
     
     x <- unlist(x,use.names = TRUE)
     
@@ -188,4 +195,35 @@ check_palette_yml <- function(self,x){
     sp[np] <- x
     
     x <- sp
+}
+
+check_get <- function(y,self=self,silent = FALSE){
+  
+  rmx <- c()
+  
+  for(x in c('template','font_family','windows_control_theme')){
+    if(x%in%names(y)){
+      if(!y[[x]]%in%self[[find_get(x,self)]]()){
+        y[[x]] <- NULL
+        rmx <- c(rmx,x)
+      }
+    }
+  }
+  
+  if(length(rmx)>0){
+    
+    if(!silent){
+      
+      message(sprintf("invalid value for the fields in the yml (ignored on load):\n%s",
+                      paste0(rmx,collapse = ', '))
+      )
+    }
+  
+  }
+  
+  return(y)
+}
+
+find_get <- function(x,self=self){
+  names(self)[startsWith(names(self),sprintf('get_%s',gsub('_(.*?)$','',x)))]
 }
