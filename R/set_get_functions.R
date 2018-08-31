@@ -45,6 +45,6 @@
 .get_templates <- function(self,private){
   c('3024-night','blackboard','base16-dark','base16-light','cobalt','dracula',
     'duotone','hopscotch','material','monokai','night-owl','oceanic-next',
-    'one-dark','panda','paraiso','seti','solarized dark','solarized light',
+    'one-dark','panda-syntax','paraiso','seti','solarized dark','solarized light',
     'tomorrow-night-bright','lucario','twilight','verminal','yeti','zenburn')
 }

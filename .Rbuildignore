@@ -6,3 +6,4 @@ tools
 README.Rmd
 ^_pkgdown\.yml$
 ^docs$
+\.github

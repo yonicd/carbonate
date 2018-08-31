@@ -11,6 +11,8 @@
 \item{self}{carbon self object}
 
 \item{private}{carbon private object}
+
+\item{clip}{boolean, write tinyurl to clipboard, Default: FALSE}
 }
 \value{
 character

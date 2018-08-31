@@ -146,3 +146,46 @@ asyncr <- function(remDr,using,value,action = NULL,maxiter = 20){
   elem$clickElement()
   
 }
+
+#' @importFrom yaml read_yaml as.yaml
+.parse_yml <- function(self, private, yml = '~/carbon.yml', silent = FALSE){
+  if(file.exists(yml)){
+    y <- yaml::read_yaml(yml)
+    ny <- names(y)
+    idx <- which(ny%in%names(self))
+    
+    if(length(idx)>0){
+    
+      if('palette'%in%ny){
+        y[['palette']] <- check_palette_yml(self, x = y[['palette']])
+      }
+        
+      y <- y[idx]
+      for(i in seq_along(y)){
+        self[[ny[i]]] <- y[i]
+      }
+      if(!silent){
+        cat(sprintf("Set via '%s'\n",yml),yaml::as.yaml(y),sep='')
+      }
+    }
+  }
+}
+
+check_palette_yml <- function(self,x){
+    
+    x <- unlist(x,use.names = TRUE)
+    
+    if(is.null(names(x))){
+      names(x) <- c('r','g','b','a')[1:length(x)]
+    }
+    
+    np <- names(x)
+    
+    x <- x[np%in%c('r','g','b','a')]
+    
+    sp <- self[['palette']]
+    
+    sp[np] <- x
+    
+    x <- sp
+}
