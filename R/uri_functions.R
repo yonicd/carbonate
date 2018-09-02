@@ -98,6 +98,7 @@
 #' @description convert carbon uri to tinyurl with option to attach to clipboard.
 #' @param self carbon self object
 #' @param private carbon private object
+#' @param clip boolean, write tinyurl to clipboard, Default: FALSE
 #' @details If clip is set to TRUE [write_clip][clipr::write_clip] will put the 
 #' tinyurl on the clipboard. 
 #' @return character

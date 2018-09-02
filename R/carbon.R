@@ -125,8 +125,9 @@
 #' @importFrom clipr read_clip
 carbon <- R6::R6Class(classname = 'Carbon',
                       public = list(
-                        initialize = function(code = clipr::read_clip()){
+                        initialize = function(code = clipr::read_clip(),yml = '~/carbon.yml', silent_yml = FALSE){
                           self$code = code
+                          private$parse_yml(yml, silent = silent_yml)
                         },
                         code                         = NULL,
                         palette                      = c(r=171,g=184,b=195,a=1),
@@ -269,6 +270,9 @@ carbon <- R6::R6Class(classname = 'Carbon',
                         },
                         map = function(){
                           .map(self,private)
+                        },
+                        parse_yml = function(yml,silent_yml){
+                          .parse_yml(self,private,yml,silent_yml)
                         }
         )
         )
