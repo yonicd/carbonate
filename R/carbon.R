@@ -87,7 +87,8 @@
 #' [$uri][carbonate::carbon-uri] \tab construct valid carbon.js uri \cr
 #' [$options][carbonate::carbon-options] \tab return all current carbon options\cr
 #' [$encode][carbonate::carbon-encode] \tab URL encode a string for the $uri \cr
-#' [$tiny][carbonate::carbon-tinyurl]  \tab Create tinyurl from [$uri][carbonate::carbon-uri]
+#' [$tiny][carbonate::carbon-tinyurl]  \tab Create tinyurl from [$uri][carbonate::carbon-uri] \cr
+#' [$rtweet][carbonate::carbon-rtweet]  \tab Send tweets containing media generated from carbon
 #' }
 #' 
 #' \if{html}{
@@ -213,10 +214,19 @@ carbon <- R6::R6Class(classname = 'Carbon',
                           
                         },
                         encode = function(URL, reserved = FALSE, repeated = FALSE){
+                          
                          .encode(self,private,URL,reserved,repeated)
+                          
                         },
                         tiny = function(clip = FALSE){
+                          
                           .tiny(self,private,clip)
+                          
+                        },
+                        rtweet = function(media, status = self$tweet_status, media_format = c('png','gif'),...){
+                          
+                          .rtweet(self, private, media, status, media_format = media_format,...)
+                          
                         }
                       ),
                       private = list(
