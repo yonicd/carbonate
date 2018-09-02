@@ -283,10 +283,10 @@ tweet using.
 x$rtweet(x$carbons,media_type = 'png') #using default status
 
 # subsets of images
-x$rtweet(status='Thithese are images'carbons[c(1,3)],media_type = 'png')
+x$rtweet(status='These are images',x$carbons[c(1,3)],media_type = 'png')
 
 # for gifs
-x$rtweet(status='th'This is a gif'$carbons,media_type = 'gif')
+x$rtweet(status='This is a gif', x$carbons,media_type = 'gif')
 ```
 
 </details>
