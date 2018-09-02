@@ -119,3 +119,87 @@
   return(RET)
   
 }
+
+
+#' @title send tweets using carbonate outputs
+#' @description wrapper for [post_tweet][rtweet::post_tweet] to send 
+#' tweets with media created using carbonate.
+#' @param self carbon self object
+#' @param private carbon private object
+#' @param media magick-image object or path to image
+#' @param status character, status to attach to post, Default: self$tweet_status
+#' @param media_format character, type of media to tweet, Default: c('png','gif')
+#' @param \dots arguments to pass to [post_tweet][rtweet::post_tweet]
+#' @return outcome from rtweet
+#' @details If multiple images are passed they can be either converted to a gif by
+#' setting media_format to 'gif' or attached each one to the post. 
+#' @examples 
+#' \dontrun{
+#' x <- carbonate::carbon$new()
+#' x$carbonate(code = readLines(system.file('DESCRIPTION',package='carbonate')))
+#' x$carbonate(code = 'x+2')
+#' 
+#' # using default status value (x$tweet_status)
+#' x$rtweet(system.file('figures/hex_black_small.png',package='carbonate'))
+#' 
+#' x$rtweet(status = 'these are two pngs',media = x$carbons,media_format='png')
+#' x$rtweet(status = 'this is a gif', media = x$carbons,media_format='gif')
+#' 
+#' }
+#' @seealso 
+#'  [image_write][magick::image_write]
+#'  [post_tweet][rtweet::post_tweet]
+#' @rdname rtweet
+#' @aliases carbon-rtweet
+#' @importFrom magick image_write
+#' @importFrom rtweet post_tweet
+.rtweet <- function(self, 
+                    private,
+                    media,
+                    status = self$tweet_status,
+                    media_format = c('png','gif'),
+                    ...){
+  
+  td <- file.path(tempdir(),'rtweet_media')
+  
+  mf <- match.arg(media_format)
+  
+  dir.create(td,showWarnings = FALSE)
+  
+  on.exit(unlink(td,recursive = TRUE,force = TRUE),add = TRUE)
+  
+  if(inherits(media,'magick-image')){
+    
+    if(mf=='gif'){
+      
+      anim <- magick::image_animate(media,fps = 1)
+      
+      magick::image_write(
+        image = anim,
+        path = file.path(td,sprintf('img01.%s',mf)),
+        format = mf)
+      
+    }else{
+      
+      invisible(
+        lapply(seq_along(media),function(x){
+          magick::image_write(
+            image = media[x],
+            path = file.path(td,sprintf('img%02d.%s',x,mf)),
+            format = mf)
+        })
+      )
+      
+    }
+  
+    tds <- list.files(td,full.names = TRUE)
+    
+  }else{
+    
+    tds <- media
+    
+  }
+  
+  rtweet::post_tweet(status = status, media = tds, ...)
+  
+}

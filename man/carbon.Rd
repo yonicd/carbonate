@@ -95,7 +95,8 @@ in the following \link[carbonate:carbon-fields]{page}.
 \link[carbonate:carbon-uri]{$uri} \tab construct valid carbon.js uri \cr
 \link[carbonate:carbon-options]{$options} \tab return all current carbon options\cr
 \link[carbonate:carbon-encode]{$encode} \tab URL encode a string for the $uri \cr
-\link[carbonate:carbon-tinyurl]{$tiny}  \tab Create tinyurl from \link[carbonate:carbon-uri]{$uri}
+\link[carbonate:carbon-tinyurl]{$tiny}  \tab Create tinyurl from \link[carbonate:carbon-uri]{$uri} \cr
+\link[carbonate:carbon-rtweet]{$rtweet}  \tab Send tweets containing media generated from carbon
 }
 
 \if{html}{
