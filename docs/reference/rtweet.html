@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>carbon set functions — .set_template • carbonate</title>
+<title>send tweets using carbonate outputs — .rtweet • carbonate</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,10 @@
 
 
 
-<meta property="og:title" content="carbon set functions — .set_template" />
+<meta property="og:title" content="send tweets using carbonate outputs — .rtweet" />
 
-<meta property="og:description" content="function that set the aesthetics of the carbon image output" />
+<meta property="og:description" content="wrapper for post_tweet to send
+tweets with media created using carbonate." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -97,22 +98,20 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>carbon set functions</h1>
-    <small class="dont-index">Source: <a href='https://github.com/yonicd/carbonate/blob/master/R/set_get_functions.R'><code>R/set_get_functions.R</code></a></small>
-    <div class="hidden name"><code>set_carbon.Rd</code></div>
+    <h1>send tweets using carbonate outputs</h1>
+    <small class="dont-index">Source: <a href='https://github.com/yonicd/carbonate/blob/master/R/uri_functions.R'><code>R/uri_functions.R</code></a></small>
+    <div class="hidden name"><code>rtweet.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>function that set the aesthetics of the carbon image output</p>
+    <p>wrapper for <a href='http://www.rdocumentation.org/packages/rtweet/topics/post_tweet'>post_tweet</a> to send
+tweets with media created using carbonate.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>.set_template</span>(<span class='no'>self</span>, <span class='no'>private</span>, <span class='no'>template</span>)
-
-<span class='fu'>.set_window_control_theme</span>(<span class='no'>self</span>, <span class='no'>private</span>, <span class='no'>theme</span>)
-
-<span class='fu'>.set_font_family</span>(<span class='no'>self</span>, <span class='no'>private</span>, <span class='no'>family</span>)</pre>
+    <pre class="usage"><span class='fu'>.rtweet</span>(<span class='no'>self</span>, <span class='no'>private</span>, <span class='no'>media</span>, <span class='kw'>status</span> <span class='kw'>=</span> <span class='no'>self</span>$<span class='no'>tweet_status</span>,
+  <span class='kw'>media_format</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"png"</span>, <span class='st'>"gif"</span>), <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -126,32 +125,65 @@
       <td><p>carbon private object</p></td>
     </tr>
     <tr>
-      <th>template</th>
-      <td><p>character, name of template to set <a href='carbon_fields.html'>$template</a> to</p></td>
+      <th>media</th>
+      <td><p>magick-image object or path to image</p></td>
     </tr>
     <tr>
-      <th>theme</th>
-      <td><p>character, theme to set <a href='carbon_fields.html'>$theme</a> to</p></td>
+      <th>status</th>
+      <td><p>character, status to attach to post, Default: self$tweet_status</p></td>
     </tr>
     <tr>
-      <th>family</th>
-      <td><p>character, font family to set <a href='carbon_fields.html'>$font_family</a> to</p></td>
+      <th>media_format</th>
+      <td><p>character, type of media to tweet, Default: c('png','gif')</p></td>
+    </tr>
+    <tr>
+      <th>&#8230;</th>
+      <td><p>arguments to pass to <a href='http://www.rdocumentation.org/packages/rtweet/topics/post_tweet'>post_tweet</a></p></td>
     </tr>
     </table>
     
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>outcome from rtweet</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>If multiple images are passed they can be either converted to a gif by
+setting media_format to 'gif' or attached each one to the post.</p>
+    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='carbon.html'>carbon</a></p></div>
+    <div class='dont-index'><p><a href='http://www.rdocumentation.org/packages/magick/topics/editing'>image_write</a>
+<a href='http://www.rdocumentation.org/packages/rtweet/topics/post_tweet'>post_tweet</a></p></div>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>carbonate</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/carbonate/topics/carbon'>carbon</a></span>$<span class='fu'>new</span>()
+<span class='no'>x</span>$<span class='fu'><a href='carbonate.html'>carbonate</a></span>(<span class='kw'>code</span> <span class='kw'>=</span> <span class='fu'>readLines</span>(<span class='fu'>system.file</span>(<span class='st'>'DESCRIPTION'</span>,<span class='kw'>package</span><span class='kw'>=</span><span class='st'>'carbonate'</span>)))
+<span class='no'>x</span>$<span class='fu'><a href='carbonate.html'>carbonate</a></span>(<span class='kw'>code</span> <span class='kw'>=</span> <span class='st'>'x+2'</span>)
+
+<span class='co'># using default status value (x$tweet_status)</span>
+<span class='no'>x</span>$<span class='fu'>rtweet</span>(<span class='fu'>system.file</span>(<span class='st'>'figures/hex_black_small.png'</span>,<span class='kw'>package</span><span class='kw'>=</span><span class='st'>'carbonate'</span>))
+
+<span class='no'>x</span>$<span class='fu'>rtweet</span>(<span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>'these are two pngs'</span>,<span class='kw'>media</span> <span class='kw'>=</span> <span class='no'>x</span>$<span class='no'>carbons</span>,<span class='kw'>media_format</span><span class='kw'>=</span><span class='st'>'png'</span>)
+<span class='no'>x</span>$<span class='fu'>rtweet</span>(<span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>'this is a gif'</span>, <span class='kw'>media</span> <span class='kw'>=</span> <span class='no'>x</span>$<span class='no'>carbons</span>,<span class='kw'>media_format</span><span class='kw'>=</span><span class='st'>'gif'</span>)
+
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       
+      <li><a href="#value">Value</a></li>
+
+      <li><a href="#details">Details</a></li>
+
       <li><a href="#see-also">See also</a></li>
-          </ul>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>

@@ -9,13 +9,14 @@ always_allow_html: yes
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "tools/readme/README-"
+  fig.path = "tools/readme/README-",
+  eval = TRUE
 )
 
 library(magick)
 ```
 
-# carbonate
+# carbonate <img src="tools/temp/hex.gif" align="right" />
 
 "[carbon.js](https://carbon.now.sh/about) is the easiest way to create beautiful images of your source code."
 
@@ -100,6 +101,27 @@ x$get_font_families()
 x$get_windows_control_themes()
 ```
 
+### Personal Configuration
+
+Users can use a file called `carbon.yml` and place it in their home directory (`~`) to override the packages defaults in order to create a session peristent carbon template they like. The config file controls all the [public carbon object fields](#manipulate-carbon-object). The following is an example of such a configuration file. 
+
+These fields will set 
+
+  - The palette (rgba) `g` and `a` fields to 175 and 0.7 respectively
+  - The template will be set to `panda-syntax`
+  - The font to `Fira Code`
+  - The padding around the output will be made tighter than the system defaults 11px and 14px.
+
+```yml
+palette:
+- g: 175.0
+- a: 0.7
+template: panda-syntax
+font_family: Fira Code
+padding_vertical: 11
+padding_horizontal: 14
+```
+
 ### Open carbon code in browser
 
 ```{r,eval=FALSE}
@@ -120,8 +142,6 @@ This function depends on RSelenium
 x$carbonate(file = 'myfile.png')
 ```
 
-<!-- ![](tools/readme/README-unnamed-chunk-12-1.png) -->
-
 ```{r,echo=FALSE}
 Sys.sleep(2)
 ```
@@ -130,8 +150,6 @@ Sys.sleep(2)
 x$template <-'cobalt'
 x$carbonate(file = 'new_template.png')
 ```
-
-<!-- ![](tools/readme/README-unnamed-chunk-13-1.png) -->
 
 ```{r,echo=FALSE}
 Sys.sleep(2)
@@ -142,9 +160,17 @@ x$font_family <-'IBM Plex Mono'
 x$carbonate(file = 'new_font.png')
 ```
 
+### Closing Browsers
+
+Closing all instances of open browsers used by RSelenium.
+
+```r
+x$stop_all()
+```
+
 ### Sharing
 
-#### Tinyurl
+<details><summary>Tinyurl</summary>
 
 You can also put a tinyurl link as a watermark on the image produced that will open to the carbon.now.sh page that has the code in the image.
 
@@ -166,7 +192,11 @@ x$tiny(clip = TRUE)
 clipr::read_clip()
 ```
 
-#### Twitter
+</details>
+
+<details><summary>Twitter</summary>
+
+##### Direct
 
 You can also directly tweet the image. An automatic status is created with two options
 
@@ -175,7 +205,7 @@ You can also directly tweet the image. An automatic status is created with two o
     
   - When `add_tinyurl <- TRUE`
     - `r sprintf('%s\nCheck out this script at \U0001f517 %s', 'Created in R using the Carbonate \U0001f4e6', x$tiny())`
-
+    
   - Manual
     - Using `tweet_status` you can write your own status. 
 
@@ -185,23 +215,30 @@ x$tweet <- TRUE
 x$carbonate()
 ```
 
-<!-- ![](tools/readme/README-unnamed-chunk-14-1.png) -->
+##### Post process (Batch)
 
-### Closing Browsers
+If you have images stored in `x$carbons` you can post them also in a tweet using.
 
-Closing all instances of open browsers used by RSelenium.
+```{r,eval = FALSE}
+# for multiple png attachments
+x$rtweet(x$carbons,media_type = 'png') #using default status
 
-```r
-x$stop_all()
+# subsets of images
+x$rtweet(status='This is a gif',x$carbons[c(1,3)],media_type = 'png')
+
+# for gifs
+x$rtweet(status='these are images', x$carbons,media_type = 'gif')
 ```
+
+</details>
 
 ### Post image processing
 
 All carbon outputs are collected and saved in the list `x$carbons`
 
-#### Combining
+<details><summary>Combining</summary>
 
-```{r,eval = TRUE}
+```{r}
 x$carbons%>%
   magick::image_scale('300')%>%
   magick::image_append()
@@ -211,9 +248,13 @@ x$carbons%>%
   magick::image_append(stack = TRUE)
 ```
 
-#### GIFs
+</details>
+
+<details><summary>GIFs</summary>
 
 ```{r}
 x$carbons%>%
   magick::image_animate(fps = 1)
 ```
+
+</details>

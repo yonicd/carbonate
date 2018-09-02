@@ -38,6 +38,17 @@ length.
 
 ``` r
 x <- carbon$new(readLines('DESCRIPTION'))
+#> Set via '~/carbon.yml'
+#> palette:
+#> - 171.0
+#> - 175.0
+#> - 195.0
+#> - 0.7
+#> template: panda-syntax
+#> font_family: Fira Code
+#> padding_vertical: 11
+#> padding_horizontal: 14
+#> language: r
 ```
 
 The code is kept in the object and can be changed at any time.
@@ -46,7 +57,7 @@ The code is kept in the object and can be changed at any time.
 x$code
 #>  [1] "Package: carbonate"                                                                                 
 #>  [2] "Title: Interact with 'carbon.js' directly from R"                                                   
-#>  [3] "Version: 0.0.0.9500"                                                                                
+#>  [3] "Version: 0.0.0.9700"                                                                                
 #>  [4] "Authors@R: person(\"Jonathan\", \"Sidi\", email = \"yonicd@gmail.com\", role = c(\"aut\", \"cre\"))"
 #>  [5] "Description: Create 'carbon.js' image outputs directly from the 'R' console."                       
 #>  [6] "Depends: R (>= 3.2.0)"                                                                              
@@ -54,7 +65,7 @@ x$code
 #>  [8] "Encoding: UTF-8"                                                                                    
 #>  [9] "LazyData: true"                                                                                     
 #> [10] "RoxygenNote: 6.0.1"                                                                                 
-#> [11] "Imports: R6,clipr,magick,wdman,RSelenium,utils,httr,rtweet"                                         
+#> [11] "Imports: R6,clipr,magick,wdman,RSelenium,utils,httr,rtweet,yaml"                                    
 #> [12] "Remotes: ropensci/RSelenium"                                                                        
 #> [13] "URL: https://github.com/yonicd/carbonate"                                                           
 #> [14] "BugReports: https://github.com/yonicd/carbonate/issues"                                             
@@ -67,7 +78,7 @@ that is sent to the carbon url page, where it is processed.
 
 ``` r
 x$uri()
-#> [1] "https://carbon.now.sh/?bg=rgba(171%2C184%2C195%2C1)&t=seti&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9500%250AAuthors%2540R%253A%2520person(%2522Jonathan%2522%252C%2520%2522Sidi%2522%252C%2520email%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%2520role%2520%253D%2520c(%2522aut%2522%252C%2520%2522cre%2522))%250ADescription%253A%2520Create%2520%27carbon.js%27%2520image%2520outputs%2520directly%2520from%2520the%2520%27R%27%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6%252Cclipr%252Cmagick%252Cwdman%252CRSelenium%252Cutils%252Chttr%252Crtweet%250ARemotes%253A%2520ropensci%252FRSelenium%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250AHexURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fraw%252Fmaster%252Ftools%252Ftemp%252Fhex.gif"
+#> [1] "https://carbon.now.sh/?bg=rgba(171%2C175%2C195%2C0.7)&t=panda-syntax&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=14px&ln=false&fm=Fira%20Code&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9700%250AAuthors%2540R%253A%2520person(%2522Jonathan%2522%252C%2520%2522Sidi%2522%252C%2520email%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%2520role%2520%253D%2520c(%2522aut%2522%252C%2520%2522cre%2522))%250ADescription%253A%2520Create%2520%27carbon.js%27%2520image%2520outputs%2520directly%2520from%2520the%2520%27R%27%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6%252Cclipr%252Cmagick%252Cwdman%252CRSelenium%252Cutils%252Chttr%252Crtweet%252Cyaml%250ARemotes%253A%2520ropensci%252FRSelenium%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250AHexURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fraw%252Fmaster%252Ftools%252Ftemp%252Fhex.gif"
 ```
 
 ### Manipulate carbon object
@@ -104,7 +115,7 @@ x$get_templates()
 #>  [7] "duotone"               "hopscotch"            
 #>  [9] "material"              "monokai"              
 #> [11] "night-owl"             "oceanic-next"         
-#> [13] "one-dark"              "panda"                
+#> [13] "one-dark"              "panda-syntax"         
 #> [15] "paraiso"               "seti"                 
 #> [17] "solarized dark"        "solarized light"      
 #> [19] "tomorrow-night-bright" "lucario"              
@@ -123,6 +134,34 @@ x$get_font_families()
 ``` r
 x$get_windows_control_themes()
 #> [1] "none"  "sharp" "bw"
+```
+
+### Personal Configuration
+
+Users can use a file called `carbon.yml` and place it in their home
+directory (`~`) to override the packages defaults in order to create a
+session peristent carbon template they like. The config file controls
+all the [public carbon object fields](#manipulate-carbon-object). The
+following is an example of such a configuration file.
+
+These fields will set
+
+  - The palette (rgba) `g` and `a` fields to 175 and 0.7 respectively
+  - The template will be set to `panda-syntax`
+  - The font to `Fira Code`
+  - The padding around the output will be made tighter than the system
+    defaults 11px and 14px.
+
+<!-- end list -->
+
+``` yml
+palette:
+- g: 175.0
+- a: 0.7
+template: panda-syntax
+font_family: Fira Code
+padding_vertical: 11
+padding_horizontal: 14
 ```
 
 ### Open carbon code in browser
@@ -152,16 +191,12 @@ x$carbonate(file = 'myfile.png')
 
 ![](tools/readme/README-unnamed-chunk-13-1.png)<!-- -->
 
-<!-- ![](tools/readme/README-unnamed-chunk-12-1.png) -->
-
 ``` r
 x$template <-'cobalt'
 x$carbonate(file = 'new_template.png')
 ```
 
 ![](tools/readme/README-unnamed-chunk-15-1.png)<!-- -->
-
-<!-- ![](tools/readme/README-unnamed-chunk-13-1.png) -->
 
 ``` r
 x$font_family <-'IBM Plex Mono'
@@ -170,9 +205,19 @@ x$carbonate(file = 'new_font.png')
 
 ![](tools/readme/README-unnamed-chunk-17-1.png)<!-- -->
 
+### Closing Browsers
+
+Closing all instances of open browsers used by RSelenium.
+
+``` r
+x$stop_all()
+```
+
 ### Sharing
 
-#### Tinyurl
+<details>
+
+<summary>Tinyurl</summary>
 
 You can also put a tinyurl link as a watermark on the image produced
 that will open to the carbon.now.sh page that has the code in the image.
@@ -189,19 +234,25 @@ you can create it using
 
 ``` r
 x$tiny()
-#> [1] "http://tinyurl.com/yajo9j8z"
+#> [1] "http://tinyurl.com/y9oo5q3g"
 ```
 
 Or you can put the link directly on your clipboard
 
 ``` r
 x$tiny(clip = TRUE)
-#> [1] "http://tinyurl.com/yajo9j8z"
+#> [1] "http://tinyurl.com/y9oo5q3g"
 clipr::read_clip()
-#> [1] "http://tinyurl.com/yajo9j8z"
+#> [1] "http://tinyurl.com/y9oo5q3g"
 ```
 
-#### Twitter
+</details>
+
+<details>
+
+<summary>Twitter</summary>
+
+##### Direct
 
 You can also directly tweet the image. An automatic status is created
 with two options
@@ -210,7 +261,7 @@ with two options
       - Created in R using the Carbonate 📦
   - When `add_tinyurl <- TRUE`
       - Created in R using the Carbonate 📦 Check out this script at 🔗
-        <http://tinyurl.com/yajo9j8z>
+        <http://tinyurl.com/y9oo5q3g>
   - Manual
       - Using `tweet_status` you can write your own status.
 
@@ -219,23 +270,34 @@ with two options
 ``` r
 x <- carbonate::carbon$new()
 x$tweet <- TRUE
-x$carbonate(cod``
+x$carbonate()
+```
 
-<!-- ![](tools/readme/README-unnamed-chunk-14-1.png) -->
+##### Post process (Batch)
 
-### Closing Browsers
-
-Closing all instances of open browsers used by RSelenium.
+If you have images stored in `x$carbons` you can post them also in a
+tweet using.
 
 ``` r
-x$stop_all()
+# for multiple png attachments
+x$rtweet(x$carbons,media_type = 'png') #using default status
+
+# subsets of images
+x$rtweet(status='This is a gif',x$carbons[c(1,3)],media_type = 'png')
+
+# for gifs
+x$rtweet(status='these are images', x$carbons,media_type = 'gif')
 ```
+
+</details>
 
 ### Post image processing
 
 All carbon outputs are collected and saved in the list `x$carbons`
 
-#### Combining
+<details>
+
+<summary>Combining</summary>
 
 ``` r
 x$carbons%>%
@@ -243,7 +305,7 @@ x$carbons%>%
   magick::image_append()
 ```
 
-![](tools/readme/README-unnamed-chunk-22-1.png)<!-- -->
+![](tools/readme/README-unnamed-chunk-23-1.png)<!-- -->
 
 ``` r
 
@@ -252,13 +314,19 @@ x$carbons%>%
   magick::image_append(stack = TRUE)
 ```
 
-![](tools/readme/README-unnamed-chunk-22-2.png)<!-- -->
+![](tools/readme/README-unnamed-chunk-23-2.png)<!-- -->
 
-#### GIFs
+</details>
+
+<details>
+
+<summary>GIFs</summary>
 
 ``` r
 x$carbons%>%
   magick::image_animate(fps = 1)
 ```
 
-![](tools/readme/README-unnamed-chunk-23-1.gif)<!-- -->
+![](tools/readme/README-unnamed-chunk-24-1.gif)<!-- -->
+
+</details>
