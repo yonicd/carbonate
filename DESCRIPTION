@@ -14,3 +14,4 @@ URL: https://github.com/yonicd/carbonate
 BugReports: https://github.com/yonicd/carbonate/issues
 Roxygen: list(markdown = TRUE)
 HexURL: https://github.com/yonicd/carbonate/raw/master/tools/temp/hex.gif
+Suggests: testthat

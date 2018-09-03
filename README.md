@@ -1,6 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+[![Travis-CI Build Status](https://travis-ci.org/yonicd/carbonate.svg?branch=master)](https://travis-ci.org/yonicd/carbonate)
+[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_02-brightgreen.svg)](https://github.com/yonicd/carbonate/tree/tests/tests/README.md)
+
 # carbonate <img src="tools/temp/hex.gif" align="right" />
 
 “[carbon.js](https://carbon.now.sh/about) is the easiest way to create
