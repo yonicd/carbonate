@@ -26,6 +26,8 @@
 #' @param private carbon private object
 #' @param code character, script to embbed into the uri
 #' @examples 
+#' if(interactive()){
+#' 
 #' x <- carbon$new('x <- 1')
 #' 
 #' # populate from self$code
@@ -33,7 +35,8 @@
 #' 
 #' # enter manually
 #' x$uri(code = 'x <- y + 3')
-
+#' 
+#' }
 #' @rdname uri 
 #' @aliases carbon-uri
 #' @seealso 

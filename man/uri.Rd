@@ -18,6 +18,8 @@
 Function that is called in a carbon object to construct valid uri to send to browser
 }
 \examples{
+if(interactive()){
+
 x <- carbon$new('x <- 1')
 
 # populate from self$code
@@ -25,6 +27,8 @@ x$uri()
 
 # enter manually
 x$uri(code = 'x <- y + 3')
+
+}
 }
 \seealso{
 \link[carbonate:carbon]{carbon}

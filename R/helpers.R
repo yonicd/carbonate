@@ -4,10 +4,6 @@
 # @param private carbon private object
 # @param x named character vector
 # @return character
-# @examples 
-# x <- carbon$new()
-# 
-# x$rgba(x = c(r=120,g=175,b=195,a=0.4))
 .rgba <- function(self,private,x){
   sprintf('rgba(%s,%s,%s,%s)',x[['r']],x[['g']],x[['b']],x[['a']])
 }
@@ -19,10 +15,6 @@
 # @param x numeric, value
 # @param unit character, the unit
 # @return character
-# @examples 
-# x <- carbon$new()
-# 
-# x$add_unit(3,'px')
 .add_unit <- function(self,private,x,unit){
   sprintf('%s%s',x,unit)
 }
@@ -34,10 +26,6 @@
 # @param private carbon private object
 # @param name name of carbon R6 field
 # @return character
-# @examples 
-# x <- carbon$new()
-# 
-# x$map_name('palette')
 .map_name <- function(self,private,name){
   private$var_names[[name]]
 }
@@ -47,14 +35,6 @@
 # @param self carbon self object
 # @param private carbon private object
 # @param value character, character to combine string to
-# @return OUTPUT_DESCRIPTION
-# @details DETAILS
-# @examples 
-# \dontrun{
-# if(interactive()){
-#  #EXAMPLE1
-#  }
-# }
 .add_percent <- function(self,private,value){
   sprintf('%s%%25',value)
 }
@@ -149,6 +129,7 @@ asyncr <- function(remDr,using,value,action = NULL,maxiter = 20){
 
 #' @importFrom yaml read_yaml as.yaml
 .parse_yml <- function(self, private, yml = '~/carbon.yml', silent = FALSE){
+  if(!is.null(yml)){
   if(file.exists(yml)){
     y <- yaml::read_yaml(yml)
     
@@ -177,7 +158,7 @@ asyncr <- function(remDr,using,value,action = NULL,maxiter = 20){
       }
       
     }
-  }
+  }}
 }
 
 check_palette_yml <- function(x,self=self){
