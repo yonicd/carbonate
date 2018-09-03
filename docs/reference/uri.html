@@ -61,7 +61,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">carbonate</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.0.9700</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.0.9800</span>
       </span>
     </div>
 
@@ -133,21 +133,17 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='no'>carbon</span>$<span class='fu'>new</span>(<span class='st'>'x &lt;- 1'</span>)</div><div class='output co'>#&gt; Set via '~/carbon.yml'
-#&gt; palette:
-#&gt; - 171.0
-#&gt; - 175.0
-#&gt; - 195.0
-#&gt; - 0.7
-#&gt; template: panda-syntax
-#&gt; font_family: Fira Code
-#&gt; padding_vertical: 11
-#&gt; padding_horizontal: 14
-#&gt; language: r</div><div class='input'>
+    <pre class="examples"><div class='input'><span class='kw'>if</span>(<span class='fu'>interactive</span>()){
+
+<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='no'>carbon</span>$<span class='fu'>new</span>(<span class='st'>'x &lt;- 1'</span>)
+
 <span class='co'># populate from self$code</span>
-<span class='no'>x</span>$<span class='fu'>uri</span>()</div><div class='output co'>#&gt; [1] "https://carbon.now.sh/?bg=rgba(171%2C175%2C195%2C0.7)&amp;t=panda-syntax&amp;wt=none&amp;l=r&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=11px&amp;ph=14px&amp;ln=false&amp;fm=Fira%20Code&amp;fs=14px&amp;lh=133%25&amp;si=false&amp;es=1x&amp;wm=false&amp;ts=false&amp;code=x%2520%253C-%25201"</div><div class='input'>
+<span class='no'>x</span>$<span class='fu'>uri</span>()
+
 <span class='co'># enter manually</span>
-<span class='no'>x</span>$<span class='fu'>uri</span>(<span class='kw'>code</span> <span class='kw'>=</span> <span class='st'>'x &lt;- y + 3'</span>)</div><div class='output co'>#&gt; [1] "https://carbon.now.sh/?bg=rgba(171%2C175%2C195%2C0.7)&amp;t=panda-syntax&amp;wt=none&amp;l=r&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=11px&amp;ph=14px&amp;ln=false&amp;fm=Fira%20Code&amp;fs=14px&amp;lh=133%25&amp;si=false&amp;es=1x&amp;wm=false&amp;ts=false&amp;code=x%2520%253C-%2520y%2520+%25203"</div></pre>
+<span class='no'>x</span>$<span class='fu'>uri</span>(<span class='kw'>code</span> <span class='kw'>=</span> <span class='st'>'x &lt;- y + 3'</span>)
+
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

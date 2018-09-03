@@ -1,7 +1,11 @@
 Package: carbonate
 Title: Interact with 'carbon.js' directly from R
 Version: 0.0.0.9800
-Authors@R: person("Jonathan", "Sidi", email = "yonicd@gmail.com", role = c("aut", "cre"))
+Authors@R: person(given  = "Jonathan",
+                 family  = "Sidi",
+                 email   = "yonicd@gmail.com",
+                 role    = c("aut", "cre"),
+                 comment = c(ORCID = "0000-0002-4222-1819"))
 Description: Create 'carbon.js' image outputs directly from the 'R' console.
 Depends: R (>= 3.2.0)
 License: MIT + file LICENSE
@@ -9,9 +13,9 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
 Imports: R6,clipr,magick,wdman,RSelenium,utils,httr,rtweet,yaml
+Suggests: testthat,covr
 Remotes: ropensci/RSelenium
 URL: https://github.com/yonicd/carbonate
 BugReports: https://github.com/yonicd/carbonate/issues
 Roxygen: list(markdown = TRUE)
 HexURL: https://github.com/yonicd/carbonate/raw/master/tools/temp/hex.gif
-Suggests: testthat
