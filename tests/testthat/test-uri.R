@@ -45,6 +45,7 @@ testthat::describe('tiny',{
   })
   
   it('clipboard',{
+    testthat::skip_on_travis()
     cl <- x$tiny(clip = TRUE)
     testthat::expect_equal(cl,clipr::read_clip())
   })
