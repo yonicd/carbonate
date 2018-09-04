@@ -154,6 +154,7 @@ carbon <- R6::R6Class(classname = 'Carbon',
                         tweet                        = FALSE,
                         tweet_status                 = 'Created in R using the Carbonate \U0001f4e6', 
                         add_timestamp                = FALSE,
+                        maxiter                      = 20,
                         carbons = list(),
                         chrome_args                  = c('--disable-gpu', '--window-size=1280,800'),
                         chrome_pref                   = list(

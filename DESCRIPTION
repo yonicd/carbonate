@@ -1,6 +1,6 @@
 Package: carbonate
 Title: Interact with 'carbon.js' directly from R
-Version: 0.0.0.9800
+Version: 0.0.0.9900
 Authors@R: person(given  = "Jonathan",
                  family  = "Sidi",
                  email   = "yonicd@gmail.com",
@@ -12,10 +12,11 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
-Imports: R6,clipr,magick,wdman,RSelenium,utils,httr,rtweet,yaml
-Suggests: testthat,covr
+Imports: R6, clipr, magick, wdman, RSelenium, utils, httr, rtweet, yaml
+Suggests: testthat, covr, knitr, rmarkdown
 Remotes: ropensci/RSelenium
 URL: https://github.com/yonicd/carbonate
 BugReports: https://github.com/yonicd/carbonate/issues
 Roxygen: list(markdown = TRUE)
 HexURL: https://github.com/yonicd/carbonate/raw/master/tools/temp/hex.gif
+VignetteBuilder: knitr
