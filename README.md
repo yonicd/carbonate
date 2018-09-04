@@ -6,7 +6,7 @@ Status](https://travis-ci.org/yonicd/carbonate.svg?branch=master)](https://travi
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_02-brightgreen.svg)](https://github.com/yonicd/carbonate/blob/master/tests/README.md)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_03-brightgreen.svg)](https://github.com/yonicd/carbonate/tree/master/tests/README.md)
 
 # carbonate <img src="tools/temp/hex.gif" align="right" />
 
@@ -45,8 +45,6 @@ length.
 
 ``` r
 x <- carbon$new(readLines('DESCRIPTION'))
-#> Warning in readLines("DESCRIPTION"): incomplete final line found on
-#> 'DESCRIPTION'
 #> Set via '~/carbon.yml'
 #> palette:
 #> - 171.0
@@ -66,7 +64,7 @@ The code is kept in the object and can be changed at any time.
 x$code
 #>  [1] "Package: carbonate"                                                          
 #>  [2] "Title: Interact with 'carbon.js' directly from R"                            
-#>  [3] "Version: 0.0.0.9800"                                                         
+#>  [3] "Version: 0.0.0.9900"                                                         
 #>  [4] "Authors@R: person(given  = \"Jonathan\","                                    
 #>  [5] "                 family  = \"Sidi\","                                        
 #>  [6] "                 email   = \"yonicd@gmail.com\","                            
@@ -78,13 +76,14 @@ x$code
 #> [12] "Encoding: UTF-8"                                                             
 #> [13] "LazyData: true"                                                              
 #> [14] "RoxygenNote: 6.0.1"                                                          
-#> [15] "Imports: R6,clipr,magick,wdman,RSelenium,utils,httr,rtweet,yaml"             
-#> [16] "Suggests: testthat,covr"                                                     
+#> [15] "Imports: R6, clipr, magick, wdman, RSelenium, utils, httr, rtweet, yaml"     
+#> [16] "Suggests: testthat, covr, knitr, rmarkdown"                                  
 #> [17] "Remotes: ropensci/RSelenium"                                                 
 #> [18] "URL: https://github.com/yonicd/carbonate"                                    
 #> [19] "BugReports: https://github.com/yonicd/carbonate/issues"                      
 #> [20] "Roxygen: list(markdown = TRUE)"                                              
-#> [21] "HexURL: https://github.com/yonicd/carbonate/raw/master/tools/temp/hex.gif"
+#> [21] "HexURL: https://github.com/yonicd/carbonate/raw/master/tools/temp/hex.gif"   
+#> [22] "VignetteBuilder: knitr"
 ```
 
 The main job of the R6 object is to convert all the options into a uri
@@ -92,7 +91,7 @@ that is sent to the carbon url page, where it is processed.
 
 ``` r
 x$uri()
-#> [1] "https://carbon.now.sh/?bg=rgba(171%2C175%2C195%2C0.7)&t=panda-syntax&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=14px&ln=false&fm=Fira%20Code&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9800%250AAuthors%2540R%253A%2520person(given%2520%2520%253D%2520%2522Jonathan%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520family%2520%2520%253D%2520%2522Sidi%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520email%2520%2520%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520role%2520%2520%2520%2520%253D%2520c(%2522aut%2522%252C%2520%2522cre%2522)%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520comment%2520%253D%2520c(ORCID%2520%253D%2520%25220000-0002-4222-1819%2522))%250ADescription%253A%2520Create%2520%27carbon.js%27%2520image%2520outputs%2520directly%2520from%2520the%2520%27R%27%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6%252Cclipr%252Cmagick%252Cwdman%252CRSelenium%252Cutils%252Chttr%252Crtweet%252Cyaml%250ASuggests%253A%2520testthat%252Ccovr%250ARemotes%253A%2520ropensci%252FRSelenium%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250AHexURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fraw%252Fmaster%252Ftools%252Ftemp%252Fhex.gif"
+#> [1] "https://carbon.now.sh/?bg=rgba(171%2C175%2C195%2C0.7)&t=panda-syntax&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=14px&ln=false&fm=Fira%20Code&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%2520directly%2520from%2520R%250AVersion%253A%25200.0.0.9900%250AAuthors%2540R%253A%2520person(given%2520%2520%253D%2520%2522Jonathan%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520family%2520%2520%253D%2520%2522Sidi%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520email%2520%2520%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520role%2520%2520%2520%2520%253D%2520c(%2522aut%2522%252C%2520%2522cre%2522)%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520comment%2520%253D%2520c(ORCID%2520%253D%2520%25220000-0002-4222-1819%2522))%250ADescription%253A%2520Create%2520%27carbon.js%27%2520image%2520outputs%2520directly%2520from%2520the%2520%27R%27%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520+%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.0.1%250AImports%253A%2520R6%252C%2520clipr%252C%2520magick%252C%2520wdman%252C%2520RSelenium%252C%2520utils%252C%2520httr%252C%2520rtweet%252C%2520yaml%250ASuggests%253A%2520testthat%252C%2520covr%252C%2520knitr%252C%2520rmarkdown%250ARemotes%253A%2520ropensci%252FRSelenium%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250AHexURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fraw%252Fmaster%252Ftools%252Ftemp%252Fhex.gif%250AVignetteBuilder%253A%2520knitr"
 ```
 
 ### Manipulate carbon object
@@ -248,16 +247,16 @@ you can create it using
 
 ``` r
 x$tiny()
-#> [1] "http://tinyurl.com/y7ogn56q"
+#> [1] "http://tinyurl.com/yd27cqc3"
 ```
 
 Or you can put the link directly on your clipboard
 
 ``` r
 x$tiny(clip = TRUE)
-#> [1] "http://tinyurl.com/y7ogn56q"
+#> [1] "http://tinyurl.com/yd27cqc3"
 clipr::read_clip()
-#> [1] "http://tinyurl.com/y7ogn56q"
+#> [1] "http://tinyurl.com/yd27cqc3"
 ```
 
 </details>
@@ -275,7 +274,7 @@ with two options
       - Created in R using the Carbonate 📦
   - When `add_tinyurl <- TRUE`
       - Created in R using the Carbonate 📦 Check out this script at 🔗
-        <http://tinyurl.com/y7ogn56q>
+        <http://tinyurl.com/yd27cqc3>
   - Manual
       - Using `tweet_status` you can write your own status.
 

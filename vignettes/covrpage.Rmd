@@ -1,7 +1,22 @@
-Tests and Coverage
-================
-04 September, 2018 07:15:28
+---
+title: "Tests and Coverage"
+date: "`r format(Sys.time(), '%d %B, %Y %H:%M:%S')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+  
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
 
+<!--- Placeholder for tests/README.md Do Not Edit--->
 This output is created by
 [covrpage](https://github.com/yonicd/covrpage).
 

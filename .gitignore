@@ -38,3 +38,4 @@ rsconnect/
 
 *.DS_Store
 misc/hex
+inst/doc

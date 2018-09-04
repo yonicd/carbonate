@@ -43,13 +43,17 @@
   
   remDr$navigate(this_uri)
   
+  
+  
   asyncr(remDr,
          using = 'xpath',
-         value = '//*[@id="toolbar"]/div[5]/div')
-
+         value = '//*[@id="__next"]/main/div[2]/div/div[1]/div[5]/div',
+         maxiter = self$maxiter)
+  
   asyncr(remDr,
          using = 'xpath',
-         value = sprintf('//*[@id="downshift-2-item-%s"]',as.numeric(device=='svg')))
+         value = sprintf('//*[@id="downshift-2-item-%s"]',as.numeric(device=='svg')),
+         maxiter = self$maxiter)
 
   if(file.exists(file.path(path,sprintf('carbon.%s',device))))
     unlink(file.path(path,sprintf('carbon.%s',device)),force = TRUE)
