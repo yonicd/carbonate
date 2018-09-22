@@ -80,7 +80,7 @@
   if (!repeated && grepl("%[[:xdigit:]]{2}", URL, useBytes = TRUE)) 
     return(URL)
   OK <- paste0("[^", if (!reserved) 
-    "][!()*+;?", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz0123456789._~-", 
+    "][!();?", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz0123456789._~-", 
     "]")
   x <- strsplit(URL, "")[[1L]]
   z <- grep(OK, x)

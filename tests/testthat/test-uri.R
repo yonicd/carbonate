@@ -33,7 +33,7 @@ testthat::describe('encode',{
   })
   
   it('no encode character',{
-    testthat::expect_equal("!()*+;?._~-",x$encode(URL = "!()*+;?._~-"))
+    testthat::expect_equal("!();?._~-",x$encode(URL = "!();?._~-"))
   })
   
 })
