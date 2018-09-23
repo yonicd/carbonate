@@ -19,7 +19,7 @@ opens the uri address in \link[carbonate:carbon-uri]{$uri} in the browser window
 x <- carbon$new('x <- 1')
 if(interactive())
  x$browse()
- 
+
 }
 \seealso{
 \link[carbonate:carbon]{carbon}

@@ -19,7 +19,7 @@ library(magick)
 [![Coverage Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master)
 [![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_22-brightgreen.svg)](https://goo.gl/gNRcCb)
 
-# carbonate
+# carbonate <img src="tools/temp/hex.gif" align="right" />
 
 "[carbon.js](https://carbon.now.sh/about) is the easiest way to create beautiful images of your source code."
 
@@ -176,6 +176,10 @@ x$stop_all()
 <details><summary>Tinyurl</summary>
 
 You can also put a tinyurl link as a watermark on the image produced that will open to the carbon.now.sh page that has the code in the image.
+
+```{r,echo=FALSE}
+Sys.sleep(2)
+```
 
 ```{r}
 x$add_tinyurl <- TRUE

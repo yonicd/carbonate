@@ -1,27 +1,32 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Travis-CI Build Status](https://travis-ci.org/yonicd/carbonate.svg?branch=master)](https://travis-ci.org/yonicd/carbonate) [![Coverage Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master) [![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_22-brightgreen.svg)](https://goo.gl/gNRcCb)
 
-carbonate <img src="tools/temp/hex.gif" align="right" />
-========================================================
+[![Travis-CI Build
+Status](https://travis-ci.org/yonicd/carbonate.svg?branch=master)](https://travis-ci.org/yonicd/carbonate)
+[![Coverage
+Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master)
+[![Covrpage
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_22-brightgreen.svg)](https://goo.gl/gNRcCb)
 
-"[carbon.js](https://carbon.now.sh/about) is the easiest way to create beautiful images of your source code."
+# carbonate <img src="tools/temp/hex.gif" align="right" />
 
-This package uses an `R6` api to interact with carbon.js and create directly from the console carbon images.
+“[carbon.js](https://carbon.now.sh/about) is the easiest way to create
+beautiful images of your source code.”
+
+This package uses an `R6` api to interact with carbon.js and create
+directly from the console carbon images.
 
 Like the image below:
 
 ![](tools/temp/myfile.png)
 
-Installation
-------------
+## Installation
 
 ``` r
 remotes::install_github('yonicd/carbonate')
 ```
 
-Usage
------
+## Usage
 
 ### Initialize new carbon object
 
@@ -35,7 +40,8 @@ The default code in the carbon object is taken from the clipboard.
 x <- carbon$new()
 ```
 
-But can also be defined inline. Code can be a character object of any length.
+But can also be defined inline. Code can be a character object of any
+length.
 
 ``` r
 x <- carbon$new(readLines('DESCRIPTION'))
@@ -79,7 +85,8 @@ x$code
 #> [21] "VignetteBuilder: knitr"
 ```
 
-The main job of the R6 object is to convert all the options into a uri that is sent to the carbon url page, where it is processed.
+The main job of the R6 object is to convert all the options into a uri
+that is sent to the carbon url page, where it is processed.
 
 ``` r
 x$uri()
@@ -88,134 +95,29 @@ x$uri()
 
 ### Manipulate carbon object
 
-Aesthetics of the carbon object that can be manipulated
+Aesthetics of the carbon object that can be
+manipulated
 
-<table style="width:75%;">
-<colgroup>
-<col width="12%" />
-<col width="34%" />
-<col width="18%" />
-<col width="9%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">Carbon Variable</th>
-<th align="left">Carbonate Variable</th>
-<th align="left">Description</th>
-<th align="center">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">l</td>
-<td align="left">language</td>
-<td align="left">language</td>
-<td align="center">r</td>
-</tr>
-<tr class="even">
-<td align="center">bg</td>
-<td align="left">palette</td>
-<td align="left">layout pallete (vector with c(r,g,b,a)</td>
-<td align="center">c(r=171,g=184,b=195,a=1)</td>
-</tr>
-<tr class="odd">
-<td align="center">t</td>
-<td align="left">template</td>
-<td align="left">layout template (listed in get_templates())</td>
-<td align="center">'seti'</td>
-</tr>
-<tr class="even">
-<td align="center">wc</td>
-<td align="left">add_window_control</td>
-<td align="left">add/remove window controls (circles on top left corner)</td>
-<td align="center">TRUE</td>
-</tr>
-<tr class="odd">
-<td align="center">wt</td>
-<td align="left">window_control_theme</td>
-<td align="left">change window control themes (listed in get_windows_control_themes())</td>
-<td align="center">'none'</td>
-</tr>
-<tr class="even">
-<td align="center">ds</td>
-<td align="left">add_drop_shadow</td>
-<td align="left">add/remove dropshadow</td>
-<td align="center">TRUE</td>
-</tr>
-<tr class="odd">
-<td align="center">dsyoff</td>
-<td align="left">drop_shadow_offset_y</td>
-<td align="left">shadow vertical offset (px)</td>
-<td align="center">20</td>
-</tr>
-<tr class="even">
-<td align="center">dsblur</td>
-<td align="left">drop_shadow_blur_radius</td>
-<td align="left">shadow blur radius (px)</td>
-<td align="center">68</td>
-</tr>
-<tr class="odd">
-<td align="center">wa</td>
-<td align="left">auto_adjust_width</td>
-<td align="left">auto-audjust output width</td>
-<td align="center">TRUE</td>
-</tr>
-<tr class="even">
-<td align="center">pv</td>
-<td align="left">padding_vertical</td>
-<td align="left">vertical padding (px)</td>
-<td align="center">48</td>
-</tr>
-<tr class="odd">
-<td align="center">ph</td>
-<td align="left">padding_horizontal</td>
-<td align="left">horizontal padding (px)</td>
-<td align="center">32</td>
-</tr>
-<tr class="even">
-<td align="center">ln</td>
-<td align="left">add_line_number</td>
-<td align="left">add/remove line numbers</td>
-<td align="center">FALSE</td>
-</tr>
-<tr class="odd">
-<td align="center">fm</td>
-<td align="left">font_family</td>
-<td align="left">layout font family (listed in get_font_families())</td>
-<td align="center">'Hack'</td>
-</tr>
-<tr class="even">
-<td align="center">fs</td>
-<td align="left">font_size</td>
-<td align="left">font size (px)</td>
-<td align="center">14</td>
-</tr>
-<tr class="odd">
-<td align="center">lh</td>
-<td align="left">line_height_percent</td>
-<td align="left">relative space between lines (percent)</td>
-<td align="center">133</td>
-</tr>
-<tr class="even">
-<td align="center">si</td>
-<td align="left">square_image</td>
-<td align="left">output image is square</td>
-<td align="center">FALSE</td>
-</tr>
-<tr class="odd">
-<td align="center">es</td>
-<td align="left">relative_export_size</td>
-<td align="left">image size in export relative to what is in the preview (1,2 or 4)</td>
-<td align="center">1</td>
-</tr>
-<tr class="even">
-<td align="center">wm</td>
-<td align="left">add_watermark</td>
-<td align="left">add official carbon.js watermark</td>
-<td align="center">FALSE</td>
-</tr>
-</tbody>
-</table>
+| Carbon Variable | Carbonate Variable         | Description                                                              |         Default          |
+| :-------------: | :------------------------- | :----------------------------------------------------------------------- | :----------------------: |
+|        l        | language                   | language                                                                 |            r             |
+|       bg        | palette                    | layout pallete (vector with c(r,g,b,a)                                   | c(r=171,g=184,b=195,a=1) |
+|        t        | template                   | layout template (listed in get\_templates())                             |          ‘seti’          |
+|       wc        | add\_window\_control       | add/remove window controls (circles on top left corner)                  |           TRUE           |
+|       wt        | window\_control\_theme     | change window control themes (listed in get\_windows\_control\_themes()) |          ‘none’          |
+|       ds        | add\_drop\_shadow          | add/remove dropshadow                                                    |           TRUE           |
+|     dsyoff      | drop\_shadow\_offset\_y    | shadow vertical offset (px)                                              |            20            |
+|     dsblur      | drop\_shadow\_blur\_radius | shadow blur radius (px)                                                  |            68            |
+|       wa        | auto\_adjust\_width        | auto-audjust output width                                                |           TRUE           |
+|       pv        | padding\_vertical          | vertical padding (px)                                                    |            48            |
+|       ph        | padding\_horizontal        | horizontal padding (px)                                                  |            32            |
+|       ln        | add\_line\_number          | add/remove line numbers                                                  |          FALSE           |
+|       fm        | font\_family               | layout font family (listed in get\_font\_families())                     |          ‘Hack’          |
+|       fs        | font\_size                 | font size (px)                                                           |            14            |
+|       lh        | line\_height\_percent      | relative space between lines (percent)                                   |           133            |
+|       si        | square\_image              | output image is square                                                   |          FALSE           |
+|       es        | relative\_export\_size     | image size in export relative to what is in the preview (1,2 or 4)       |            1             |
+|       wm        | add\_watermark             | add official carbon.js watermark                                         |          FALSE           |
 
 ``` r
 x$get_templates()
@@ -248,14 +150,21 @@ x$get_windows_control_themes()
 
 ### Personal Configuration
 
-Users can use a file called `carbon.yml` and place it in their home directory (`~`) to override the packages defaults in order to create a session peristent carbon template they like. The config file controls all the [public carbon object fields](#manipulate-carbon-object). The following is an example of such a configuration file.
+Users can use a file called `carbon.yml` and place it in their home
+directory (`~`) to override the packages defaults in order to create a
+session peristent carbon template they like. The config file controls
+all the [public carbon object fields](#manipulate-carbon-object). The
+following is an example of such a configuration file.
 
 These fields will set
 
--   The palette (rgba) `g` and `a` fields to 175 and 0.7 respectively
--   The template will be set to `panda-syntax`
--   The font to `Fira Code`
--   The padding around the output will be made tighter than the system defaults 11px and 14px.
+  - The palette (rgba) `g` and `a` fields to 175 and 0.7 respectively
+  - The template will be set to `panda-syntax`
+  - The font to `Fira Code`
+  - The padding around the output will be made tighter than the system
+    defaults 11px and 14px.
+
+<!-- end list -->
 
 ``` yml
 palette:
@@ -292,21 +201,21 @@ x$carbonate(file = 'myfile.png')
 #> BEGIN: POSTDOWNLOAD
 ```
 
-![](tools/readme/README-unnamed-chunk-13-1.png)
+![](tools/readme/README-unnamed-chunk-13-1.png)<!-- -->
 
 ``` r
 x$template <-'cobalt'
 x$carbonate(file = 'new_template.png')
 ```
 
-![](tools/readme/README-unnamed-chunk-15-1.png)
+![](tools/readme/README-unnamed-chunk-15-1.png)<!-- -->
 
 ``` r
 x$font_family <-'IBM Plex Mono'
 x$carbonate(file = 'new_font.png')
 ```
 
-![](tools/readme/README-unnamed-chunk-17-1.png)
+![](tools/readme/README-unnamed-chunk-17-1.png)<!-- -->
 
 ### Closing Browsers
 
@@ -318,18 +227,22 @@ x$stop_all()
 
 ### Sharing
 
-<details><summary>Tinyurl</summary>
+<details>
 
-You can also put a tinyurl link as a watermark on the image produced that will open to the carbon.now.sh page that has the code in the image.
+<summary>Tinyurl</summary>
+
+You can also put a tinyurl link as a watermark on the image produced
+that will open to the carbon.now.sh page that has the code in the image.
 
 ``` r
 x$add_tinyurl <- TRUE
 x$carbonate(file = 'tiny_url.png')
 ```
 
-![](tools/readme/README-unnamed-chunk-18-1.png)
+![](tools/readme/README-unnamed-chunk-19-1.png)<!-- -->
 
-If you just want the tinyurl link without the image to use in a tweet you can create it using
+If you just want the tinyurl link without the image to use in a tweet
+you can create it using
 
 ``` r
 x$tiny()
@@ -347,18 +260,24 @@ clipr::read_clip()
 
 </details>
 
-<details><summary>Twitter</summary>
+<details>
+
+<summary>Twitter</summary>
 
 ##### Direct
 
-You can also directly tweet the image. An automatic status is created with two options
+You can also directly tweet the image. An automatic status is created
+with two options
 
--   Default
-    -   Created in R using the Carbonate 📦
--   When `add_tinyurl <- TRUE`
-    -   Created in R using the Carbonate 📦 Check out this script at 🔗 <http://tinyurl.com/ybrqzdft>
--   Manual
-    -   Using `tweet_status` you can write your own status.
+  - Default
+      - Created in R using the Carbonate 📦
+  - When `add_tinyurl <- TRUE`
+      - Created in R using the Carbonate 📦 Check out this script at 🔗
+        <http://tinyurl.com/ybrqzdft>
+  - Manual
+      - Using `tweet_status` you can write your own status.
+
+<!-- end list -->
 
 ``` r
 x <- carbonate::carbon$new()
@@ -368,7 +287,8 @@ x$carbonate()
 
 ##### Post process (Batch)
 
-If you have images stored in `x$carbons` you can post them also in a tweet using.
+If you have images stored in `x$carbons` you can post them also in a
+tweet using.
 
 ``` r
 # for multiple png attachments
@@ -387,7 +307,9 @@ x$rtweet(status='This is a gif', x$carbons,media_type = 'gif')
 
 All carbon outputs are collected and saved in the list `x$carbons`
 
-<details><summary>Combining</summary>
+<details>
+
+<summary>Combining</summary>
 
 ``` r
 x$carbons%>%
@@ -395,7 +317,7 @@ x$carbons%>%
   magick::image_append()
 ```
 
-![](tools/readme/README-unnamed-chunk-23-1.png)
+![](tools/readme/README-unnamed-chunk-24-1.png)<!-- -->
 
 ``` r
 
@@ -404,17 +326,19 @@ x$carbons%>%
   magick::image_append(stack = TRUE)
 ```
 
-![](tools/readme/README-unnamed-chunk-23-2.png)
+![](tools/readme/README-unnamed-chunk-24-2.png)<!-- -->
 
 </details>
 
-<details><summary>GIFs</summary>
+<details>
+
+<summary>GIFs</summary>
 
 ``` r
 x$carbons%>%
   magick::image_animate(fps = 1)
 ```
 
-![](tools/readme/README-unnamed-chunk-24-1.gif)
+![](tools/readme/README-unnamed-chunk-25-1.gif)<!-- -->
 
 </details>

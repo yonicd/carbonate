@@ -22,25 +22,25 @@
 #' @param relative_export_size numeric, image size in export relative to what is in
 #'  the preview (1,2 or 4), Default: 1
 #' @param add_watermark boolean, add official carbon.js watermark, Default: FALSE
-#' @param add_tinyurl boolean, add tinyurl link to image directing to the carbon page that 
+#' @param add_tinyurl boolean, add tinyurl link to image directing to the carbon page that
 #' created the image, Default: FALSE
-#' @param tinyurl_location character, string with [gravity][magick::options] value to place the annotate tinyurl 
+#' @param tinyurl_location character, string with [gravity][magick::options] value to place the annotate tinyurl
 #' address on image, Default: 'southeast'
 #' @param tweet boolean, tweet out the image using [post_tweet][rtweet::post_tweet]
-#' @param tweet_status character, status to add to the tweet. If add_tinyurl is TRUE then 
-#' a link to the url will be appended to the status automatically, 
+#' @param tweet_status character, status to add to the tweet. If add_tinyurl is TRUE then
+#' a link to the url will be appended to the status automatically,
 #' Default: 'Created in R using the Carbonate (Package Icon)'
 #' @param add_timestamp boolean, add timestamp to output filename, Default: FALSE
 #' @param carbons list, storage of rendered carbon images, Default: NULL
 #' @param chrome_args character, arguments passed to chrome browser, Default:
 #'   c('--disable-gpu', '--window-size=1280,800')
-#' @param chrome_pref list, preferences passed to chrome browser, Default: 
+#' @param chrome_pref list, preferences passed to chrome browser, Default:
 #'   list("profile.default_content_settings.popups" = 0L,"download.prompt_for_download" = FALSE,"download.default_directory" = tempdir())
 #' @param rD RSelenium Driver object
 #' @param cDrv Chrome Driver object from wdman
 #' @name carbon_fields
 #' @rdname carbon_fields
 #' @aliases carbon-fields
-#' @seealso 
+#' @seealso
 #'  [carbon][carbonate::carbon]
 NULL
