@@ -210,8 +210,8 @@ carbon <- R6::R6Class(
     stop_all = function() {
       .stop_all(self, private)
     },
-    carbonate = function(file = "rcarbon.png", code = self$code, rD = self$rD) {
-      .carbonate(self, private, file, code, rD)
+    carbonate = function(file = "rcarbon.png", output_dir = NULL, code = self$code, rD = self$rD) {
+      .carbonate(self, private, file, output_dir, code, rD)
     },
     encode = function(URL, reserved = FALSE, repeated = FALSE) {
       .encode(self, private, URL, reserved, repeated)

@@ -163,6 +163,12 @@ x$font_family <-'IBM Plex Mono'
 x$carbonate(file = 'new_font.png')
 ```
 
+Setting download directory directly in `carbonate` call
+
+```{r,eval = FALSE}
+x$carbonate(file = 'new_dir.png',output_dir = file.path(tempdir(),'newdir'))
+```
+
 ### Closing Browsers
 
 Closing all instances of open browsers used by RSelenium.
