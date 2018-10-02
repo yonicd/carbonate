@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>convert carbon uri to tinyurl — .tiny • carbonate</title>
+<title>convert uri to tinyurl — tinyurl • carbonate</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="convert carbon uri to tinyurl — .tiny" />
+<meta property="og:title" content="convert uri to tinyurl — tinyurl" />
 
-<meta property="og:description" content="convert carbon uri to tinyurl with option to attach to clipboard." />
+<meta property="og:description" content="convert uri to tinyurl." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -61,7 +61,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">carbonate</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.1</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.11</span>
       </span>
     </div>
 
@@ -109,44 +109,31 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>convert carbon uri to tinyurl</h1>
+    <h1>convert uri to tinyurl</h1>
     <small class="dont-index">Source: <a href='https://github.com/yonicd/carbonate/blob/master/R/uri_functions.R'><code>R/uri_functions.R</code></a></small>
     <div class="hidden name"><code>tinyurl.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>convert carbon uri to tinyurl with option to attach to clipboard.</p>
+    <p>convert uri to tinyurl.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>.tiny</span>(<span class='no'>self</span>, <span class='no'>private</span>, <span class='kw'>clip</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>tinyurl</span>(<span class='no'>uri</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>self</th>
-      <td><p>carbon self object</p></td>
-    </tr>
-    <tr>
-      <th>private</th>
-      <td><p>carbon private object</p></td>
-    </tr>
-    <tr>
-      <th>clip</th>
-      <td><p>boolean, write tinyurl to clipboard, Default: FALSE</p></td>
+      <th>uri</th>
+      <td><p>character, the uri to convert</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>character</p>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>If clip is set to TRUE <a href='http://www.rdocumentation.org/packages/clipr/topics/write_clip'>write_clip</a> will put the
-tinyurl on the clipboard.</p>
     
 
   </div>
@@ -156,8 +143,6 @@ tinyurl on the clipboard.</p>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
-
-      <li><a href="#details">Details</a></li>
           </ul>
 
   </div>

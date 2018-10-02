@@ -109,15 +109,13 @@
 #' @details If clip is set to TRUE [write_clip][clipr::write_clip] will put the
 #' tinyurl on the clipboard.
 #' @return character
-#' @importFrom httr GET content
 #' @importFrom clipr write_clip
-#' @rdname tinyurl
+#' @rdname tiny
 #' @aliases carbon-tinyurl
 .tiny <- function(self, private, clip = FALSE) {
-  base <- "http://tinyurl.com/api-create.php"
 
-  RET <- httr::content(httr::GET(sprintf("%s?url=%s", base, self$uri())))
-
+  RET <- tinyurl(self$uri())
+  
   if (clip) {
     clipr::write_clip(RET)
   }
@@ -199,4 +197,26 @@
   }
 
   rtweet::post_tweet(status = status, media = tds, ...)
+}
+
+#' @title convert uri to tinyurl
+#' @description convert uri to tinyurl.
+#' @param uri character, the uri to convert
+#' @return character
+#' @importFrom httr http_error content GET
+#' @export
+tinyurl <- function(uri){
+  
+  host <- 'tinyurl.com'
+  
+  if(!httr::http_error(host)){
+    
+    base <- sprintf('http://%s/api-create.php',host)
+    
+    uri <- httr::content(httr::GET(sprintf('%s?url=%s',base,uri)))
+    
+  }
+  
+  uri
+  
 }

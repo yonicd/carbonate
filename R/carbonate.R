@@ -25,6 +25,7 @@
 
   if (is.null(rD)) {
     message("starting chrome session...")
+  
     self$start()
     rD <- self$rD
   }
@@ -33,7 +34,9 @@
     invisible(utils::capture.output(rD$client$open()))
   }
 
-  on.exit(rD$client$close(), add = TRUE)
+  on.exit({
+    rD$client$close()
+  }, add = TRUE)
 
   remDr <- rD$client
 
@@ -47,7 +50,7 @@
 
   asyncr(remDr,
     using = "xpath",
-    value = '//*[@id="__next"]/main/div[2]/div/div[1]/div[5]/div',
+    value = '//*[@id="__next"]/main/div[3]/div/div[1]/div[5]/div',
     maxiter = self$maxiter
   )
 

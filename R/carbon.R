@@ -161,6 +161,8 @@ carbon <- R6::R6Class(
     chrome_pref = list(
       "profile.default_content_settings.popups" = 0L,
       "download.prompt_for_download" = FALSE,
+      "download.directory_upgrade" = TRUE,
+      "safebrowsing.enabled" = TRUE,
       "download.default_directory" = tempdir()
     ),
     rD = NULL,
