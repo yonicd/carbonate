@@ -6,7 +6,7 @@ Status](https://travis-ci.org/yonicd/carbonate.svg?branch=master)](https://travi
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_22-brightgreen.svg)](https://goo.gl/gNRcCb)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_30-brightgreen.svg)](https://goo.gl/gNRcCb)
 
 # carbonate <img src="tools/temp/hex.gif" align="right" />
 
@@ -217,12 +217,7 @@ x$carbonate(file = 'new_font.png')
 
 ![](tools/readme/README-unnamed-chunk-17-1.png)<!-- -->
 
-Setting download directory directly in `carbonate`
-call
-
-``` r
-x$carbonate(file = 'new_dir.png',output_dir = file.path(tempdir(),'newdir'))
-```
+### Carbonate code directly to file in specific directory
 
 ### Closing Browsers
 

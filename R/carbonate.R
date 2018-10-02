@@ -4,7 +4,6 @@
 #' @param self carbon self object
 #' @param private carbon private object
 #' @param file character, name of file to save image as
-#' @param output_dir character, output directory to save file, Default: NULL
 #' @param code character, lines of script to make carbon image from
 #' @param rD RSelenium driver
 #' @details Script is passed to <https://carbon.now.sh/> is downloaded to the `tempdir()` and appended to the list [$carbons][carbonate::carbon-fields] using RSelenium and Chrome.
@@ -21,11 +20,12 @@
 #' @importFrom magick image_read
 #' @importFrom utils capture.output
 #' @importFrom rtweet post_tweet
-.carbonate <- function(self, private, file, output_dir = NULL, code, rD) {
+.carbonate <- function(self, private, file, code, rD) {
   this_uri <- self$uri(code = code)
 
   if (is.null(rD)) {
     message("starting chrome session...")
+  
     self$start()
     rD <- self$rD
   }
@@ -34,20 +34,12 @@
     invisible(utils::capture.output(rD$client$open()))
   }
 
-  on.exit(rD$client$close(), add = TRUE)
+  on.exit({
+    rD$client$close()
+  }, add = TRUE)
 
   remDr <- rD$client
 
-  if(!is.null(output_dir)){
-    
-    if(!dir.exists(output_dir)){
-      message(sprintf('output_dir: %s does not exist, creating...',output_dir))
-      dir.create(output_dir,recursive = TRUE)
-    }
-      
-    rD$client$extraCapabilities$chromeOptions$prefs$download.default_directory <- output_dir    
-  }
-  
   path <- rD$client$extraCapabilities$chromeOptions$prefs$download.default_directory
 
   device <- gsub("^(.*?)\\.", "", basename(file))

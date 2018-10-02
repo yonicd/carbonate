@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>License • carbonate</title>
+<title>convert carbon uri to tinyurl — .tiny • carbonate</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -25,12 +25,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
-<link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script>
+<link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script>
 
 
 
-<meta property="og:title" content="License" />
+<meta property="og:title" content="convert carbon uri to tinyurl — .tiny" />
+
+<meta property="og:description" content="convert carbon uri to tinyurl with option to attach to clipboard." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -46,7 +49,7 @@
   </head>
 
   <body>
-    <div class="container template-title-body">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -57,7 +60,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">carbonate</a>
+        <a class="navbar-link" href="../index.html">carbonate</a>
         <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.11</span>
       </span>
     </div>
@@ -65,13 +68,13 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -81,7 +84,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="articles/covrpage.html">Tests and Coverage</a>
+      <a href="../articles/covrpage.html">Tests and Coverage</a>
     </li>
   </ul>
 </li>
@@ -104,19 +107,61 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>License</h1>
+    <h1>convert carbon uri to tinyurl</h1>
+    <small class="dont-index">Source: <a href='https://github.com/yonicd/carbonate/blob/master/R/uri_functions.R'><code>R/uri_functions.R</code></a></small>
+    <div class="hidden name"><code>tiny.Rd</code></div>
     </div>
 
-<pre>YEAR: 2018
-COPYRIGHT HOLDER: Your name goes here
-</pre>
+    <div class="ref-description">
+    
+    <p>convert carbon uri to tinyurl with option to attach to clipboard.</p>
+    
+    </div>
+
+    <pre class="usage"><span class='fu'>.tiny</span>(<span class='no'>self</span>, <span class='no'>private</span>, <span class='kw'>clip</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>self</th>
+      <td><p>carbon self object</p></td>
+    </tr>
+    <tr>
+      <th>private</th>
+      <td><p>carbon private object</p></td>
+    </tr>
+    <tr>
+      <th>clip</th>
+      <td><p>boolean, write tinyurl to clipboard, Default: FALSE</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>character</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>If clip is set to TRUE <a href='http://www.rdocumentation.org/packages/clipr/topics/write_clip'>write_clip</a> will put the
+tinyurl on the clipboard.</p>
+    
 
   </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
 
+      <li><a href="#details">Details</a></li>
+          </ul>
+
+  </div>
 </div>
-
 
       <footer>
       <div class="copyright">
