@@ -46,6 +46,7 @@
       chromeOptions = eCap
     )
   )
+  
 }
 
 #' @rdname carbon_selenium

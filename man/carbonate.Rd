@@ -6,7 +6,7 @@
 \alias{carbonate}
 \title{Carbonate script lines to a carbon image}
 \usage{
-.carbonate(self, private, file, code, rD)
+.carbonate(self, private, file, path, code, rD)
 }
 \arguments{
 \item{self}{carbon self object}
@@ -14,6 +14,8 @@
 \item{private}{carbon private object}
 
 \item{file}{character, name of file to save image as}
+
+\item{path}{character, path to save the image}
 
 \item{code}{character, lines of script to make carbon image from}
 
