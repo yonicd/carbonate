@@ -4,6 +4,7 @@
 #' @param self carbon self object
 #' @param private carbon private object
 #' @param file character, name of file to save image as
+#' @param path character, path to save the image
 #' @param code character, lines of script to make carbon image from
 #' @param rD RSelenium driver
 #' @details Script is passed to <https://carbon.now.sh/> is downloaded to the `tempdir()` and appended to the list [$carbons][carbonate::carbon-fields] using RSelenium and Chrome.
@@ -20,9 +21,17 @@
 #' @importFrom magick image_read
 #' @importFrom utils capture.output
 #' @importFrom rtweet post_tweet
-.carbonate <- function(self, private, file, code, rD) {
+.carbonate <- function(self, private, file, path,  code, rD) {
+  
   this_uri <- self$uri(code = code)
 
+  path <- normalizePath(path,mustWork = FALSE)
+  
+  if(!dir.exists(path)){
+    message(sprintf('creating directory: %s', path))
+    dir.create(path)
+  }
+    
   if (is.null(rD)) {
     message("starting chrome session...")
   
@@ -40,14 +49,24 @@
 
   remDr <- rD$client
 
-  path <- rD$client$extraCapabilities$chromeOptions$prefs$download.default_directory
+  remDr$queryRD(
+    ipAddr = file.path(remDr$serverURL,"session",
+                       remDr$sessionInfo[["id"]],
+                       "chromium/send_command"),
+    method = "POST",
+    qdata = list(
+      cmd = "Page.setDownloadBehavior",
+      params = list(
+        behavior = "allow",
+        downloadPath = path
+      )
+    )
+  )
 
   device <- gsub("^(.*?)\\.", "", basename(file))
 
   remDr$navigate(this_uri)
-
-
-
+  
   asyncr(remDr,
     using = "xpath",
     value = '//*[@id="__next"]/main/div[3]/div/div[1]/div[5]/div',

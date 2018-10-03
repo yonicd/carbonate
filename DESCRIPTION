@@ -1,6 +1,6 @@
 Package: carbonate
 Title: Interact with 'carbon.js' directly from R
-Version: 0.0.11
+Version: 0.0.12
 Authors@R: person(given  = "Jonathan",
                  family  = "Sidi",
                  email   = "yonicd@gmail.com",
