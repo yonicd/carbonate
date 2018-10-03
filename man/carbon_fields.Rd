@@ -61,6 +61,8 @@ Default: 'Created in R using the Carbonate (Package Icon)'}
 
 \item{carbons}{list, storage of rendered carbon images, Default: NULL}
 
+\item{download_path}{character, path to download the images, Default: tempdir()}
+
 \item{chrome_args}{character, arguments passed to chrome browser, Default:
 c('--disable-gpu', '--window-size=1280,800')}
 

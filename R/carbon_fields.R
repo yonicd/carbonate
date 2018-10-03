@@ -32,6 +32,7 @@
 #' Default: 'Created in R using the Carbonate (Package Icon)'
 #' @param add_timestamp boolean, add timestamp to output filename, Default: FALSE
 #' @param carbons list, storage of rendered carbon images, Default: NULL
+#' @param download_path character, path to download the images, Default: tempdir()
 #' @param chrome_args character, arguments passed to chrome browser, Default:
 #'   c('--disable-gpu', '--window-size=1280,800')
 #' @param chrome_pref list, preferences passed to chrome browser, Default:

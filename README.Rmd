@@ -134,7 +134,7 @@ x$browse()
 ### Set the download directory
 
 ```{r}
-x$chrome_pref$download.default_directory <- normalizePath("tools/temp")
+x$download_path <- normalizePath("tools/temp")
 ```
 
 ### Carbonate code directly to file
