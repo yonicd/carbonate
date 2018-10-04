@@ -8,7 +8,7 @@ Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](ht
 [![Covrpage
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_30-brightgreen.svg)](https://goo.gl/gNRcCb)
 
-# carbonate <img src="https://github.com/yonicd/carbonate/raw/master/tools/hex.gif" align="right" />
+# carbonate <img src="https://github.com/yonicd/carbonate/raw/master/hextools/hex.gif" align="right" />
 
 “[carbon.js](https://carbon.now.sh/about) is the easiest way to create
 beautiful images of your source code.”

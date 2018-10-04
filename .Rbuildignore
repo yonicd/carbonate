@@ -1,12 +1,12 @@
 ^data-raw$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-misc
-tools
-README.Rmd
+^README.Rmd$
 ^_pkgdown\.yml$
 ^docs$
 \.github
 ^\.travis\.yml$
 ^codecov\.yml$
 ^cran-comments\.md$
+hextools
+README_files
