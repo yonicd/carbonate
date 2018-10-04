@@ -8,7 +8,7 @@ Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](ht
 [![Covrpage
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_30-brightgreen.svg)](https://goo.gl/gNRcCb)
 
-# carbonate <img src="tools/temp/hex.gif" align="right" />
+# carbonate <img src="https://github.com/yonicd/carbonate/raw/master/tools/hex.gif" align="right" />
 
 “[carbon.js](https://carbon.now.sh/about) is the easiest way to create
 beautiful images of your source code.”
@@ -18,7 +18,7 @@ directly from the console carbon images.
 
 Like the image below:
 
-![](tools/temp/myfile.png)
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ## Installation
 
@@ -45,17 +45,6 @@ length.
 
 ``` r
 x <- carbon$new(readLines('DESCRIPTION'))
-#> Set via '~/carbon.yml'
-#> palette:
-#> - 171.0
-#> - 175.0
-#> - 195.0
-#> - 0.7
-#> template: panda-syntax
-#> font_family: Fira Code
-#> padding_vertical: 11
-#> padding_horizontal: 14
-#> language: r
 ```
 
 The code is kept in the object and can be changed at any time.
@@ -64,7 +53,7 @@ The code is kept in the object and can be changed at any time.
 x$code
 #>  [1] "Package: carbonate"                                                          
 #>  [2] "Title: Interact with 'carbon.js' directly from R"                            
-#>  [3] "Version: 0.0.12"                                                             
+#>  [3] "Version: 0.1.0"                                                              
 #>  [4] "Authors@R: person(given  = \"Jonathan\","                                    
 #>  [5] "                 family  = \"Sidi\","                                        
 #>  [6] "                 email   = \"yonicd@gmail.com\","                            
@@ -81,8 +70,7 @@ x$code
 #> [17] "URL: https://github.com/yonicd/carbonate"                                    
 #> [18] "BugReports: https://github.com/yonicd/carbonate/issues"                      
 #> [19] "Roxygen: list(markdown = TRUE)"                                              
-#> [20] "HexURL: https://github.com/yonicd/carbonate/raw/master/tools/temp/hex.gif"   
-#> [21] "VignetteBuilder: knitr"
+#> [20] "VignetteBuilder: knitr"
 ```
 
 The main job of the R6 object is to convert all the options into a uri
@@ -90,7 +78,7 @@ that is sent to the carbon url page, where it is processed.
 
 ``` r
 x$uri()
-#> [1] "https://carbon.now.sh/?bg=rgba(171%2C175%2C195%2C0.7)&t=panda-syntax&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=14px&ln=false&fm=Fira%20Code&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%2520directly%2520from%2520R%250AVersion%253A%25200.0.12%250AAuthors%2540R%253A%2520person(given%2520%2520%253D%2520%2522Jonathan%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520family%2520%2520%253D%2520%2522Sidi%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520email%2520%2520%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520role%2520%2520%2520%2520%253D%2520c(%2522aut%2522%252C%2520%2522cre%2522)%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520comment%2520%253D%2520c(ORCID%2520%253D%2520%25220000-0002-4222-1819%2522))%250ADescription%253A%2520Create%2520%27carbon.js%27%2520image%2520outputs%2520directly%2520from%2520the%2520%27R%27%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520%252B%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.1.0%250AImports%253A%2520R6%252C%2520clipr%252C%2520magick%252C%2520wdman%252C%2520RSelenium%252C%2520utils%252C%2520httr%252C%2520rtweet%252C%2520yaml%250ASuggests%253A%2520testthat%252C%2520covr%252C%2520knitr%252C%2520rmarkdown%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250AHexURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fraw%252Fmaster%252Ftools%252Ftemp%252Fhex.gif%250AVignetteBuilder%253A%2520knitr"
+#> [1] "https://carbon.now.sh/?bg=rgba(171%2C175%2C195%2C0.7)&t=panda-syntax&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=14px&ln=false&fm=Fira%20Code&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%2520directly%2520from%2520R%250AVersion%253A%25200.1.0%250AAuthors%2540R%253A%2520person(given%2520%2520%253D%2520%2522Jonathan%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520family%2520%2520%253D%2520%2522Sidi%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520email%2520%2520%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520role%2520%2520%2520%2520%253D%2520c(%2522aut%2522%252C%2520%2522cre%2522)%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520comment%2520%253D%2520c(ORCID%2520%253D%2520%25220000-0002-4222-1819%2522))%250ADescription%253A%2520Create%2520%27carbon.js%27%2520image%2520outputs%2520directly%2520from%2520the%2520%27R%27%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520%252B%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.1.0%250AImports%253A%2520R6%252C%2520clipr%252C%2520magick%252C%2520wdman%252C%2520RSelenium%252C%2520utils%252C%2520httr%252C%2520rtweet%252C%2520yaml%250ASuggests%253A%2520testthat%252C%2520covr%252C%2520knitr%252C%2520rmarkdown%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250AVignetteBuilder%253A%2520knitr"
 ```
 
 ### Manipulate carbon object
@@ -185,7 +173,7 @@ x$browse()
 ### Set the download directory
 
 ``` r
-x$download_path <- normalizePath("tools/temp")
+x$download_path <- file.path('README_files/download')
 ```
 
 ### Carbonate code directly to file
@@ -194,28 +182,23 @@ This function depends on RSelenium
 
 ``` r
 x$carbonate(file = 'myfile.png')
-#> starting chrome session...
-#> checking chromedriver versions:
-#> BEGIN: PREDOWNLOAD
-#> BEGIN: DOWNLOAD
-#> BEGIN: POSTDOWNLOAD
 ```
 
-![](tools/readme/README-unnamed-chunk-13-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 
 ``` r
 x$template <-'cobalt'
 x$carbonate(file = 'new_template.png')
 ```
 
-![](tools/readme/README-unnamed-chunk-15-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
 ``` r
 x$font_family <-'IBM Plex Mono'
 x$carbonate(file = 'new_font.png')
 ```
 
-![](tools/readme/README-unnamed-chunk-17-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 ### Carbonate code directly to file in specific directory
 
@@ -241,23 +224,23 @@ x$add_tinyurl <- TRUE
 x$carbonate(file = 'tiny_url.png')
 ```
 
-![](tools/readme/README-unnamed-chunk-20-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
 
 If you just want the tinyurl link without the image to use in a tweet
 you can create it using
 
 ``` r
 x$tiny()
-#> [1] "http://tinyurl.com/yculwqfj"
+#> [1] "http://tinyurl.com/ybcjho9v"
 ```
 
 Or you can put the link directly on your clipboard
 
 ``` r
 x$tiny(clip = TRUE)
-#> [1] "http://tinyurl.com/yculwqfj"
+#> [1] "http://tinyurl.com/ybcjho9v"
 clipr::read_clip()
-#> [1] "http://tinyurl.com/yculwqfj"
+#> [1] "http://tinyurl.com/ybcjho9v"
 ```
 
 </details>
@@ -275,7 +258,7 @@ with two options
       - Created in R using the Carbonate 📦
   - When `add_tinyurl <- TRUE`
       - Created in R using the Carbonate 📦 Check out this script at 🔗
-        <http://tinyurl.com/yculwqfj>
+        <http://tinyurl.com/ybcjho9v>
   - Manual
       - Using `tweet_status` you can write your own status.
 
@@ -319,7 +302,7 @@ x$carbons%>%
   magick::image_append()
 ```
 
-![](tools/readme/README-unnamed-chunk-25-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ``` r
 
@@ -328,7 +311,7 @@ x$carbons%>%
   magick::image_append(stack = TRUE)
 ```
 
-![](tools/readme/README-unnamed-chunk-25-2.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-28-2.png)<!-- -->
 
 </details>
 
@@ -341,6 +324,6 @@ x$carbons%>%
   magick::image_animate(fps = 1)
 ```
 
-![](tools/readme/README-unnamed-chunk-26-1.gif)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-29-1.gif)<!-- -->
 
 </details>

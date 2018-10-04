@@ -9,3 +9,4 @@ README.Rmd
 \.github
 ^\.travis\.yml$
 ^codecov\.yml$
+^cran-comments\.md$

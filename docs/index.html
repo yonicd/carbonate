@@ -29,7 +29,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">carbonate</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.12</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.0</span>
       </span>
     </div>
 
@@ -87,7 +87,7 @@
 <p>“<a href="https://carbon.now.sh/about">carbon.js</a> is the easiest way to create beautiful images of your source code.”</p>
 <p>This package uses an <code>R6</code> api to interact with carbon.js and create directly from the console carbon images.</p>
 <p>Like the image below:</p>
-<p><img src="tools/temp/myfile.png"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png"><!-- --></p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -103,23 +103,12 @@
 <p>The default code in the carbon object is taken from the clipboard.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">x &lt;-<span class="st"> </span>carbon<span class="op">$</span><span class="kw">new</span>()</a></code></pre></div>
 <p>But can also be defined inline. Code can be a character object of any length.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">x &lt;-<span class="st"> </span>carbon<span class="op">$</span><span class="kw">new</span>(<span class="kw">readLines</span>(<span class="st">'DESCRIPTION'</span>))</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; Set via '~/carbon.yml'</span></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt; palette:</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt; - 171.0</span></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; - 175.0</span></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt; - 195.0</span></a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt; - 0.7</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; template: panda-syntax</span></a>
-<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt; font_family: Fira Code</span></a>
-<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt; padding_vertical: 11</span></a>
-<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt; padding_horizontal: 14</span></a>
-<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt; language: r</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">x &lt;-<span class="st"> </span>carbon<span class="op">$</span><span class="kw">new</span>(<span class="kw">readLines</span>(<span class="st">'DESCRIPTION'</span>))</a></code></pre></div>
 <p>The code is kept in the object and can be changed at any time.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">x<span class="op">$</span>code</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">#&gt;  [1] "Package: carbonate"                                                          </span></a>
 <a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#&gt;  [2] "Title: Interact with 'carbon.js' directly from R"                            </span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#&gt;  [3] "Version: 0.0.12"                                                             </span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#&gt;  [3] "Version: 0.1.0"                                                              </span></a>
 <a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt;  [4] "Authors@R: person(given  = \"Jonathan\","                                    </span></a>
 <a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt;  [5] "                 family  = \"Sidi\","                                        </span></a>
 <a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt;  [6] "                 email   = \"yonicd@gmail.com\","                            </span></a>
@@ -136,11 +125,10 @@
 <a class="sourceLine" id="cb5-18" data-line-number="18"><span class="co">#&gt; [17] "URL: https://github.com/yonicd/carbonate"                                    </span></a>
 <a class="sourceLine" id="cb5-19" data-line-number="19"><span class="co">#&gt; [18] "BugReports: https://github.com/yonicd/carbonate/issues"                      </span></a>
 <a class="sourceLine" id="cb5-20" data-line-number="20"><span class="co">#&gt; [19] "Roxygen: list(markdown = TRUE)"                                              </span></a>
-<a class="sourceLine" id="cb5-21" data-line-number="21"><span class="co">#&gt; [20] "HexURL: https://github.com/yonicd/carbonate/raw/master/tools/temp/hex.gif"   </span></a>
-<a class="sourceLine" id="cb5-22" data-line-number="22"><span class="co">#&gt; [21] "VignetteBuilder: knitr"</span></a></code></pre></div>
+<a class="sourceLine" id="cb5-21" data-line-number="21"><span class="co">#&gt; [20] "VignetteBuilder: knitr"</span></a></code></pre></div>
 <p>The main job of the R6 object is to convert all the options into a uri that is sent to the carbon url page, where it is processed.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">x<span class="op">$</span><span class="kw">uri</span>()</a>
-<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#&gt; [1] "https://carbon.now.sh/?bg=rgba(171%2C175%2C195%2C0.7)&amp;t=panda-syntax&amp;wt=none&amp;l=r&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=11px&amp;ph=14px&amp;ln=false&amp;fm=Fira%20Code&amp;fs=14px&amp;lh=133%25&amp;si=false&amp;es=1x&amp;wm=false&amp;ts=false&amp;code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%2520directly%2520from%2520R%250AVersion%253A%25200.0.12%250AAuthors%2540R%253A%2520person(given%2520%2520%253D%2520%2522Jonathan%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520family%2520%2520%253D%2520%2522Sidi%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520email%2520%2520%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520role%2520%2520%2520%2520%253D%2520c(%2522aut%2522%252C%2520%2522cre%2522)%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520comment%2520%253D%2520c(ORCID%2520%253D%2520%25220000-0002-4222-1819%2522))%250ADescription%253A%2520Create%2520%27carbon.js%27%2520image%2520outputs%2520directly%2520from%2520the%2520%27R%27%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520%252B%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.1.0%250AImports%253A%2520R6%252C%2520clipr%252C%2520magick%252C%2520wdman%252C%2520RSelenium%252C%2520utils%252C%2520httr%252C%2520rtweet%252C%2520yaml%250ASuggests%253A%2520testthat%252C%2520covr%252C%2520knitr%252C%2520rmarkdown%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250AHexURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fraw%252Fmaster%252Ftools%252Ftemp%252Fhex.gif%250AVignetteBuilder%253A%2520knitr"</span></a></code></pre></div>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#&gt; [1] "https://carbon.now.sh/?bg=rgba(171%2C175%2C195%2C0.7)&amp;t=panda-syntax&amp;wt=none&amp;l=r&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=11px&amp;ph=14px&amp;ln=false&amp;fm=Fira%20Code&amp;fs=14px&amp;lh=133%25&amp;si=false&amp;es=1x&amp;wm=false&amp;ts=false&amp;code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%2520directly%2520from%2520R%250AVersion%253A%25200.1.0%250AAuthors%2540R%253A%2520person(given%2520%2520%253D%2520%2522Jonathan%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520family%2520%2520%253D%2520%2522Sidi%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520email%2520%2520%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520role%2520%2520%2520%2520%253D%2520c(%2522aut%2522%252C%2520%2522cre%2522)%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520comment%2520%253D%2520c(ORCID%2520%253D%2520%25220000-0002-4222-1819%2522))%250ADescription%253A%2520Create%2520%27carbon.js%27%2520image%2520outputs%2520directly%2520from%2520the%2520%27R%27%2520console.%250ADepends%253A%2520R%2520(%253E%253D%25203.2.0)%250ALicense%253A%2520MIT%2520%252B%2520file%2520LICENSE%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygenNote%253A%25206.1.0%250AImports%253A%2520R6%252C%2520clipr%252C%2520magick%252C%2520wdman%252C%2520RSelenium%252C%2520utils%252C%2520httr%252C%2520rtweet%252C%2520yaml%250ASuggests%253A%2520testthat%252C%2520covr%252C%2520knitr%252C%2520rmarkdown%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250AVignetteBuilder%253A%2520knitr"</span></a></code></pre></div>
 </div>
 <div id="manipulate-carbon-object" class="section level3">
 <h3 class="hasAnchor">
@@ -320,25 +308,20 @@
 <div id="set-the-download-directory" class="section level3">
 <h3 class="hasAnchor">
 <a href="#set-the-download-directory" class="anchor"></a>Set the download directory</h3>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">x<span class="op">$</span>download_path &lt;-<span class="st"> </span><span class="kw">normalizePath</span>(<span class="st">"tools/temp"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">x<span class="op">$</span>download_path &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="st">'README_files/download'</span>)</a></code></pre></div>
 </div>
 <div id="carbonate-code-directly-to-file" class="section level3">
 <h3 class="hasAnchor">
 <a href="#carbonate-code-directly-to-file" class="anchor"></a>Carbonate code directly to file</h3>
 <p>This function depends on RSelenium</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">x<span class="op">$</span><span class="kw"><a href="reference/carbonate.html">carbonate</a></span>(<span class="dt">file =</span> <span class="st">'myfile.png'</span>)</a>
-<a class="sourceLine" id="cb13-2" data-line-number="2"><span class="co">#&gt; starting chrome session...</span></a>
-<a class="sourceLine" id="cb13-3" data-line-number="3"><span class="co">#&gt; checking chromedriver versions:</span></a>
-<a class="sourceLine" id="cb13-4" data-line-number="4"><span class="co">#&gt; </span><span class="re">BEGIN</span><span class="co">: PREDOWNLOAD</span></a>
-<a class="sourceLine" id="cb13-5" data-line-number="5"><span class="co">#&gt; </span><span class="re">BEGIN</span><span class="co">: DOWNLOAD</span></a>
-<a class="sourceLine" id="cb13-6" data-line-number="6"><span class="co">#&gt; </span><span class="re">BEGIN</span><span class="co">: POSTDOWNLOAD</span></a></code></pre></div>
-<p><img src="tools/readme/README-unnamed-chunk-13-1.png"><!-- --></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">x<span class="op">$</span><span class="kw"><a href="reference/carbonate.html">carbonate</a></span>(<span class="dt">file =</span> <span class="st">'myfile.png'</span>)</a></code></pre></div>
+<p><img src="index_files/figure-html/unnamed-chunk-16-1.png"><!-- --></p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">x<span class="op">$</span>template &lt;-<span class="st">'cobalt'</span></a>
 <a class="sourceLine" id="cb14-2" data-line-number="2">x<span class="op">$</span><span class="kw"><a href="reference/carbonate.html">carbonate</a></span>(<span class="dt">file =</span> <span class="st">'new_template.png'</span>)</a></code></pre></div>
-<p><img src="tools/readme/README-unnamed-chunk-15-1.png"><!-- --></p>
+<p><img src="index_files/figure-html/unnamed-chunk-18-1.png"><!-- --></p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">x<span class="op">$</span>font_family &lt;-<span class="st">'IBM Plex Mono'</span></a>
 <a class="sourceLine" id="cb15-2" data-line-number="2">x<span class="op">$</span><span class="kw"><a href="reference/carbonate.html">carbonate</a></span>(<span class="dt">file =</span> <span class="st">'new_font.png'</span>)</a></code></pre></div>
-<p><img src="tools/readme/README-unnamed-chunk-17-1.png"><!-- --></p>
+<p><img src="index_files/figure-html/unnamed-chunk-20-1.png"><!-- --></p>
 </div>
 <div id="carbonate-code-directly-to-file-in-specific-directory" class="section level3">
 <h3 class="hasAnchor">
@@ -357,15 +340,15 @@
 <p>You can also put a tinyurl link as a watermark on the image produced that will open to the carbon.now.sh page that has the code in the image.</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">x<span class="op">$</span>add_tinyurl &lt;-<span class="st"> </span><span class="ot">TRUE</span></a>
 <a class="sourceLine" id="cb17-2" data-line-number="2">x<span class="op">$</span><span class="kw"><a href="reference/carbonate.html">carbonate</a></span>(<span class="dt">file =</span> <span class="st">'tiny_url.png'</span>)</a></code></pre></div>
-<p><img src="tools/readme/README-unnamed-chunk-20-1.png"><!-- --></p>
+<p><img src="index_files/figure-html/unnamed-chunk-23-1.png"><!-- --></p>
 <p>If you just want the tinyurl link without the image to use in a tweet you can create it using</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">x<span class="op">$</span><span class="kw">tiny</span>()</a>
-<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="co">#&gt; [1] "http://tinyurl.com/yculwqfj"</span></a></code></pre></div>
+<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="co">#&gt; [1] "http://tinyurl.com/ybcjho9v"</span></a></code></pre></div>
 <p>Or you can put the link directly on your clipboard</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1">x<span class="op">$</span><span class="kw">tiny</span>(<span class="dt">clip =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="co">#&gt; [1] "http://tinyurl.com/yculwqfj"</span></a>
+<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="co">#&gt; [1] "http://tinyurl.com/ybcjho9v"</span></a>
 <a class="sourceLine" id="cb19-3" data-line-number="3">clipr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/clipr/topics/read_clip">read_clip</a></span>()</a>
-<a class="sourceLine" id="cb19-4" data-line-number="4"><span class="co">#&gt; [1] "http://tinyurl.com/yculwqfj"</span></a></code></pre></div>
+<a class="sourceLine" id="cb19-4" data-line-number="4"><span class="co">#&gt; [1] "http://tinyurl.com/ybcjho9v"</span></a></code></pre></div>
 </details><details><p><summary>Twitter</summary></p>
 <div id="direct" class="section level5">
 <h5 class="hasAnchor">
@@ -379,7 +362,7 @@
 </li>
 <li>When <code>add_tinyurl &lt;- TRUE</code>
 <ul>
-<li>Created in R using the Carbonate 📦 Check out this script at 🔗 <a href="http://tinyurl.com/yculwqfj" class="uri">http://tinyurl.com/yculwqfj</a>
+<li>Created in R using the Carbonate 📦 Check out this script at 🔗 <a href="http://tinyurl.com/ybcjho9v" class="uri">http://tinyurl.com/ybcjho9v</a>
 </li>
 </ul>
 </li>
@@ -417,16 +400,16 @@
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">x<span class="op">$</span>carbons<span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb22-2" data-line-number="2"><span class="st">  </span>magick<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/magick/topics/transform">image_scale</a></span>(<span class="st">'300'</span>)<span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb22-3" data-line-number="3"><span class="st">  </span>magick<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/magick/topics/animation">image_append</a></span>()</a></code></pre></div>
-<p><img src="tools/readme/README-unnamed-chunk-25-1.png"><!-- --></p>
+<p><img src="index_files/figure-html/unnamed-chunk-28-1.png"><!-- --></p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1"></a>
 <a class="sourceLine" id="cb23-2" data-line-number="2">x<span class="op">$</span>carbons<span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb23-3" data-line-number="3"><span class="st">  </span>magick<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/magick/topics/transform">image_scale</a></span>(<span class="st">'300'</span>)<span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb23-4" data-line-number="4"><span class="st">  </span>magick<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/magick/topics/animation">image_append</a></span>(<span class="dt">stack =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<p><img src="tools/readme/README-unnamed-chunk-25-2.png"><!-- --></p>
+<p><img src="index_files/figure-html/unnamed-chunk-28-2.png"><!-- --></p>
 </details><details><p><summary>GIFs</summary></p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">x<span class="op">$</span>carbons<span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb24-2" data-line-number="2"><span class="st">  </span>magick<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/magick/topics/animation">image_animate</a></span>(<span class="dt">fps =</span> <span class="dv">1</span>)</a></code></pre></div>
-<p><img src="tools/readme/README-unnamed-chunk-26-1.gif"><!-- --></p>
+<p><img src="index_files/figure-html/unnamed-chunk-29-1.gif"><!-- --></p>
 </details>
 </div>
 </div>
@@ -437,7 +420,7 @@
     <div class="">
 <h2></h2>
 <ul class="list-unstyled">
-<li><img src="https://github.com/yonicd/carbonate/raw/master/tools/temp/hex.gif" alt=""></li>
+<li><img src="https://github.com/yonicd/carbonate/raw/master/tools/tem.gif" alt=""></li>
 </ul>
 </div>
 <div class="links">

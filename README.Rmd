@@ -8,9 +8,7 @@ always_allow_html: yes
 ```{r, echo = FALSE,message=FALSE,warning=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  fig.path = "tools/readme/README-",
-  eval = TRUE
+  comment = "#>"
 )
 
 library(magick)
@@ -19,7 +17,7 @@ library(magick)
 [![Coverage Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master)
 [![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_30-brightgreen.svg)](https://goo.gl/gNRcCb)
 
-# carbonate <img src="tools/temp/hex.gif" align="right" />
+# carbonate `r if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers') '<img src="https://github.com/yonicd/carbonate/raw/master/tools/hex.gif" align="right" />'`
 
 "[carbon.js](https://carbon.now.sh/about) is the easiest way to create beautiful images of your source code."
 
@@ -27,7 +25,15 @@ This package uses an `R6` api to interact with carbon.js and create directly fro
 
 Like the image below:
 
-![](tools/temp/myfile.png)
+```{r,include=FALSE}
+library(carbonate)
+x <- carbon$new(readLines('DESCRIPTION'))
+x$carbonate(file = 'myfile.png',path = 'README_files/download')
+```
+
+```{r, echo=FALSE}
+x$carbons
+```
 
 ## Installation
 
@@ -39,7 +45,7 @@ remotes::install_github('yonicd/carbonate')
 
 ### Initialize new carbon object
 
-```{r}
+```{r,eval = FALSE}
 library(carbonate)
 ```
 
@@ -51,7 +57,7 @@ x <- carbon$new()
 
 But can also be defined inline. Code can be a character object of any length.
 
-```{r}
+```{r, eval = FALSE}
 x <- carbon$new(readLines('DESCRIPTION'))
 ```
 
@@ -134,15 +140,19 @@ x$browse()
 ### Set the download directory
 
 ```{r}
-x$download_path <- normalizePath("tools/temp")
+x$download_path <- file.path('README_files/download')
 ```
 
 ### Carbonate code directly to file
 
 This function depends on RSelenium
 
-```{r}
+```{r,eval = FALSE}
 x$carbonate(file = 'myfile.png')
+```
+
+```{r, echo=FALSE}
+x$carbons
 ```
 
 ```{r,echo=FALSE}
