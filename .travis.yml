@@ -16,7 +16,7 @@ after_success:
 
 r_github_packages:
   - yonicd/covrpage
-  - r-lib/pkgdown
+  - metrumresearchgroup/pkgdown
   
 deploy:
   provider: pages
