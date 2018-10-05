@@ -34,7 +34,7 @@ Like the image below:
 ```{r,include=FALSE}
 library(carbonate)
 x <- carbon$new(readLines('DESCRIPTION'))
-x$carbonate(file = 'myfile.png',path = 'README_files/download')
+x$carbonate(file = 'myfile.png',path = 'man/figures')
 ```
 
 ```{r, echo=FALSE}
@@ -147,7 +147,7 @@ x$browse()
 
 ### Set the download directory
 
-```{r}
+```{r,eval = FALSE}
 x$download_path <- file.path('README_files/download')
 ```
 
