@@ -4,9 +4,8 @@
 ^README.Rmd$
 ^_pkgdown\.yml$
 ^docs$
-\.github
 ^\.travis\.yml$
 ^codecov\.yml$
 ^cran-comments\.md$
+^\.github$
 hextools
-README_files

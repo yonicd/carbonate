@@ -11,11 +11,17 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
+if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers'){
+knitr::opts_chunk$set(
+    fig.path = 'man/figures/README-'
+)
+}
+
 library(magick)
 ```
 [![Travis-CI Build Status](https://travis-ci.org/yonicd/carbonate.svg?branch=master)](https://travis-ci.org/yonicd/carbonate)
 [![Coverage Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master)
-[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_09_30-brightgreen.svg)](https://goo.gl/gNRcCb)
+[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_10_04-brightgreen.svg)](https://goo.gl/gNRcCb)
 
 # carbonate `r if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers') '<img src="https://github.com/yonicd/carbonate/raw/master/hextools/hex.gif" align="right" />'`
 
@@ -72,6 +78,8 @@ The main job of the R6 object is to convert all the options into a uri that is s
 ```{r}
 x$uri()
 ```
+
+Click the [link](`r x$uri()`) to see the URI works.
 
 ### Manipulate carbon object
 

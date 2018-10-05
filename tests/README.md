@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-30 September, 2018 16:02:46
+04 October, 2018 22:14:05
 
 This output is created by
 [covrpage](https://github.com/yonicd/covrpage).
@@ -12,7 +12,7 @@ Coverage summary is created using the
 
 | Object                                               | Coverage (%) |
 | :--------------------------------------------------- | :----------: |
-| carbonate                                            |    52.87     |
+| carbonate                                            |    50.36     |
 | [R/carbonate.R](../R/carbonate.R)                    |     0.00     |
 | [R/selenium\_functions.R](../R/selenium_functions.R) |     0.00     |
 | [R/uri\_functions.R](../R/uri_functions.R)           |    54.39     |
@@ -30,9 +30,9 @@ package.
 
 |            | file                              | n |  time | error | failed | skipped | warning |
 | ---------- | :-------------------------------- | -: | ----: | ----: | -----: | ------: | ------: |
-| test-set.R | [test-set.R](testthat/test-set.R) | 3 | 0.003 |     0 |      0 |       0 |       0 |
-| test-uri.R | [test-uri.R](testthat/test-uri.R) | 8 | 2.031 |     0 |      0 |       0 |       0 |
-| test-yml.R | [test-yml.R](testthat/test-yml.R) | 6 | 0.015 |     0 |      0 |       0 |       0 |
+| test-set.R | [test-set.R](testthat/test-set.R) | 3 | 0.004 |     0 |      0 |       0 |       0 |
+| test-uri.R | [test-uri.R](testthat/test-uri.R) | 8 | 1.224 |     0 |      0 |       0 |       0 |
+| test-yml.R | [test-yml.R](testthat/test-yml.R) | 6 | 0.013 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -41,18 +41,18 @@ package.
 
 | file                                  | context | test                                        | status | n |  time |
 | :------------------------------------ | :------ | :------------------------------------------ | :----- | -: | ----: |
-| [test-set.R](testthat/test-set.R#L8)  | set\_   | set functions: set\_template                | PASS   | 1 | 0.001 |
+| [test-set.R](testthat/test-set.R#L8)  | set\_   | set functions: set\_template                | PASS   | 1 | 0.002 |
 | [test-set.R](testthat/test-set.R#L13) | set\_   | set functions: set\_font\_family            | PASS   | 1 | 0.001 |
 | [test-set.R](testthat/test-set.R#L18) | set\_   | set functions: set\_windows\_control\_theme | PASS   | 1 | 0.001 |
-| [test-uri.R](testthat/test-uri.R#L9)  | uri     | options: benchmark                          | PASS   | 1 | 0.002 |
-| [test-uri.R](testthat/test-uri.R#L17) | uri     | uri: benchmark                              | PASS   | 1 | 0.002 |
-| [test-uri.R](testthat/test-uri.R#L21) | uri     | uri: 200                                    | PASS   | 1 | 0.466 |
+| [test-uri.R](testthat/test-uri.R#L9)  | uri     | options: benchmark                          | PASS   | 1 | 0.001 |
+| [test-uri.R](testthat/test-uri.R#L17) | uri     | uri: benchmark                              | PASS   | 1 | 0.001 |
+| [test-uri.R](testthat/test-uri.R#L21) | uri     | uri: 200                                    | PASS   | 1 | 0.063 |
 | [test-uri.R](testthat/test-uri.R#L27) | uri     | encode: encode character                    | PASS   | 1 | 0.002 |
-| [test-uri.R](testthat/test-uri.R#L31) | uri     | encode: no encode character                 | PASS   | 1 | 0.002 |
-| [test-uri.R](testthat/test-uri.R#L37) | uri     | tiny: valid tiny                            | PASS   | 1 | 0.865 |
-| [test-uri.R](testthat/test-uri.R#L43) | uri     | tiny: clipboard                             | PASS   | 1 | 0.690 |
+| [test-uri.R](testthat/test-uri.R#L31) | uri     | encode: no encode character                 | PASS   | 1 | 0.001 |
+| [test-uri.R](testthat/test-uri.R#L37) | uri     | tiny: valid tiny                            | PASS   | 1 | 0.651 |
+| [test-uri.R](testthat/test-uri.R#L43) | uri     | tiny: clipboard                             | PASS   | 1 | 0.503 |
 | [test-uri.R](testthat/test-uri.R#)    | uri     | bad template: error uri                     | PASS   | 1 | 0.002 |
-| [test-yml.R](testthat/test-yml.R#L24) | yml     | yaml fields: rgba                           | PASS   | 1 | 0.005 |
+| [test-yml.R](testthat/test-yml.R#L24) | yml     | yaml fields: rgba                           | PASS   | 1 | 0.003 |
 | [test-yml.R](testthat/test-yml.R#L29) | yml     | yaml fields: template                       | PASS   | 1 | 0.002 |
 | [test-yml.R](testthat/test-yml.R#L34) | yml     | yaml fields: bad font family                | PASS   | 1 | 0.002 |
 | [test-yml.R](testthat/test-yml.R#L39) | yml     | yaml fields: pv                             | PASS   | 1 | 0.003 |
