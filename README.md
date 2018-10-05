@@ -6,7 +6,7 @@ Status](https://travis-ci.org/yonicd/carbonate.svg?branch=master)](https://travi
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_10_04-brightgreen.svg)](https://goo.gl/gNRcCb)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_10_05-yellowgreen.svg)](https://goo.gl/gNRcCb)
 
 # carbonate <img src="https://github.com/yonicd/carbonate/raw/master/hextools/hex.gif" align="right" />
 
