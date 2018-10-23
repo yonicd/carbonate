@@ -8,7 +8,7 @@ addons:
     - xclip
 after_success:
 - Rscript -e 'covr::codecov()'
-- Rscript -e 'devtools::install(); covrpage::covrpage_ci()'
+- Rscript -e 'devtools::install(); covrpage::covrpage_ci(update_badge=FALSE)'
 - Rscript -e 'pkgdown::build_article("tests_and_coverage")'
 r_github_packages:
 - yonicd/covrpage
