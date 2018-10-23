@@ -9,7 +9,7 @@ addons:
 after_success:
 - Rscript -e 'covr::codecov()'
 - Rscript -e 'devtools::install(); covrpage::covrpage_ci()'
-- Rscript -e 'pkgdown::build_article("tests_and_coverage")'
+- Rscript -e 'pkgdown::build_site()'
 r_github_packages:
 - yonicd/covrpage
 - metrumresearchgroup/pkgdown
