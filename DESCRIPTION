@@ -1,12 +1,12 @@
 Package: carbonate
-Title: Interact with 'carbon.js' directly from R
+Title: Interact with 'carbon.js'
 Version: 0.1.0
 Authors@R: person(given  = "Jonathan",
                  family  = "Sidi",
                  email   = "yonicd@gmail.com",
                  role    = c("aut", "cre"),
                  comment = c(ORCID = "0000-0002-4222-1819"))
-Description: Create 'carbon.js' image outputs directly from the 'R' console.
+Description: Create beautiful images of source code using 'carbon.js'<https://carbon.now.sh/about>.
 Depends: R (>= 3.2.0)
 License: MIT + file LICENSE
 Encoding: UTF-8

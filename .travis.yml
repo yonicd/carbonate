@@ -1,28 +1,26 @@
-# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
-
 language: R
 sudo: false
 cache: packages
 addons:
   apt:
     packages:
-      - libmagick++-dev
-      - xclip
-
+    - libmagick++-dev
+    - xclip
 after_success:
-  - Rscript -e 'covr::codecov()'
-  - Rscript -e 'devtools::install(); covrpage::covrpage(preview=FALSE,update_badge = FALSE,vignette = TRUE)'
-  - Rscript -e 'pkgdown::build_articles()'
-
+- Rscript -e 'covr::codecov()'
+- Rscript -e 'devtools::install(); covrpage::covrpage_ci()'
+- Rscript -e 'pkgdown::build_articles()'
 r_github_packages:
-  - yonicd/covrpage
-  - metrumresearchgroup/pkgdown
-  
+- yonicd/covrpage
+- metrumresearchgroup/pkgdown
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GH_PAT
+  github-token: "$GITHUB_PAT"
   keep-history: true
   local-dir: docs
   on:
     branch: master
+env:
+  global:
+    secure: paX28Bf7HldCoa6ZPJOJmSrzTqaBKRDhQEVLk6+F1U5G54e+T2JuO6HcV3S61LXAAp31ZfrF9+uCpAhJvpSSjet/vYxJM/CdqII4DkHRbhGRE0KZ+mlVTj4tl56/N19sUsBX7TmTirudwQg1jXLOoDgtYafDFODdYIDI27XlSWbUwuub9tMVeEju+/Cx1nWgU9ABnnmow9Toio06kVNHc1dYAtE1Jhvp7COCzOKQAOS4UYcxvTMTCmEFG9uXzFQSUfr6pQ6lHNX8lSpqUVvDZbDHZEE6AyjG9Gnj0zA0CZWNEQ0HVXuXFPjYOPUVLpJmB6kHbbGuulERw2QZzPVSUFq9SGw3DnpqkexSPp+jVdkS3FGOeLoaItn3mcVyOgmc3KwMTaVUE3J46fUKWHtjqT6X6N1Fx8S5Z2HzPrAdiZGrT3FRXepmorqzzLcn59sDly0tvUJs2oxlVtIQxBKEpWVT/s3YNzfdxfYvVQdXWBFHsbRMU0yYSqKpUmQvE5Lgl8f8QGKas3z2sBd/YCXxGmB5YF+clw8xUx5O0nWUE6rLownlx68NOKRc0/AC4w2ryDOFJp5/5dg49dbLkxe5EsexesLNMvpNZ4vV+72TEpLjvhSyKN4s/QoKlQoZrlS9712j/u7mE6vBOlq+8GYR2XK/xejT3mNV/NWlcsU4fc0=
