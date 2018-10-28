@@ -2,13 +2,13 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/carbonate)](https://cran.r-project.org/package=carbonate)
-![downloads](http://cranlogs.r-pkg.org/badges/carbonate) [![Travis-CI
-Build
+[![](https://cranlogs.r-pkg.org/badges/carbonate)](https://cran.r-project.org/package=carbonate)
+[![Travis-CI Build
 Status](https://travis-ci.org/yonicd/carbonate.svg?branch=master)](https://travis-ci.org/yonicd/carbonate)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_10_05-yellowgreen.svg)](https://goo.gl/gNRcCb)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_10_23-yellowgreen.svg)](https://goo.gl/gNRcCb)
 
 # carbonate <img src="https://github.com/yonicd/carbonate/raw/master/hextools/hex.gif" align="right" />
 
