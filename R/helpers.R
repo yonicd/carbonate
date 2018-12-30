@@ -134,6 +134,31 @@ asyncr <- function(remDr, using, value, action = NULL, maxiter = 20) {
   elem$clickElement()
 }
 
+file.timeout <- function(path, device, maxiter = 20) {
+  
+  file_found <- FALSE
+  
+  i <- 0
+  
+  while (!file_found & (i <= maxiter)) {
+
+    file_found <- file.exists(file.path(path, sprintf("carbon.%s", device)))
+    
+    Sys.sleep(0.02 * (i + 1))
+    
+    i <- i + 1
+  }
+  
+  if (i >= maxiter) {
+    # assuming this means timed out
+    stop("Could not find file in download path, 
+         please check network connectivity and try again",
+         call. = FALSE
+    )
+  }
+  
+}
+
 #' @importFrom yaml read_yaml as.yaml
 .parse_yml <- function(self, private, yml = "~/carbon.yml", silent = FALSE) {
   if (!is.null(yml)) {

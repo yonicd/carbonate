@@ -83,13 +83,8 @@
     maxiter = self$maxiter
   )
 
-  file_found <- FALSE
-
-  while (!file_found) {
-    Sys.sleep(0.05)
-    file_found <- file.exists(file.path(path, sprintf("carbon.%s", device)))
-  }
-
+  file.timeout(path,device)
+  
   if (file.exists(file.path(path, sprintf("rcarbon.%s", device)))) {
     unlink(file.path(path, sprintf("rcarbon.%s", device)), force = TRUE)
   }

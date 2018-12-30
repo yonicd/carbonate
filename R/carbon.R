@@ -158,7 +158,7 @@ carbon <- R6::R6Class(
     maxiter = 20,
     carbons = list(),
     download_path = tempdir(),
-    chrome_args = c("--headless","--disable-gpu", "--window-size=1280,800"),
+    chrome_args = c("--disable-gpu", "--window-size=1280,800"),
     chrome_pref = list(
       "profile.default_content_settings.popups" = 0L,
       "download.prompt_for_download" = FALSE,
@@ -213,7 +213,7 @@ carbon <- R6::R6Class(
     stop_all = function() {
       .stop_all(self, private)
     },
-    carbonate = function(file = "rcarbon.png", path = self$download_path, code = self$code, rD = self$rD) {
+    carbonate = function(file = "rcarbon.png", path = tempdir(), code = self$code, rD = self$rD) {
       .carbonate(self, private, file, path, code, rD)
     },
     encode = function(URL, reserved = FALSE, repeated = FALSE) {
