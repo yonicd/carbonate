@@ -24,7 +24,7 @@ library(magick)
 [![](https://cranlogs.r-pkg.org/badges/carbonate)](https://cran.r-project.org/package=carbonate)
 [![Travis-CI Build Status](https://travis-ci.org/yonicd/carbonate.svg?branch=master)](https://travis-ci.org/yonicd/carbonate)
 [![Coverage Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master)
-[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_10_23-yellowgreen.svg)](https://goo.gl/gNRcCb)
+[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_01_17-yellowgreen.svg)](https://goo.gl/gNRcCb)
 
 # carbonate `r if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers') '<img src="https://github.com/yonicd/carbonate/raw/master/hextools/hex.gif" align="right" />'`
 
