@@ -73,13 +73,13 @@
   
   asyncr(remDr,
     using = "xpath",
-    value = '//*[@id="__next"]/main/div[3]/div/div[1]/div[5]/div/div/button',
+    value = '//*[@id="export-menu"]/div/button',
     maxiter = self$maxiter
   )
 
   asyncr(remDr,
     using = "xpath",
-    value = sprintf('//*[@id="__next"]/main/div[3]/div/div[1]/div[5]/div/div[2]/div[4]/div/div/button[%s]', which(device%in%c('png','svg'))),
+    value = sprintf('//*[@id="export-%s"]', device),
     maxiter = self$maxiter
   )
 
