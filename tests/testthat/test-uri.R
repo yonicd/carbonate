@@ -34,6 +34,7 @@ testthat::describe("encode", {
 
 testthat::describe("tiny", {
   it("valid tiny", {
+    testthat::skip_on_cran()
     testthat::expect_false(httr::http_error(x$tiny()))
   })
 
