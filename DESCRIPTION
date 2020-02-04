@@ -1,20 +1,40 @@
 Package: carbonate
 Title: Interact with 'carbon.js'
-Version: 0.1.2
-Authors@R: person(given  = "Jonathan",
-                 family  = "Sidi",
-                 email   = "yonicd@gmail.com",
-                 role    = c("aut", "cre"),
-                 comment = c(ORCID = "0000-0002-4222-1819"))
-Description: Create beautiful images of source code using 'carbon.js'<https://carbon.now.sh/about>.
-Depends: R (>= 3.2.0)
+Version: 0.1.3
+Authors@R: 
+    person(given = "Jonathan",
+           family = "Sidi",
+           role = c("aut", "cre"),
+           email = "yonicd@gmail.com",
+           comment = c(ORCID = "0000-0002-4222-1819"))
+Description: Create beautiful images of source code using
+    'carbon.js'<https://carbon.now.sh/about>.
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 6.1.1
-Imports: R6, clipr, magick, wdman, RSelenium, utils, httr, rtweet, yaml
-Suggests: testthat, covr, knitr, rmarkdown
 URL: https://github.com/yonicd/carbonate
 BugReports: https://github.com/yonicd/carbonate/issues
+Depends: 
+    R (>= 3.2.0)
+Imports: 
+    clipr,
+    details,
+    httr,
+    magick,
+    R6,
+    RSelenium,
+    rtweet,
+    utils,
+    wdman,
+    yaml
+Suggests: 
+    covr,
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: 
+    knitr
+RdMacros: 
+    details
+Encoding: UTF-8
+LazyData: true
 Roxygen: list(markdown = TRUE)
-VignetteBuilder: knitr
+RoxygenNote: 6.1.1
