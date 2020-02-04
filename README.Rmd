@@ -26,7 +26,7 @@ library(magick)
 [![Coverage Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master)
 [![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_01_17-yellowgreen.svg)](https://goo.gl/gNRcCb)
 
-# carbonate `r if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers') '<img src="https://github.com/yonicd/carbonate/raw/master/hextools/hex.gif" align="right" />'`
+# carbonate <img src="hextools/hex.gif" align="right" class="logo" style="height:150px;"/>
 
 "[carbon.js](https://carbon.now.sh/about) is the easiest way to create beautiful images of your source code."
 
@@ -222,7 +222,7 @@ x$tiny()
 
 Or you can put the link directly on your clipboard
 
-```{r}
+```{r, eval = interactive()}
 x$tiny(clip = TRUE)
 clipr::read_clip()
 ```

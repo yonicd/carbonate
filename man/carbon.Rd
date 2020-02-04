@@ -22,53 +22,28 @@ A new 'Carbon'-object is initialized using the \code{new()} method on the genera
 \section{Fields}{
 
 
-\if{html}{
-\out{
-<br>
-<details>
-<summary> <span title='Click to Expand'> <big> Public Fields </big> </span> </summary>
-}
-}
+\foldstart{<big> Public Fields </big>}
 
 Description of fields of the R6 object that can be set by the user can be found
 in the following \link[carbonate:carbon-fields]{page}.
 
-\if{html}{
-\out{
-</details>
-}
-}
+\foldend
 }
 
 \section{Methods}{
 
 
-\if{html}{
-\out{
-<br>
-<details>
-<summary> <span title='Click to Expand'> <big> Interacting with Browser </big> </span> </summary>
-}
-}
+\foldstart{<big> Interacting with Browser </big>}
 
 \tabular{ll}{
 \link[carbonate:carbon-carbonate]{$carbonate} \tab Using RSelenium fetch the carbon image output \cr
 \link[carbonate:.browse]{$browse} \tab open \link[carbonate:carbon-uri]{$uri} in the browser
 }
 
-\if{html}{
-\out{
-</details>
-}
-}
+\foldend
 
-\if{html}{
-\out{
-<br>
-<details>
-<summary> <span title='Click to Expand'> <big> Aesthetics </big> </span> </summary>
-}
-}
+\foldstart{<big> Aesthetics </big>}
+
 \tabular{ll}{
 \link[carbonate:carbon-set-fields]{$set_template} \tab set $template \cr
 \link[carbonate:carbon-get-fields]{$get_templates} \tab get a list of possible templates \cr
@@ -78,19 +53,10 @@ in the following \link[carbonate:carbon-fields]{page}.
 \link[carbonate:carbon-get-fields]{$get_font_families} \tab get a list of possible fonts
 }
 
-\if{html}{
-\out{
-</details>
-}
-}
+\foldend
 
-\if{html}{
-\out{
-<br>
-<details>
-<summary> <span title='Click to Expand'> <big> URI Building </big> </span> </summary>
-}
-}
+\foldstart{<big> URI Building </big>}
+
 \tabular{ll}{
 \link[carbonate:carbon-uri]{$uri} \tab construct valid carbon.js uri \cr
 \link[carbonate:carbon-options]{$options} \tab return all current carbon options\cr
@@ -99,19 +65,10 @@ in the following \link[carbonate:carbon-fields]{page}.
 \link[carbonate:carbon-rtweet]{$rtweet}  \tab Send tweets containing media generated from carbon
 }
 
-\if{html}{
-\out{
-</details>
-}
-}
+\foldend
 
-\if{html}{
-\out{
-<br>
-<details>
-<summary> <span title='Click to Expand'> <big> Webdriver Settings </big> </span> </summary>
-}
-}
+\foldstart{<big> Webdriver Settings </big>}
+
 \tabular{ll}{
 \link[carbonate:carbon-chrome]{$chromeOptions} \tab construct a chromeOptions object \cr
 \link[carbonate:carbon-chrome]{$chrome_start} \tab start a chrome session \cr
@@ -121,11 +78,7 @@ in the following \link[carbonate:carbon-fields]{page}.
 \link[carbonate:carbon-selenium]{$stop_all} \tab stop all active RSelenium sessions
 }
 
-\if{html}{
-\out{
-</details>
-}
-}
+\foldend
 }
 
 \keyword{datasets}
