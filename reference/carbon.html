@@ -8,23 +8,25 @@
 
 <title>Carbon R6 class — carbon • carbonate</title>
 
-<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -32,8 +34,8 @@
 
 
 
-<meta property="og:title" content="Carbon R6 class — carbon" />
 
+<meta property="og:title" content="Carbon R6 class — carbon" />
 <meta property="og:description" content="The Carbon generator creates a new Carbon-object, which is the class containing
 all the app logic. The class is based on the R6 OO-system and
 is thus reference-based with methods and data attached to each object, in
@@ -42,13 +44,16 @@ contrast to the more well known S3 and S4 systems." />
 
 
 
+
 <!-- mathjax -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
 
 
   </head>
@@ -67,7 +72,7 @@ contrast to the more well known S3 and S4 systems." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">carbonate</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
       </span>
     </div>
 
@@ -75,7 +80,7 @@ contrast to the more well known S3 and S4 systems." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -95,11 +100,10 @@ contrast to the more well known S3 and S4 systems." />
   </ul>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/yonicd/carbonate">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -110,6 +114,7 @@ contrast to the more well known S3 and S4 systems." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -121,47 +126,48 @@ contrast to the more well known S3 and S4 systems." />
     </div>
 
     <div class="ref-description">
-    
     <p>The Carbon generator creates a new <code>Carbon</code>-object, which is the class containing
-all the app logic. The class is based on the <a href='http://www.rdocumentation.org/packages/R6/topics/R6Class'>R6</a> OO-system and
+all the app logic. The class is based on the <a href='https://rdrr.io/pkg/R6/man/R6Class.html'>R6</a> OO-system and
 is thus reference-based with methods and data attached to each object, in
 contrast to the more well known S3 and S4 systems.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="initialization"><a class="anchor" href="#initialization"></a>Initialization</h2>
 
     
-    <p>A new 'Carbon'-object is initialized using the <code>new()</code> method on the generator:</p>
+
+<p>A new 'Carbon'-object is initialized using the <code>new()</code> method on the generator:</p>
 <table class='table'>
 <tr><td><code>x &lt;- carbon$new(code = clipr::read_clip())</code></td></tr>
 </table>
-    
+
+
     <h2 class="hasAnchor" id="fields"><a class="anchor" href="#fields"></a>Fields</h2>
 
     
-    <p><br>
-<details>
-<summary> <span title='Click to Expand'> <big> Public Fields </big> </span> </summary></p>
+
+
+<p><br><details><summary> <span title='Click to Expand'> <big> Public Fields </big> </span> </summary></p>
 <p>Description of fields of the R6 object that can be set by the user can be found
 in the following <a href='carbon_fields.html'>page</a>.</p>
 <p></details></p>
-    
     <h2 class="hasAnchor" id="methods"><a class="anchor" href="#methods"></a>Methods</h2>
 
     
-    <p><br>
-<details>
-<summary> <span title='Click to Expand'> <big> Interacting with Browser </big> </span> </summary></p>
+
+
+<p><br><details><summary> <span title='Click to Expand'> <big> Interacting with Browser </big> </span> </summary></p>
 <table class='table'>
 <tr><td><a href='carbonate.html'>$carbonate</a></td><td>Using RSelenium fetch the carbon image output</td></tr>
 <tr><td><a href='browse.html'>$browse</a></td><td>open <a href='uri.html'>$uri</a> in the browser</td></tr>
 </table>
-    <p></details></p>
-<p><br>
-<details>
-<summary> <span title='Click to Expand'> <big> Aesthetics </big> </span> </summary></p><table class='table'>
+
+
+<p></details></p>
+<p><br><details><summary> <span title='Click to Expand'> <big> Aesthetics </big> </span> </summary></p>
+<table class='table'>
 <tr><td><a href='set_carbon.html'>$set_template</a></td><td>set $template</td></tr>
 <tr><td><a href='get_carbon.html'>$get_templates</a></td><td>get a list of possible templates</td></tr>
 <tr><td><a href='set_carbon.html'>$set_window_control_theme</a></td><td>set $windows_control_theme</td></tr>
@@ -169,20 +175,22 @@ in the following <a href='carbon_fields.html'>page</a>.</p>
 <tr><td><a href='set_carbon.html'>$set_font_family</a></td><td>set $font_family</td></tr>
 <tr><td><a href='get_carbon.html'>$get_font_families</a></td><td>get a list of possible fonts</td></tr>
 </table>
-    <p></details></p>
-<p><br>
-<details>
-<summary> <span title='Click to Expand'> <big> URI Building </big> </span> </summary></p><table class='table'>
+
+
+<p></details></p>
+<p><br><details><summary> <span title='Click to Expand'> <big> URI Building </big> </span> </summary></p>
+<table class='table'>
 <tr><td><a href='uri.html'>$uri</a></td><td>construct valid carbon.js uri</td></tr>
 <tr><td><a href='options.html'>$options</a></td><td>return all current carbon options</td></tr>
 <tr><td><a href='encode.html'>$encode</a></td><td>URL encode a string for the $uri</td></tr>
 <tr><td><a href='tiny.html'>$tiny</a></td><td>Create tinyurl from <a href='uri.html'>$uri</a></td></tr>
 <tr><td><a href='rtweet.html'>$rtweet</a></td><td>Send tweets containing media generated from carbon</td></tr>
 </table>
-    <p></details></p>
-<p><br>
-<details>
-<summary> <span title='Click to Expand'> <big> Webdriver Settings </big> </span> </summary></p><table class='table'>
+
+
+<p></details></p>
+<p><br><details><summary> <span title='Click to Expand'> <big> Webdriver Settings </big> </span> </summary></p>
+<table class='table'>
 <tr><td><a href='carbon_chrome.html'>$chromeOptions</a></td><td>construct a chromeOptions object</td></tr>
 <tr><td><a href='carbon_chrome.html'>$chrome_start</a></td><td>start a chrome session</td></tr>
 <tr><td><a href='carbon_chrome.html'>$chrome_stop</a></td><td>stop a chrome session</td></tr>
@@ -190,23 +198,22 @@ in the following <a href='carbon_fields.html'>page</a>.</p>
 <tr><td><a href='carbon_selenium.html'>$stop</a></td><td>stop a RSelenium session</td></tr>
 <tr><td><a href='carbon_selenium.html'>$stop_all</a></td><td>stop all active RSelenium sessions</td></tr>
 </table>
-    <p></details></p>
-    
+
+
+<p></details></p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      
       <li><a href="#initialization">Initialization</a></li>
-
       <li><a href="#fields">Fields</a></li>
-
       <li><a href="#methods">Methods</a></li>
-          </ul>
+    </ul>
 
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -214,7 +221,7 @@ in the following <a href='carbon_fields.html'>page</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.9000.</p>
 </div>
 
       </footer>
@@ -222,6 +229,8 @@ in the following <a href='carbon_fields.html'>page</a>.</p>
 
   
 
+
   </body>
 </html>
+
 
