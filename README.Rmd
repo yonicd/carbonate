@@ -8,14 +8,9 @@ always_allow_html: yes
 ```{r, echo = FALSE,message=FALSE,warning=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.path = "man/figures/"
 )
-
-if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers'){
-knitr::opts_chunk$set(
-    fig.path = 'man/figures/README-'
-)
-}
 
 library(magick)
 ```

@@ -20,7 +20,7 @@ directly from the console carbon images.
 
 Like the image below:
 
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](man/figures/unnamed-chunk-3-1.png)<!-- -->
 
 ## Installation
 
@@ -211,21 +211,21 @@ This function depends on RSelenium
 x$carbonate(file = 'myfile.png')
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](man/figures/unnamed-chunk-16-1.png)<!-- -->
 
 ``` r
 x$template <-'cobalt'
 x$carbonate(file = 'new_template.png')
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](man/figures/unnamed-chunk-18-1.png)<!-- -->
 
 ``` r
 x$font_family <-'IBM Plex Mono'
 x$carbonate(file = 'new_font.png')
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](man/figures/unnamed-chunk-20-1.png)<!-- -->
 
 ### Carbonate code directly to file in specific directory
 
@@ -251,7 +251,7 @@ x$add_tinyurl <- TRUE
 x$carbonate(file = 'tiny_url.png')
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+![](man/figures/unnamed-chunk-23-1.png)<!-- -->
 
 If you just want the tinyurl link without the image to use in a tweet
 you can create it using
@@ -327,7 +327,7 @@ x$carbons%>%
   magick::image_append()
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](man/figures/unnamed-chunk-28-1.png)<!-- -->
 
 ``` r
 
@@ -336,7 +336,7 @@ x$carbons%>%
   magick::image_append(stack = TRUE)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-28-2.png)<!-- -->
+![](man/figures/unnamed-chunk-28-2.png)<!-- -->
 
 </details>
 
@@ -349,6 +349,6 @@ x$carbons%>%
   magick::image_animate(fps = 1)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-29-1.gif)<!-- -->
+![](man/figures/unnamed-chunk-29-1.gif)<!-- -->
 
 </details>
