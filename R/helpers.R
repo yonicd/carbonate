@@ -237,3 +237,15 @@ check_get <- function(y, self = self, silent = FALSE) {
 find_get <- function(x, self = self) {
   names(self)[startsWith(names(self), sprintf("get_%s", gsub("_(.*?)$", "", x)))]
 }
+
+# Select a random safe port (From fiery)
+# 
+# This is a small utility function to get random safe ports to run your 
+# application on. It chooses a port within the range that cannot be registered
+# to IANA and thus is safe to assume are not in use.
+# from https://github.com/thomasp85/fiery/blob/master/R/aaa.R#L10_L28
+.random_port <- function(self = self, private = private) {
+  low <- 49152
+  high <- 65535
+  as.integer(sample(high - low, 1) + low)
+}

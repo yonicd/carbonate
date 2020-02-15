@@ -83,6 +83,7 @@ carbon <- R6::R6Class(
     initialize = function(code = clipr::read_clip(), yml = "~/carbon.yml", silent_yml = FALSE) {
       self$code <- code
       private$parse_yml(yml, silent = silent_yml)
+      self$set_port()
     },
     code = NULL,
     palette = c(r = 171, g = 184, b = 195, a = 1),
@@ -177,6 +178,21 @@ carbon <- R6::R6Class(
     },
     rtweet = function(media, status = self$tweet_status, media_format = c("png", "gif"), ...) {
       .rtweet(self, private, media, status, media_format = media_format, ...)
+    },
+    set_port  = function(port = NULL){
+      
+      if(!is.null(private$port))
+        private$port
+      
+      if(is.null(port)){
+        private$port <- .random_port(self,private)
+      }else{
+        private$port <- as.integer(port)
+      }
+      
+    },
+    get_port  = function(){
+      private$port
     }
   ),
   private = list(
@@ -217,6 +233,7 @@ carbon <- R6::R6Class(
       add_watermark = "wm",
       add_timestamp = "ts"
     ),
+    port = NULL,
     rgba = function(x) {
       .rgba(self, private, x)
     },

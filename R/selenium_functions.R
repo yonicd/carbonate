@@ -14,7 +14,7 @@
 #' @rdname carbon_chrome
 #' @importFrom wdman chrome
 .chrome_start <- function(self, private) {
-  self$cDrv <- wdman::chrome()
+  self$cDrv <- wdman::chrome(port = private$port)
 }
 
 #' @rdname carbon_chrome
@@ -41,7 +41,8 @@
   self$rD <- RSelenium::rsDriver(
     browser = "chrome",
     verbose = FALSE,
-    port = 4567L,
+    chromever = 'latest',
+    port = private$port,
     extraCapabilities = list(
       chromeOptions = eCap
     )
