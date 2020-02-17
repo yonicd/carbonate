@@ -5,8 +5,14 @@
 \alias{carbon-rtweet}
 \title{send tweets using carbonate outputs}
 \usage{
-.rtweet(self, private, media, status = self$tweet_status,
-  media_format = c("png", "gif"), ...)
+.rtweet(
+  self,
+  private,
+  media,
+  status = self$tweet_status,
+  media_format = c("png", "gif"),
+  ...
+)
 }
 \arguments{
 \item{self}{carbon self object}
