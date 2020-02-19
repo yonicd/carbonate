@@ -15,26 +15,24 @@
 #'
 #' @section Fields:
 #'
-#' \foldstart{<big> Public Fields </big>}
+#' Public Fields
 #'
 #' Description of fields of the R6 object that can be set by the user can be found
 #'  in the following [page][carbonate::carbon-fields].
 #'
-#' \foldend
 #'
 #' @section Methods:
 #'
-#' \foldstart{<big> Interacting with Browser </big>}
+#' Interacting with Browser
 #'
 #' \tabular{ll}{
 #' [$carbonate][carbonate::carbon-carbonate] \tab Using RSelenium fetch the carbon image output \cr
 #' [$browse][carbonate::.browse] \tab open [$uri][carbonate::carbon-uri] in the browser
 #' }
 #'
-#' \foldend
 #'
 #'
-#' \foldstart{<big> Aesthetics </big>}
+#' Aesthetics
 #' 
 #' \tabular{ll}{
 #' [$set_template][carbonate::carbon-set-fields] \tab set $template \cr
@@ -45,9 +43,7 @@
 #' [$get_font_families][carbonate::carbon-get-fields] \tab get a list of possible fonts
 #' }
 #'
-#' \foldend
-#'
-#' \foldstart{<big> URI Building </big>}
+#' URI Building
 #' 
 #' \tabular{ll}{
 #' [$uri][carbonate::carbon-uri] \tab construct valid carbon.js uri \cr
@@ -57,9 +53,7 @@
 #' [$rtweet][carbonate::carbon-rtweet]  \tab Send tweets containing media generated from carbon
 #' }
 #'
-#' \foldend
-#'
-#' \foldstart{<big> Webdriver Settings </big>}
+#' Webdriver Settings
 #' 
 #' \tabular{ll}{
 #' [$chromeOptions][carbonate::carbon-chrome] \tab construct a chromeOptions object \cr
@@ -70,7 +64,6 @@
 #' [$stop_all][carbonate::carbon-selenium] \tab stop all active RSelenium sessions
 #' }
 #'
-#' \foldend
 #'
 #'
 #' @rdname carbon

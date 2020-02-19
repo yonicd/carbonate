@@ -21,27 +21,23 @@ A new 'Carbon'-object is initialized using the \code{new()} method on the genera
 \section{Fields}{
 
 
-\foldstart{<big> Public Fields </big>}
+Public Fields
 
 Description of fields of the R6 object that can be set by the user can be found
 in the following \link[carbonate:carbon-fields]{page}.
-
-\foldend
 }
 
 \section{Methods}{
 
 
-\foldstart{<big> Interacting with Browser </big>}
+Interacting with Browser
 
 \tabular{ll}{
 \link[carbonate:carbon-carbonate]{$carbonate} \tab Using RSelenium fetch the carbon image output \cr
 \link[carbonate:.browse]{$browse} \tab open \link[carbonate:carbon-uri]{$uri} in the browser
 }
 
-\foldend
-
-\foldstart{<big> Aesthetics </big>}
+Aesthetics
 
 \tabular{ll}{
 \link[carbonate:carbon-set-fields]{$set_template} \tab set $template \cr
@@ -52,9 +48,7 @@ in the following \link[carbonate:carbon-fields]{page}.
 \link[carbonate:carbon-get-fields]{$get_font_families} \tab get a list of possible fonts
 }
 
-\foldend
-
-\foldstart{<big> URI Building </big>}
+URI Building
 
 \tabular{ll}{
 \link[carbonate:carbon-uri]{$uri} \tab construct valid carbon.js uri \cr
@@ -64,9 +58,7 @@ in the following \link[carbonate:carbon-fields]{page}.
 \link[carbonate:carbon-rtweet]{$rtweet}  \tab Send tweets containing media generated from carbon
 }
 
-\foldend
-
-\foldstart{<big> Webdriver Settings </big>}
+Webdriver Settings
 
 \tabular{ll}{
 \link[carbonate:carbon-chrome]{$chromeOptions} \tab construct a chromeOptions object \cr
@@ -76,8 +68,6 @@ in the following \link[carbonate:carbon-fields]{page}.
 \link[carbonate:carbon-selenium]{$stop} \tab stop a RSelenium session \cr
 \link[carbonate:carbon-selenium]{$stop_all} \tab stop all active RSelenium sessions
 }
-
-\foldend
 }
 
 \section{Methods}{
