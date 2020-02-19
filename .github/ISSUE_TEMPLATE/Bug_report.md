@@ -12,7 +12,7 @@ about: Create a report to help us improve
   Steps to reproduce the behavior:
   
 ```yaml
-contents of your _mrgconfig.yml file
+contents of your carbon.yml file
 ```
 
 **Expected behavior**
