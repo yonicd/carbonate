@@ -1,10 +1,14 @@
 testthat::context("uri")
 
 carb <- carbonate::carbon$new(silent_yml = TRUE)
-p <- carb$get_port()
 
 testthat::describe("port", {
 
+  testthat::skip_on_travis()
+  testthat::skip_on_cran()
+  
+  p <- carb$get_port()
+  
   it('init',{
     testthat::expect_true(inherits(carb$get_port(),'integer'))
   })
