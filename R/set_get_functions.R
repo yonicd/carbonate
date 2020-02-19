@@ -46,9 +46,10 @@
 #' @rdname get_carbon
 .get_templates <- function(self, private) {
   c(
-    "3024-night", "blackboard", "base16-dark", "base16-light", "cobalt", "dracula",
-    "duotone", "hopscotch", "material", "monokai", "night-owl", "oceanic-next",
-    "one-dark", "panda-syntax", "paraiso", "seti", "solarized dark", "solarized light",
-    "tomorrow-night-bright", "lucario", "twilight", "verminal", "yeti", "zenburn"
+    "3024-night", "a11y-dark", "blackboard", "base16-dark", "base16-light", "cobalt",
+    "dracula", "duotone", "hopscotch", "lucario", "material", "monokai", "night-owl",
+    "nord", "oceanic-next", "one-dark", "one-light", "panda-syntax", "paraiso", 
+    "seti", "shades-of-purple", "solarized dark", "solarized light", "synthwave-84", 
+    "tomorrow-night-bright", "twilight", "verminal", "vscode", "yeti", "zenburn"
   )
 }
