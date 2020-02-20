@@ -15,24 +15,26 @@
 #'
 #' @section Fields:
 #'
-#' Public Fields
+#' \foldstart{<big> Public Fields </big>}
 #'
 #' Description of fields of the R6 object that can be set by the user can be found
 #'  in the following [page][carbonate::carbon-fields].
 #'
+#' \foldend
 #'
 #' @section Methods:
 #'
-#' Interacting with Browser
+#' \foldstart{<big> Interacting with Browser </big>}
 #'
 #' \tabular{ll}{
 #' [$carbonate][carbonate::carbon-carbonate] \tab Using RSelenium fetch the carbon image output \cr
 #' [$browse][carbonate::.browse] \tab open [$uri][carbonate::carbon-uri] in the browser
 #' }
 #'
+#' \foldend
 #'
 #'
-#' Aesthetics
+#' \foldstart{<big> Aesthetics </big>}
 #' 
 #' \tabular{ll}{
 #' [$set_template][carbonate::carbon-set-fields] \tab set $template \cr
@@ -43,7 +45,9 @@
 #' [$get_font_families][carbonate::carbon-get-fields] \tab get a list of possible fonts
 #' }
 #'
-#' URI Building
+#' \foldend
+#'
+#' \foldstart{<big> URI Building </big>}
 #' 
 #' \tabular{ll}{
 #' [$uri][carbonate::carbon-uri] \tab construct valid carbon.js uri \cr
@@ -53,7 +57,9 @@
 #' [$rtweet][carbonate::carbon-rtweet]  \tab Send tweets containing media generated from carbon
 #' }
 #'
-#' Webdriver Settings
+#' \foldend
+#'
+#' \foldstart{<big> Webdriver Settings </big>}
 #' 
 #' \tabular{ll}{
 #' [$chromeOptions][carbonate::carbon-chrome] \tab construct a chromeOptions object \cr
@@ -61,10 +67,12 @@
 #' [$chrome_stop][carbonate::carbon-chrome] \tab stop a chrome session \cr
 #' [$start][carbonate::carbon-selenium] \tab start a RSelenium session \cr
 #' [$stop][carbonate::carbon-selenium] \tab stop a RSelenium session \cr
-#' [$stop_all][carbonate::carbon-selenium] \tab stop all active RSelenium sessions
+#' [$stop_all][carbonate::carbon-selenium] \tab stop all active RSelenium sessions \cr
+#' [$get_port][carbonate::carbon-selenium] \tab Get active port  \cr
+#' [$set_port][carbonate::carbon-selenium] \tab Set new port
 #' }
 #'
-#'
+#' \foldend
 #'
 #' @rdname carbon
 #' @export
@@ -173,19 +181,10 @@ carbon <- R6::R6Class(
       .rtweet(self, private, media, status, media_format = media_format, ...)
     },
     set_port  = function(port = NULL){
-      
-      if(!is.null(private$port))
-        private$port
-      
-      if(is.null(port)){
-        private$port <- .random_port(self,private)
-      }else{
-        private$port <- as.integer(port)
-      }
-      
+      .set_port(self,private,port)
     },
     get_port  = function(){
-      private$port
+      .get_port(self,private)
     }
   ),
   private = list(

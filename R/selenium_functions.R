@@ -61,3 +61,21 @@
   self$rD$client$closeall()
   self$chrome_stop()
 }
+
+#' @rdname carbon_selenium
+#' @param port integer, port for the [rsDriver][RSelenium::rsDriver] to use, if NULL then a random port is selected
+.set_port <- function(self,private,port = NULL){
+  if(!is.null(private$port))
+    private$port
+  
+  if(is.null(port)){
+    private$port <- .random_port(self,private)
+  }else{
+    private$port <- as.integer(port)
+  }
+}
+
+#' @rdname carbon_selenium
+.get_port <- function(self,private){
+  private$port
+}
