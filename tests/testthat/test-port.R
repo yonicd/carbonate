@@ -1,6 +1,6 @@
 testthat::context("port")
 
-carb <- carbonate::carbon$new(silent_yml = TRUE)
+carb <- carbonate::carbon$new()
 p <- carb$get_port()
 
 testthat::describe("port", {
