@@ -1,6 +1,6 @@
 testthat::context("port")
 
-carb <- carbonate::carbon$new()
+carb <- carbonate::carbon$new(code='123')
 p <- carb$get_port()
 
 testthat::describe("port", {
