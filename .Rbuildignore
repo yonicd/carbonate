@@ -9,3 +9,4 @@
 ^cran-comments\.md$
 ^\.github$
 hextools
+^CRAN-RELEASE$

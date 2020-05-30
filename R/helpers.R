@@ -237,3 +237,8 @@ check_get <- function(y, self = self, silent = FALSE) {
 find_get <- function(x, self = self) {
   names(self)[startsWith(names(self), sprintf("get_%s", gsub("_(.*?)$", "", x)))]
 }
+
+#' @importFrom httpuv randomPort
+.random_port <- function(self = self, private = private) {
+  httpuv::randomPort()
+}

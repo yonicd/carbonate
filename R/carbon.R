@@ -67,22 +67,25 @@
 #' [$chrome_stop][carbonate::carbon-chrome] \tab stop a chrome session \cr
 #' [$start][carbonate::carbon-selenium] \tab start a RSelenium session \cr
 #' [$stop][carbonate::carbon-selenium] \tab stop a RSelenium session \cr
-#' [$stop_all][carbonate::carbon-selenium] \tab stop all active RSelenium sessions
+#' [$stop_all][carbonate::carbon-selenium] \tab stop all active RSelenium sessions \cr
+#' [$get_port][carbonate::carbon-selenium] \tab Get active port  \cr
+#' [$set_port][carbonate::carbon-selenium] \tab Set new port
 #' }
 #'
 #' \foldend
-#'
 #'
 #' @rdname carbon
 #' @export
 #' @importFrom R6 R6Class
 #' @importFrom clipr read_clip
+#' @importFrom details details
 carbon <- R6::R6Class(
   classname = "Carbon",
   public = list(
     initialize = function(code = clipr::read_clip(), yml = "~/carbon.yml", silent_yml = FALSE) {
       self$code <- code
       private$parse_yml(yml, silent = silent_yml)
+      self$set_port()
     },
     code = NULL,
     palette = c(r = 171, g = 184, b = 195, a = 1),
@@ -177,6 +180,12 @@ carbon <- R6::R6Class(
     },
     rtweet = function(media, status = self$tweet_status, media_format = c("png", "gif"), ...) {
       .rtweet(self, private, media, status, media_format = media_format, ...)
+    },
+    set_port  = function(port = NULL){
+      .set_port(self,private,port)
+    },
+    get_port  = function(){
+      .get_port(self,private)
     }
   ),
   private = list(
@@ -217,6 +226,7 @@ carbon <- R6::R6Class(
       add_watermark = "wm",
       add_timestamp = "ts"
     ),
+    port = NULL,
     rgba = function(x) {
       .rgba(self, private, x)
     },

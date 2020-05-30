@@ -5,6 +5,8 @@
 \alias{carbon-selenium}
 \alias{.stop}
 \alias{.stop_all}
+\alias{.set_port}
+\alias{.get_port}
 \title{RSelenium webdriver functions}
 \usage{
 .start(self, private, eCap)
@@ -12,6 +14,10 @@
 .stop(self, private)
 
 .stop_all(self, private)
+
+.set_port(self, private, port = NULL)
+
+.get_port(self, private)
 }
 \arguments{
 \item{self}{carbon self object}
@@ -19,6 +25,8 @@
 \item{private}{carbon private object}
 
 \item{eCap}{chromeOptions passed into \link[RSelenium:rsDriver]{rsDriver}}
+
+\item{port}{integer, port for the \link[RSelenium:rsDriver]{rsDriver} to use, if NULL then a random port is selected}
 }
 \description{
 Functions to open,stop, stop_all RSelenium sessions
