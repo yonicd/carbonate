@@ -73,7 +73,7 @@
   
   asyncr(remDr,
     using = "xpath",
-    value = '//*[@id="export-menu"]/div/button',
+    value = '//*[@id="export-menu"]',
     maxiter = self$maxiter
   )
 

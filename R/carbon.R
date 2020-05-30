@@ -78,6 +78,7 @@
 #' @export
 #' @importFrom R6 R6Class
 #' @importFrom clipr read_clip
+#' @importFrom details details
 carbon <- R6::R6Class(
   classname = "Carbon",
   public = list(

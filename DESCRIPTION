@@ -37,5 +37,5 @@ RdMacros:
     details
 Encoding: UTF-8
 LazyData: true
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE,old_usage = TRUE,r6 = FALSE)
+RoxygenNote: 7.1.0

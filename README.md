@@ -20,7 +20,7 @@ directly from the console carbon images.
 
 Like the image below:
 
-![](man/figures/unnamed-chunk-3-1.png)<!-- -->
+<img src="man/figures/unnamed-chunk-3-1.png" width="545" />
 
 ## Installation
 
@@ -56,7 +56,7 @@ The code is kept in the object and can be changed at any time.
 x$code
 #>  [1] "Package: carbonate"                                       
 #>  [2] "Title: Interact with 'carbon.js'"                         
-#>  [3] "Version: 0.1.3"                                           
+#>  [3] "Version: 0.1.4"                                           
 #>  [4] "Authors@R: "                                              
 #>  [5] "    person(given = \"Jonathan\","                         
 #>  [6] "           family = \"Sidi\","                            
@@ -93,8 +93,8 @@ x$code
 #> [37] "    details"                                              
 #> [38] "Encoding: UTF-8"                                          
 #> [39] "LazyData: true"                                           
-#> [40] "Roxygen: list(markdown = TRUE)"                           
-#> [41] "RoxygenNote: 7.0.2"
+#> [40] "Roxygen: list(markdown = TRUE,old_usage = TRUE)"          
+#> [41] "RoxygenNote: 7.1.0"
 ```
 
 The main job of the R6 object is to convert all the options into a uri
@@ -102,11 +102,11 @@ that is sent to the carbon url page, where it is processed.
 
 ``` r
 x$uri()
-#> [1] "https://carbon.now.sh/?bg=rgba(171%2C175%2C195%2C0.7)&t=panda-syntax&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=14px&ln=false&fm=Fira%20Code&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%250AVersion%253A%25200.1.3%250AAuthors%2540R%253A%2520%250A%2520%2520%2520%2520person(given%2520%253D%2520%2522Jonathan%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520family%2520%253D%2520%2522Sidi%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520role%2520%253D%2520c(%2522aut%2522%252C%2520%2522cre%2522)%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520email%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520comment%2520%253D%2520c(ORCID%2520%253D%2520%25220000-0002-4222-1819%2522))%250ADescription%253A%2520Create%2520beautiful%2520images%2520of%2520source%2520code%2520using%250A%2520%2520%2520%2520%27carbon.js%27%253Chttps%253A%252F%252Fcarbon.now.sh%252Fabout%253E.%250ALicense%253A%2520MIT%2520%252B%2520file%2520LICENSE%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ADepends%253A%2520%250A%2520%2520%2520%2520R%2520(%253E%253D%25203.2.0)%250AImports%253A%2520%250A%2520%2520%2520%2520clipr%252C%250A%2520%2520%2520%2520details%252C%250A%2520%2520%2520%2520httpuv%252C%250A%2520%2520%2520%2520httr%252C%250A%2520%2520%2520%2520magick%252C%250A%2520%2520%2520%2520R6%252C%250A%2520%2520%2520%2520RSelenium%252C%250A%2520%2520%2520%2520rtweet%252C%250A%2520%2520%2520%2520utils%252C%250A%2520%2520%2520%2520wdman%252C%250A%2520%2520%2520%2520yaml%250ASuggests%253A%2520%250A%2520%2520%2520%2520covr%252C%250A%2520%2520%2520%2520knitr%252C%250A%2520%2520%2520%2520rmarkdown%252C%250A%2520%2520%2520%2520testthat%250AVignetteBuilder%253A%2520%250A%2520%2520%2520%2520knitr%250ARdMacros%253A%2520%250A%2520%2520%2520%2520details%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE)%250ARoxygenNote%253A%25207.0.2"
+#> [1] "https://carbon.now.sh/?bg=rgba(171%2C175%2C195%2C0.7)&t=panda-syntax&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=14px&ln=false&fm=Fira%20Code&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%250AVersion%253A%25200.1.4%250AAuthors%2540R%253A%2520%250A%2520%2520%2520%2520person(given%2520%253D%2520%2522Jonathan%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520family%2520%253D%2520%2522Sidi%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520role%2520%253D%2520c(%2522aut%2522%252C%2520%2522cre%2522)%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520email%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520comment%2520%253D%2520c(ORCID%2520%253D%2520%25220000-0002-4222-1819%2522))%250ADescription%253A%2520Create%2520beautiful%2520images%2520of%2520source%2520code%2520using%250A%2520%2520%2520%2520%27carbon.js%27%253Chttps%253A%252F%252Fcarbon.now.sh%252Fabout%253E.%250ALicense%253A%2520MIT%2520%252B%2520file%2520LICENSE%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ADepends%253A%2520%250A%2520%2520%2520%2520R%2520(%253E%253D%25203.2.0)%250AImports%253A%2520%250A%2520%2520%2520%2520clipr%252C%250A%2520%2520%2520%2520details%252C%250A%2520%2520%2520%2520httpuv%252C%250A%2520%2520%2520%2520httr%252C%250A%2520%2520%2520%2520magick%252C%250A%2520%2520%2520%2520R6%252C%250A%2520%2520%2520%2520RSelenium%252C%250A%2520%2520%2520%2520rtweet%252C%250A%2520%2520%2520%2520utils%252C%250A%2520%2520%2520%2520wdman%252C%250A%2520%2520%2520%2520yaml%250ASuggests%253A%2520%250A%2520%2520%2520%2520covr%252C%250A%2520%2520%2520%2520knitr%252C%250A%2520%2520%2520%2520rmarkdown%252C%250A%2520%2520%2520%2520testthat%250AVignetteBuilder%253A%2520%250A%2520%2520%2520%2520knitr%250ARdMacros%253A%2520%250A%2520%2520%2520%2520details%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygen%253A%2520list(markdown%2520%253D%2520TRUE%252Cold_usage%2520%253D%2520TRUE)%250ARoxygenNote%253A%25207.1.0"
 ```
 
 Click the
-[link](https://carbon.now.sh/?bg=rgba\(171%2C175%2C195%2C0.7\)&t=panda-syntax&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=14px&ln=false&fm=Fira%20Code&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%250AVersion%253A%25200.1.3%250AAuthors%2540R%253A%2520%250A%2520%2520%2520%2520person\(given%2520%253D%2520%2522Jonathan%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520family%2520%253D%2520%2522Sidi%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520role%2520%253D%2520c\(%2522aut%2522%252C%2520%2522cre%2522\)%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520email%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520comment%2520%253D%2520c\(ORCID%2520%253D%2520%25220000-0002-4222-1819%2522\)\)%250ADescription%253A%2520Create%2520beautiful%2520images%2520of%2520source%2520code%2520using%250A%2520%2520%2520%2520%27carbon.js%27%253Chttps%253A%252F%252Fcarbon.now.sh%252Fabout%253E.%250ALicense%253A%2520MIT%2520%252B%2520file%2520LICENSE%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ADepends%253A%2520%250A%2520%2520%2520%2520R%2520\(%253E%253D%25203.2.0\)%250AImports%253A%2520%250A%2520%2520%2520%2520clipr%252C%250A%2520%2520%2520%2520details%252C%250A%2520%2520%2520%2520httpuv%252C%250A%2520%2520%2520%2520httr%252C%250A%2520%2520%2520%2520magick%252C%250A%2520%2520%2520%2520R6%252C%250A%2520%2520%2520%2520RSelenium%252C%250A%2520%2520%2520%2520rtweet%252C%250A%2520%2520%2520%2520utils%252C%250A%2520%2520%2520%2520wdman%252C%250A%2520%2520%2520%2520yaml%250ASuggests%253A%2520%250A%2520%2520%2520%2520covr%252C%250A%2520%2520%2520%2520knitr%252C%250A%2520%2520%2520%2520rmarkdown%252C%250A%2520%2520%2520%2520testthat%250AVignetteBuilder%253A%2520%250A%2520%2520%2520%2520knitr%250ARdMacros%253A%2520%250A%2520%2520%2520%2520details%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygen%253A%2520list\(markdown%2520%253D%2520TRUE\)%250ARoxygenNote%253A%25207.0.2)
+[link](https://carbon.now.sh/?bg=rgba\(171%2C175%2C195%2C0.7\)&t=panda-syntax&wt=none&l=r&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=14px&ln=false&fm=Fira%20Code&fs=14px&lh=133%25&si=false&es=1x&wm=false&ts=false&code=Package%253A%2520carbonate%250ATitle%253A%2520Interact%2520with%2520%27carbon.js%27%250AVersion%253A%25200.1.4%250AAuthors%2540R%253A%2520%250A%2520%2520%2520%2520person\(given%2520%253D%2520%2522Jonathan%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520family%2520%253D%2520%2522Sidi%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520role%2520%253D%2520c\(%2522aut%2522%252C%2520%2522cre%2522\)%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520email%2520%253D%2520%2522yonicd%2540gmail.com%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520comment%2520%253D%2520c\(ORCID%2520%253D%2520%25220000-0002-4222-1819%2522\)\)%250ADescription%253A%2520Create%2520beautiful%2520images%2520of%2520source%2520code%2520using%250A%2520%2520%2520%2520%27carbon.js%27%253Chttps%253A%252F%252Fcarbon.now.sh%252Fabout%253E.%250ALicense%253A%2520MIT%2520%252B%2520file%2520LICENSE%250AURL%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%250ABugReports%253A%2520https%253A%252F%252Fgithub.com%252Fyonicd%252Fcarbonate%252Fissues%250ADepends%253A%2520%250A%2520%2520%2520%2520R%2520\(%253E%253D%25203.2.0\)%250AImports%253A%2520%250A%2520%2520%2520%2520clipr%252C%250A%2520%2520%2520%2520details%252C%250A%2520%2520%2520%2520httpuv%252C%250A%2520%2520%2520%2520httr%252C%250A%2520%2520%2520%2520magick%252C%250A%2520%2520%2520%2520R6%252C%250A%2520%2520%2520%2520RSelenium%252C%250A%2520%2520%2520%2520rtweet%252C%250A%2520%2520%2520%2520utils%252C%250A%2520%2520%2520%2520wdman%252C%250A%2520%2520%2520%2520yaml%250ASuggests%253A%2520%250A%2520%2520%2520%2520covr%252C%250A%2520%2520%2520%2520knitr%252C%250A%2520%2520%2520%2520rmarkdown%252C%250A%2520%2520%2520%2520testthat%250AVignetteBuilder%253A%2520%250A%2520%2520%2520%2520knitr%250ARdMacros%253A%2520%250A%2520%2520%2520%2520details%250AEncoding%253A%2520UTF-8%250ALazyData%253A%2520true%250ARoxygen%253A%2520list\(markdown%2520%253D%2520TRUE%252Cold_usage%2520%253D%2520TRUE\)%250ARoxygenNote%253A%25207.1.0)
 to see the URI works.
 
 ### Manipulate carbon object
@@ -136,18 +136,16 @@ Aesthetics of the carbon object that can be manipulated
 
 ``` r
 x$get_templates()
-#>  [1] "3024-night"            "blackboard"           
-#>  [3] "base16-dark"           "base16-light"         
-#>  [5] "cobalt"                "dracula"              
-#>  [7] "duotone"               "hopscotch"            
-#>  [9] "material"              "monokai"              
-#> [11] "night-owl"             "oceanic-next"         
-#> [13] "one-dark"              "panda-syntax"         
-#> [15] "paraiso"               "seti"                 
-#> [17] "solarized dark"        "solarized light"      
-#> [19] "tomorrow-night-bright" "lucario"              
-#> [21] "twilight"              "verminal"             
-#> [23] "yeti"                  "zenburn"
+#>  [1] "3024-night"            "a11y-dark"             "blackboard"           
+#>  [4] "base16-dark"           "base16-light"          "cobalt"               
+#>  [7] "dracula"               "duotone"               "hopscotch"            
+#> [10] "lucario"               "material"              "monokai"              
+#> [13] "night-owl"             "nord"                  "oceanic-next"         
+#> [16] "one-dark"              "one-light"             "panda-syntax"         
+#> [19] "paraiso"               "seti"                  "shades-of-purple"     
+#> [22] "solarized dark"        "solarized light"       "synthwave-84"         
+#> [25] "tomorrow-night-bright" "twilight"              "verminal"             
+#> [28] "vscode"                "yeti"                  "zenburn"
 ```
 
 ``` r
@@ -211,21 +209,21 @@ This function depends on RSelenium
 x$carbonate(file = 'myfile.png')
 ```
 
-![](man/figures/unnamed-chunk-16-1.png)<!-- -->
+<img src="man/figures/unnamed-chunk-16-1.png" width="545" />
 
 ``` r
 x$template <-'cobalt'
 x$carbonate(file = 'new_template.png')
 ```
 
-![](man/figures/unnamed-chunk-18-1.png)<!-- -->
+<img src="man/figures/unnamed-chunk-18-1.png" width="545" />
 
 ``` r
 x$font_family <-'IBM Plex Mono'
 x$carbonate(file = 'new_font.png')
 ```
 
-![](man/figures/unnamed-chunk-20-1.png)<!-- -->
+<img src="man/figures/unnamed-chunk-20-1.png" width="545" />
 
 ### Carbonate code directly to file in specific directory
 
@@ -251,23 +249,21 @@ x$add_tinyurl <- TRUE
 x$carbonate(file = 'tiny_url.png')
 ```
 
-![](man/figures/unnamed-chunk-23-1.png)<!-- -->
+<img src="man/figures/unnamed-chunk-23-1.png" width="545" />
 
 If you just want the tinyurl link without the image to use in a tweet
 you can create it using
 
 ``` r
 x$tiny()
-#> [1] "http://tinyurl.com/uo8m4pt"
+#> [1] "http://tinyurl.com/y9ahtsy2"
 ```
 
 Or you can put the link directly on your clipboard
 
 ``` r
 x$tiny(clip = TRUE)
-#> [1] "http://tinyurl.com/uo8m4pt"
 clipr::read_clip()
-#> [1] "http://tinyurl.com/uo8m4pt"
 ```
 
 </details>
@@ -285,7 +281,7 @@ with two options
       - Created in R using the Carbonate 📦
   - When `add_tinyurl <- TRUE`
       - Created in R using the Carbonate 📦 Check out this script at 🔗
-        <http://tinyurl.com/uo8m4pt>
+        <http://tinyurl.com/y9ahtsy2>
   - Manual
       - Using `tweet_status` you can write your own status.
 
@@ -329,7 +325,7 @@ x$carbons%>%
   magick::image_append()
 ```
 
-![](man/figures/unnamed-chunk-28-1.png)<!-- -->
+<img src="man/figures/unnamed-chunk-28-1.png" width="1200" />
 
 ``` r
 
@@ -338,7 +334,7 @@ x$carbons%>%
   magick::image_append(stack = TRUE)
 ```
 
-![](man/figures/unnamed-chunk-28-2.png)<!-- -->
+<img src="man/figures/unnamed-chunk-28-2.png" width="300" />
 
 </details>
 
