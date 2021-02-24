@@ -37,19 +37,61 @@
 
 #' @rdname get_carbon
 .get_font_families <- function(self, private) {
-  c(
-    "Anonymous Pro", "Droid Sans Mono", "Fantasque Sans Mono", "Fira Code", "Monoid",
-    "Hack", "IBM Plex Mono", "Iosevka", "Inconsolata", "Source Code Pro", "Ubuntu Mono"
-  )
+  # library(tidyverse)
+  # library(magrittr)
+  # library(curl)
+  # (
+  #   'https://raw.githubusercontent.com/carbon-app/carbon/main/lib/constants.js'
+  #   %>% curl_fetch_memory()
+  #   %$% rawToChar(.$content)
+  #   %>% str_split('\n')
+  #   %>% unlist()
+  # ) -> con_lines
+  # fonts_start = which(con_lines=="export const FONTS = [")+1
+  # con_lines = con_lines[fonts_start:length(con_lines)]
+  # fonts_end = which(con_lines=="]")[1]-1
+  # (
+  #   con_lines[1:fonts_end]
+  #   %>% str_replace(fixed("  { id: '"),"")
+  #   %>% str_replace_all("(')(.*)","")
+  # ) -> fonts
+  # dput(fonts)
+  c("Anonymous Pro", "Droid Sans Mono", "Fantasque Sans Mono", 
+    "Fira Code", "Hack", "IBM Plex Mono", "Inconsolata", "Iosevka", 
+    "JetBrains Mono", "Monoid", "Source Code Pro", "Space Mono", 
+    "Ubuntu Mono")
 }
 
 #' @rdname get_carbon
 .get_templates <- function(self, private) {
-  c(
-    "3024-night", "a11y-dark", "blackboard", "base16-dark", "base16-light", "cobalt",
-    "dracula", "duotone", "hopscotch", "lucario", "material", "monokai", "night-owl",
-    "nord", "oceanic-next", "one-dark", "one-light", "panda-syntax", "paraiso", 
-    "seti", "shades-of-purple", "solarized dark", "solarized light", "synthwave-84", 
-    "tomorrow-night-bright", "twilight", "verminal", "vscode", "yeti", "zenburn"
-  )
+  # library(tidyverse)
+  # library(magrittr)
+  # library(curl)
+  # (
+  #   'https://raw.githubusercontent.com/carbon-app/carbon/main/lib/constants.js'
+  #   %>% curl_fetch_memory()
+  #   %$% rawToChar(.$content)
+  #   %>% str_split('\n')
+  #   %>% unlist()
+  # ) -> con_lines
+  # theme_start = which(con_lines=="export const THEMES = [")+1
+  # con_lines = con_lines[theme_start:length(con_lines)]
+  # theme_end = which(con_lines=="]")[1]-1
+  # (
+  #   con_lines[1:theme_end]
+  #   %>% as_tibble()
+  #   %>% filter(
+  #     str_starts(value,'    id: ')
+  #   )
+  #   %>% pull(value) 
+  #   %>% str_replace(fixed("    id: '"),"")
+  #   %>% str_replace(fixed("',"),"")
+  # ) -> themes
+  # dput(themes)
+  c("3024-night", "a11y-dark", "blackboard", "base16-dark", "base16-light", 
+    "cobalt", "dracula", "duotone-dark", "hopscotch", "lucario", 
+    "material", "monokai", "night-owl", "nord", "oceanic-next", "one-light", 
+    "one-dark", "panda-syntax", "paraiso-dark", "seti", "shades-of-purple", 
+    "solarized dark", "solarized light", "synthwave-84", "twilight", 
+    "verminal", "vscode", "yeti", "zenburn")
 }
