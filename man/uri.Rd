@@ -31,5 +31,5 @@ x$uri(code = 'x <- y + 3')
 }
 }
 \seealso{
-\link[carbonate:carbon]{carbon}
+\link[=carbon]{carbon}
 }

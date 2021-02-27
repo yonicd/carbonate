@@ -242,3 +242,50 @@ find_get <- function(x, self = self) {
 .random_port <- function(self = self, private = private) {
   httpuv::randomPort()
 }
+
+#' @importFrom jsonlite parse_json
+query_defaults <- function(type = "FONTS") {
+
+    con_lines <- readLines('https://raw.githubusercontent.com/carbon-app/carbon/main/lib/constants.js')
+
+    # Collapse to single string
+    con_lines_collapse <- paste0(con_lines, collapse = "")
+    con_lines_collapse <- gsub(",\\]", "\\]", con_lines_collapse)
+
+    # Find and extract type
+    l_matches <- gregexpr(sprintf("\\b%s\\b(.*?)\\]", type), con_lines_collapse)
+    l_raw <- regmatches(con_lines_collapse, l_matches)[[1]][[1]]
+    l_raw <- gsub(sprintf(sprintf("%s(.*?)= ", type)), "", l_raw)
+
+    # Clean up trailing commas and whitespaces
+    l_raw <- gsub("\\s+", " ", l_raw)
+    l_raw <- gsub("\\}, \\}", "\\}\\}", l_raw)
+    l_raw <- gsub(",\\s*", ",", l_raw)
+    l_raw <- gsub(",\\s*\\}", "\\}", l_raw)
+    l_raw <- gsub("\\{\\s", "\\{", l_raw)
+
+    # Replace name of elements with quoted names
+    find_l <- regmatches(l_raw,gregexpr("[{,](.*?):", l_raw))
+    old_chr <- unique(gsub("[ {:,]", "", find_l[[1]]))
+    new_chr <- sprintf('"%s":', old_chr)
+    block_chr <- sprintf("\\b%s\\b:", old_chr)
+    l_out <- l_raw
+    for(i in seq(length(old_chr))) {
+        l_out <- gsub(block_chr[i], new_chr[i], l_out)
+    }
+
+    #Fix syntax problems
+    l_out <- gsub("' :", '" :', l_out)
+    l_out <- gsub(": '", ': "', l_out)
+    l_out <- gsub("\\{ '", '\\{ "', l_out)
+    l_out <- gsub("' \\}", '" \\}', l_out)
+    l_out <- gsub("'\\}", '"\\}', l_out)
+    l_out <- gsub("',", '",', l_out)
+    l_out <- gsub(",'", ',"', l_out)
+    l_out <- gsub(":'", ':"', l_out)
+    l_out <- gsub('-"', "-", l_out)
+    l_out <- gsub('""', '"', l_out)
+
+    # Convert to list
+    jsonlite::parse_json(l_out)
+}

@@ -32,5 +32,5 @@
 Functions to open,stop, stop_all RSelenium sessions
 }
 \seealso{
-\link[carbonate:carbon]{carbon}
+\link[=carbon]{carbon}
 }

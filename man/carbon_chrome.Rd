@@ -22,5 +22,5 @@
 Functions to open,close,set chrome webdriver
 }
 \seealso{
-\link[carbonate:carbon]{carbon}, \link[wdman:chrome]{chrome}
+\link[=carbon]{carbon}, \link[wdman:chrome]{chrome}
 }

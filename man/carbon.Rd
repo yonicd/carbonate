@@ -24,7 +24,7 @@ A new 'Carbon'-object is initialized using the \code{new()} method on the genera
 \foldstart{<big> Public Fields </big>}
 
 Description of fields of the R6 object that can be set by the user can be found
-in the following \link[carbonate:carbon-fields]{page}.
+in the following \link[=carbon-fields]{page}.
 
 \foldend
 }
@@ -35,8 +35,8 @@ in the following \link[carbonate:carbon-fields]{page}.
 \foldstart{<big> Interacting with Browser </big>}
 
 \tabular{ll}{
-\link[carbonate:carbon-carbonate]{$carbonate} \tab Using RSelenium fetch the carbon image output \cr
-\link[carbonate:.browse]{$browse} \tab open \link[carbonate:carbon-uri]{$uri} in the browser
+\link[=carbon-carbonate]{$carbonate} \tab Using RSelenium fetch the carbon image output \cr
+\link[=.browse]{$browse} \tab open \link[=carbon-uri]{$uri} in the browser
 }
 
 \foldend
@@ -44,12 +44,12 @@ in the following \link[carbonate:carbon-fields]{page}.
 \foldstart{<big> Aesthetics </big>}
 
 \tabular{ll}{
-\link[carbonate:carbon-set-fields]{$set_template} \tab set $template \cr
-\link[carbonate:carbon-get-fields]{$get_templates} \tab get a list of possible templates \cr
-\link[carbonate:carbon-set-fields]{$set_window_control_theme} \tab  set $windows_control_theme \cr
-\link[carbonate:carbon-get-fields]{$get_windows_control_themes} \tab get a list of possible window control themes\cr
-\link[carbonate:carbon-set-fields]{$set_font_family} \tab set $font_family\cr
-\link[carbonate:carbon-get-fields]{$get_font_families} \tab get a list of possible fonts
+\link[=carbon-set-fields]{$set_template} \tab set $template \cr
+\link[=carbon-get-fields]{$get_templates} \tab get a list of possible templates \cr
+\link[=carbon-set-fields]{$set_window_control_theme} \tab  set $windows_control_theme \cr
+\link[=carbon-get-fields]{$get_windows_control_themes} \tab get a list of possible window control themes\cr
+\link[=carbon-set-fields]{$set_font_family} \tab set $font_family\cr
+\link[=carbon-get-fields]{$get_font_families} \tab get a list of possible fonts
 }
 
 \foldend
@@ -57,11 +57,11 @@ in the following \link[carbonate:carbon-fields]{page}.
 \foldstart{<big> URI Building </big>}
 
 \tabular{ll}{
-\link[carbonate:carbon-uri]{$uri} \tab construct valid carbon.js uri \cr
-\link[carbonate:carbon-options]{$options} \tab return all current carbon options\cr
-\link[carbonate:carbon-encode]{$encode} \tab URL encode a string for the $uri \cr
-\link[carbonate:carbon-tinyurl]{$tiny}  \tab Create tinyurl from \link[carbonate:carbon-uri]{$uri} \cr
-\link[carbonate:carbon-rtweet]{$rtweet}  \tab Send tweets containing media generated from carbon
+\link[=carbon-uri]{$uri} \tab construct valid carbon.js uri \cr
+\link[=carbon-options]{$options} \tab return all current carbon options\cr
+\link[=carbon-encode]{$encode} \tab URL encode a string for the $uri \cr
+\link[=carbon-tinyurl]{$tiny}  \tab Create tinyurl from \link[=carbon-uri]{$uri} \cr
+\link[=carbon-rtweet]{$rtweet}  \tab Send tweets containing media generated from carbon
 }
 
 \foldend
@@ -69,14 +69,14 @@ in the following \link[carbonate:carbon-fields]{page}.
 \foldstart{<big> Webdriver Settings </big>}
 
 \tabular{ll}{
-\link[carbonate:carbon-chrome]{$chromeOptions} \tab construct a chromeOptions object \cr
-\link[carbonate:carbon-chrome]{$chrome_start} \tab start a chrome session \cr
-\link[carbonate:carbon-chrome]{$chrome_stop} \tab stop a chrome session \cr
-\link[carbonate:carbon-selenium]{$start} \tab start a RSelenium session \cr
-\link[carbonate:carbon-selenium]{$stop} \tab stop a RSelenium session \cr
-\link[carbonate:carbon-selenium]{$stop_all} \tab stop all active RSelenium sessions \cr
-\link[carbonate:carbon-selenium]{$get_port} \tab Get active port  \cr
-\link[carbonate:carbon-selenium]{$set_port} \tab Set new port
+\link[=carbon-chrome]{$chromeOptions} \tab construct a chromeOptions object \cr
+\link[=carbon-chrome]{$chrome_start} \tab start a chrome session \cr
+\link[=carbon-chrome]{$chrome_stop} \tab stop a chrome session \cr
+\link[=carbon-selenium]{$start} \tab start a RSelenium session \cr
+\link[=carbon-selenium]{$stop} \tab stop a RSelenium session \cr
+\link[=carbon-selenium]{$stop_all} \tab stop all active RSelenium sessions \cr
+\link[=carbon-selenium]{$get_port} \tab Get active port  \cr
+\link[=carbon-selenium]{$set_port} \tab Set new port
 }
 
 \foldend
