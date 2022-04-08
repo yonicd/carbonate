@@ -21,6 +21,7 @@ Imports:
     httr,
     magick,
     R6,
+    reprex,
     RSelenium,
     rtweet,
     utils,

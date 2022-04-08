@@ -1,0 +1,9 @@
+Name: Browse carbonated Reprex
+Description: Opens the browser for the current reprex in Carbon
+Binding: reprex_to_carbon_browser
+Interactive: true
+
+Name: Download carbonated Reprex
+Description: Downloads the current reprex in Carbon
+Binding: reprex_to_carbon_download
+Interactive: true
