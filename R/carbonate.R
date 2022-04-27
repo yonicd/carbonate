@@ -7,6 +7,7 @@
 #' @param path character, path to save the image
 #' @param code character, lines of script to make carbon image from
 #' @param rD RSelenium driver
+#' @param driver character, select either 'firefox' or 'chrome' driver
 #' @details Script is passed to <https://carbon.now.sh/> is downloaded to the `tempdir()` and appended to the list [$carbons][carbonate::carbon-fields] using RSelenium and Chrome.
 #' @return image object
 #' @examples

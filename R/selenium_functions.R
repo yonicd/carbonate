@@ -34,13 +34,14 @@
 #' @param self carbon self object
 #' @param private carbon private object
 #' @param eCap chromeOptions passed into [rsDriver][RSelenium::rsDriver]
+#' @param driver character, select either 'firefox' or 'chrome' driver
 #' @rdname carbon_selenium
 #' @aliases carbon-selenium
 #' @seealso
 #'  [carbon][carbonate::carbon]
 #' @importFrom RSelenium rsDriver makeFirefoxProfile
-.start <- function(self, private, eCap, driver = c("chrome", "firefox")) {
-  driver <- match.arg(driver, c("chrome", "firefox"))
+.start <- function(self, private, eCap, driver = c("firefox", "chrome")) {
+  driver <- match.arg(driver, c("firefox", "chrome"))
   if (is.null(self$cDrv)) {
     self$driver_start(driver)
   }

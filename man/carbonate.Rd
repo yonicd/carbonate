@@ -20,6 +20,8 @@
 \item{code}{character, lines of script to make carbon image from}
 
 \item{rD}{RSelenium driver}
+
+\item{driver}{character, select either 'firefox' or 'chrome' driver}
 }
 \value{
 image object
