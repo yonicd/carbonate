@@ -83,15 +83,15 @@
     maxiter = self$maxiter
   )
 
-  file.timeout(path,device)
+  file.timeout(private$temp_dir,device)
   
-  if (file.exists(file.path(path, sprintf("rcarbon.%s", device)))) {
-    unlink(file.path(path, sprintf("rcarbon.%s", device)), force = TRUE)
+  if (file.exists(file.path(private$temp_dir, sprintf("rcarbon.%s", device)))) {
+    unlink(file.path(private$temp_dir, sprintf("rcarbon.%s", device)), force = TRUE)
   }
 
-  file.rename(file.path(path, sprintf("carbon.%s", device)), file.path(path, sprintf("rcarbon.%s", device)))
+  file.rename(file.path(private$temp_dir, sprintf("carbon.%s", device)), file.path(private$temp_dir, sprintf("rcarbon.%s", device)))
 
-  file.rename(file.path(path, sprintf("rcarbon.%s", device)), file.path(path, file))
+  file.rename(file.path(private$temp_dir, sprintf("rcarbon.%s", device)), file.path(path, file))
 
   img <- magick::image_read(file.path(path, file))
 

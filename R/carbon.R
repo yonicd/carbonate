@@ -201,6 +201,7 @@ carbon <- R6::R6Class(
     }
   ),
   private = list(
+    temp_dir = tempdir(),
     px_vars = c(
       "drop_shadow_offset_y",
       "drop_shadow_blur_radius",
