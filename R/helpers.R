@@ -255,7 +255,7 @@ query_defaults <- function(type = "FONTS") {
     # Find and extract type
     l_matches <- gregexpr(sprintf("\\b%s\\b(.*?)\\]", type), con_lines_collapse)
     l_raw <- regmatches(con_lines_collapse, l_matches)[[1]][[1]]
-    l_raw <- gsub(sprintf(sprintf("%s(.*?)= ", type)), "", l_raw)
+    l_raw <- gsub(sprintf("%s(.*?)= ", type), "", l_raw)
 
     # Clean up trailing commas and whitespaces
     l_raw <- gsub("\\s+", " ", l_raw)

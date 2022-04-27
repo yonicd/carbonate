@@ -6,7 +6,7 @@
 \alias{carbonate}
 \title{Carbonate script lines to a carbon image}
 \usage{
-.carbonate(self, private, file, path, code, rD)
+.carbonate(self, private, file, path, code, rD, driver)
 }
 \arguments{
 \item{self}{carbon self object}
