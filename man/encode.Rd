@@ -26,5 +26,5 @@ encode uri string for carbon.js.
 Augmented version of than \link[utils:URLencode]{URLencode}
 }
 \seealso{
-\link[utils:URLencode]{URLencode}, \link[carbonate:carbon]{carbon}
+\link[utils:URLencode]{URLencode}, \link[=carbon]{carbon}
 }

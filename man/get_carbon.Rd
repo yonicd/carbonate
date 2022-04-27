@@ -22,5 +22,5 @@
 function that gets the available list of aesthetic values of fields
 }
 \seealso{
-\link[carbonate:carbon]{carbon}
+\link[=carbon]{carbon}
 }

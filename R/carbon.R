@@ -122,6 +122,13 @@ carbon <- R6::R6Class(
       "safebrowsing.enabled" = TRUE,
       "download.default_directory" = tempdir()
     ),
+    firefox_args = c('--width=1280','--height=800','--memory 1024mb','--headless'),
+    firefox_pref = list(
+      'browser.download.dir' = tempdir(),
+      'browser.helperApps.neverAsk.saveToDisk' = 'image/png',
+      'browser.download.folderList' = 2L,
+      'browser.download.manager.showWhenStarting' = FALSE
+    ),
     rD = NULL,
     cDrv = NULL,
     set_template = function(template = self$get_templates()[16]) {
@@ -154,14 +161,19 @@ carbon <- R6::R6Class(
     chromeOptions = function() {
       .chromeOptions(self, private)
     },
-    chrome_start = function() {
-      .chrome_start(self, private)
+    firefoxOptions = function() {
+      .firefoxOptions(self, private)
     },
-    chrome_stop = function() {
-      .chrome_stop(self, private)
+    driver = 'firefox',
+    driver_start = function(driver = self$driver) {
+      .driver_start(self, private, driver)
     },
-    start = function(eCap = self$chromeOptions()) {
-      .start(self, private, eCap)
+    driver_stop = function() {
+      .driver_stop(self, private)
+    },
+    start = function(driver = self$driver) {
+      obj <- eval(parse(text = sprintf('self$%sOptions()',driver)))
+      .start(self, private, eCap = obj, driver = driver)
     },
     stop = function() {
       .stop(self, private)
@@ -169,8 +181,8 @@ carbon <- R6::R6Class(
     stop_all = function() {
       .stop_all(self, private)
     },
-    carbonate = function(file = "rcarbon.png", path = tempdir(), code = self$code, rD = self$rD) {
-      .carbonate(self, private, file, path, code, rD)
+    carbonate = function(file = "rcarbon.png", path = self$download_path, code = self$code, rD = self$rD, driver = self$driver) {
+      .carbonate(self, private, file, path, code, rD, driver)
     },
     encode = function(URL, reserved = FALSE, repeated = FALSE) {
       .encode(self, private, URL, reserved, repeated)

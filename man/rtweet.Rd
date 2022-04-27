@@ -47,6 +47,6 @@ x$rtweet(status = 'this is a gif', media = x$carbons,media_format='gif')
 }
 }
 \seealso{
-\link[magick:image_write]{image_write}
+\link[magick:editing]{image_write}
 \link[rtweet:post_tweet]{post_tweet}
 }

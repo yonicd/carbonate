@@ -21,7 +21,7 @@
 #' @importFrom magick image_read
 #' @importFrom utils capture.output
 #' @importFrom rtweet post_tweet
-.carbonate <- function(self, private, file, path,  code, rD) {
+.carbonate <- function(self, private, file, path,  code, rD, driver) {
   
   this_uri <- self$uri(code = code)
 
@@ -39,7 +39,7 @@
   }
     
   if (is.null(rD)) {
-    message("starting chrome session...")
+    message(sprintf("starting %s session...", driver))
   
     self$start()
     rD <- self$rD
@@ -55,19 +55,19 @@
 
   remDr <- rD$client
 
-  remDr$queryRD(
-    ipAddr = file.path(remDr$serverURL,"session",
-                       remDr$sessionInfo[["id"]],
-                       "chromium/send_command"),
-    method = "POST",
-    qdata = list(
-      cmd = "Page.setDownloadBehavior",
-      params = list(
-        behavior = "allow",
-        downloadPath = path
-      )
-    )
-  )
+  # remDr$queryRD(
+  #   ipAddr = file.path(remDr$serverURL,"session",
+  #                      remDr$sessionInfo[["id"]],
+  #                      "chromium/send_command"),
+  #   method = "POST",
+  #   qdata = list(
+  #     cmd = "Page.setDownloadBehavior",
+  #     params = list(
+  #       behavior = "allow",
+  #       downloadPath = path
+  #     )
+  #   )
+  # )
 
   remDr$navigate(this_uri)
   
