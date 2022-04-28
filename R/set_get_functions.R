@@ -37,19 +37,20 @@
 
 #' @rdname get_carbon
 .get_font_families <- function(self, private) {
-  c(
-    "Anonymous Pro", "Droid Sans Mono", "Fantasque Sans Mono", "Fira Code", "Monoid",
-    "Hack", "IBM Plex Mono", "Iosevka", "Inconsolata", "Source Code Pro", "Ubuntu Mono"
-  )
+  # c("Anonymous Pro", "Droid Sans Mono", "Fantasque Sans Mono", 
+  #   "Fira Code", "Hack", "IBM Plex Mono", "Inconsolata", "Iosevka", 
+  #   "JetBrains Mono", "Monoid", "Source Code Pro", "Space Mono", 
+  #   "Ubuntu Mono")
+  sapply(query_defaults('FONTS'),'[[',2)
 }
 
 #' @rdname get_carbon
 .get_templates <- function(self, private) {
-  c(
-    "3024-night", "a11y-dark", "blackboard", "base16-dark", "base16-light", "cobalt",
-    "dracula", "duotone", "hopscotch", "lucario", "material", "monokai", "night-owl",
-    "nord", "oceanic-next", "one-dark", "one-light", "panda-syntax", "paraiso", 
-    "seti", "shades-of-purple", "solarized dark", "solarized light", "synthwave-84", 
-    "tomorrow-night-bright", "twilight", "verminal", "vscode", "yeti", "zenburn"
-  )
+  # c("3024-night", "a11y-dark", "blackboard", "base16-dark", "base16-light", 
+  #   "cobalt", "dracula", "duotone-dark", "hopscotch", "lucario", 
+  #   "material", "monokai", "night-owl", "nord", "oceanic-next", "one-light", 
+  #   "one-dark", "panda-syntax", "paraiso-dark", "seti", "shades-of-purple", 
+  #   "solarized dark", "solarized light", "synthwave-84", "twilight", 
+  #   "verminal", "vscode", "yeti", "zenburn")
+  sapply(query_defaults('THEMES'),'[[',1)
 }

@@ -3,15 +3,9 @@
 \name{.chromeOptions}
 \alias{.chromeOptions}
 \alias{carbon-chrome}
-\alias{.chrome_start}
-\alias{.chrome_stop}
 \title{chrome webdriver functions}
 \usage{
 .chromeOptions(self, private)
-
-.chrome_start(self, private)
-
-.chrome_stop(self, private)
 }
 \arguments{
 \item{self}{carbon self object}
@@ -22,5 +16,5 @@
 Functions to open,close,set chrome webdriver
 }
 \seealso{
-\link[carbonate:carbon]{carbon}, \link[wdman:chrome]{chrome}
+\link[=carbon]{carbon}, \link[wdman:chrome]{chrome}
 }

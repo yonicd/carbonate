@@ -6,7 +6,7 @@
 \alias{carbonate}
 \title{Carbonate script lines to a carbon image}
 \usage{
-.carbonate(self, private, file, path, code, rD)
+.carbonate(self, private, file, path, code, rD, driver)
 }
 \arguments{
 \item{self}{carbon self object}
@@ -20,6 +20,8 @@
 \item{code}{character, lines of script to make carbon image from}
 
 \item{rD}{RSelenium driver}
+
+\item{driver}{character, select either 'firefox' or 'chrome' driver}
 }
 \value{
 image object
@@ -29,7 +31,7 @@ Main function of the package that invokes RSelenium to open
 a browser to the carbon.js uri, create an image and download the file.
 }
 \details{
-Script is passed to \url{https://carbon.now.sh/} is downloaded to the \code{tempdir()} and appended to the list \link[carbonate:carbon-fields]{$carbons} using RSelenium and Chrome.
+Script is passed to \url{https://carbon.now.sh/} is downloaded to the \code{tempdir()} and appended to the list \link[=carbon-fields]{$carbons} using RSelenium and Chrome.
 }
 \examples{
 if(interactive()){
@@ -38,5 +40,5 @@ if(interactive()){
  }
 }
 \seealso{
-\link[carbonate:carbon]{carbon}, \link[RSelenium:rsDriver]{rsDriver}
+\link[=carbon]{carbon}, \link[RSelenium:rsDriver]{rsDriver}
 }

@@ -21,5 +21,5 @@ OUTPUT_DESCRIPTION
 combine all the carbon options into a carbon.js valid string
 }
 \seealso{
-\link[carbonate:carbon]{carbon}
+\link[=carbon]{carbon}
 }

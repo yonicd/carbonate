@@ -3,13 +3,19 @@
 \name{.start}
 \alias{.start}
 \alias{carbon-selenium}
+\alias{.driver_start}
+\alias{.driver_stop}
 \alias{.stop}
 \alias{.stop_all}
 \alias{.set_port}
 \alias{.get_port}
 \title{RSelenium webdriver functions}
 \usage{
-.start(self, private, eCap)
+.start(self, private, eCap, driver = c("firefox", "chrome"))
+
+.driver_start(self, private, driver = c("chrome", "firefox"))
+
+.driver_stop(self, private)
 
 .stop(self, private)
 
@@ -26,11 +32,14 @@
 
 \item{eCap}{chromeOptions passed into \link[RSelenium:rsDriver]{rsDriver}}
 
-\item{port}{integer, port for the \link[RSelenium:rsDriver]{rsDriver} to use, if NULL then a random port is selected}
+\item{driver}{character, select either 'firefox' or 'chrome' driver}
+
+\item{port}{integer, port for the \link[RSelenium:rsDriver]{rsDriver} to use,
+if NULL then a random port is selected}
 }
 \description{
 Functions to open,stop, stop_all RSelenium sessions
 }
 \seealso{
-\link[carbonate:carbon]{carbon}
+\link[=carbon]{carbon}
 }

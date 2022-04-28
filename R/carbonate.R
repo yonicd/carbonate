@@ -7,6 +7,7 @@
 #' @param path character, path to save the image
 #' @param code character, lines of script to make carbon image from
 #' @param rD RSelenium driver
+#' @param driver character, select either 'firefox' or 'chrome' driver
 #' @details Script is passed to <https://carbon.now.sh/> is downloaded to the `tempdir()` and appended to the list [$carbons][carbonate::carbon-fields] using RSelenium and Chrome.
 #' @return image object
 #' @examples
@@ -21,7 +22,7 @@
 #' @importFrom magick image_read
 #' @importFrom utils capture.output
 #' @importFrom rtweet post_tweet
-.carbonate <- function(self, private, file, path,  code, rD) {
+.carbonate <- function(self, private, file, path,  code, rD, driver) {
   
   this_uri <- self$uri(code = code)
 
@@ -39,7 +40,7 @@
   }
     
   if (is.null(rD)) {
-    message("starting chrome session...")
+    message(sprintf("starting %s session...", driver))
   
     self$start()
     rD <- self$rD
@@ -55,19 +56,19 @@
 
   remDr <- rD$client
 
-  remDr$queryRD(
-    ipAddr = file.path(remDr$serverURL,"session",
-                       remDr$sessionInfo[["id"]],
-                       "chromium/send_command"),
-    method = "POST",
-    qdata = list(
-      cmd = "Page.setDownloadBehavior",
-      params = list(
-        behavior = "allow",
-        downloadPath = path
-      )
-    )
-  )
+  # remDr$queryRD(
+  #   ipAddr = file.path(remDr$serverURL,"session",
+  #                      remDr$sessionInfo[["id"]],
+  #                      "chromium/send_command"),
+  #   method = "POST",
+  #   qdata = list(
+  #     cmd = "Page.setDownloadBehavior",
+  #     params = list(
+  #       behavior = "allow",
+  #       downloadPath = path
+  #     )
+  #   )
+  # )
 
   remDr$navigate(this_uri)
   
@@ -83,15 +84,15 @@
     maxiter = self$maxiter
   )
 
-  file.timeout(path,device)
+  file.timeout(private$temp_dir,device)
   
-  if (file.exists(file.path(path, sprintf("rcarbon.%s", device)))) {
-    unlink(file.path(path, sprintf("rcarbon.%s", device)), force = TRUE)
+  if (file.exists(file.path(private$temp_dir, sprintf("rcarbon.%s", device)))) {
+    unlink(file.path(private$temp_dir, sprintf("rcarbon.%s", device)), force = TRUE)
   }
 
-  file.rename(file.path(path, sprintf("carbon.%s", device)), file.path(path, sprintf("rcarbon.%s", device)))
+  file.rename(file.path(private$temp_dir, sprintf("carbon.%s", device)), file.path(private$temp_dir, sprintf("rcarbon.%s", device)))
 
-  file.rename(file.path(path, sprintf("rcarbon.%s", device)), file.path(path, file))
+  file.rename(file.path(private$temp_dir, sprintf("rcarbon.%s", device)), file.path(path, file))
 
   img <- magick::image_read(file.path(path, file))
 

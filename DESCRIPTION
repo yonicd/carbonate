@@ -1,6 +1,6 @@
 Package: carbonate
 Title: Interact with 'carbon.js'
-Version: 0.1.4
+Version: 0.2.0
 Authors@R: 
     person(given = "Jonathan",
            family = "Sidi",
@@ -26,6 +26,7 @@ Imports:
     rtweet,
     utils,
     wdman,
+    jsonlite,
     yaml
 Suggests: 
     covr,
@@ -39,4 +40,4 @@ RdMacros:
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE,old_usage = TRUE,r6 = FALSE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.2

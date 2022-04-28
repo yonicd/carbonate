@@ -12,7 +12,7 @@ after_success:
 - Rscript -e 'pkgdown::build_article("tests_and_coverage")'
 r_github_packages:
 - yonicd/covrpage
-- metrumresearchgroup/pkgdown
+- yonicd/pkgdown
 deploy:
   provider: pages
   skip-cleanup: true

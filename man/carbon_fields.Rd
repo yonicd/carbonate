@@ -74,8 +74,8 @@ list("profile.default_content_settings.popups" = 0L,"download.prompt_for_downloa
 \item{cDrv}{Chrome Driver object from wdman}
 }
 \description{
-Fields that can be changed in the \link[carbonate:carbon]{Carbon} object
+Fields that can be changed in the \link[=carbon]{Carbon} object
 }
 \seealso{
-\link[carbonate:carbon]{carbon}
+\link[=carbon]{carbon}
 }

@@ -13,7 +13,7 @@
 \item{private}{carbon private object}
 }
 \description{
-opens the uri address in \link[carbonate:carbon-uri]{$uri} in the browser window.
+opens the uri address in \link[=carbon-uri]{$uri} in the browser window.
 }
 \examples{
 x <- carbon$new('x <- 1')
@@ -22,5 +22,5 @@ if(interactive())
 
 }
 \seealso{
-\link[carbonate:carbon]{carbon}
+\link[=carbon]{carbon}
 }
