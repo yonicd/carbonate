@@ -38,6 +38,5 @@ VignetteBuilder:
 RdMacros: 
     details
 Encoding: UTF-8
-LazyData: true
 Roxygen: list(markdown = TRUE,old_usage = TRUE,r6 = FALSE)
 RoxygenNote: 7.2.1

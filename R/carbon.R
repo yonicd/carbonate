@@ -34,7 +34,7 @@
 #' \foldend
 #'
 #'
-#' \foldstart{<big> Aesthetics </big>}
+#' \foldstart{ Aesthetics }
 #' 
 #' \tabular{ll}{
 #' [$set_template][carbonate::carbon-set-fields] \tab set $template \cr
@@ -47,7 +47,7 @@
 #'
 #' \foldend
 #'
-#' \foldstart{<big> URI Building </big>}
+#' \foldstart{ URI Building }
 #' 
 #' \tabular{ll}{
 #' [$uri][carbonate::carbon-uri] \tab construct valid carbon.js uri \cr
@@ -59,7 +59,7 @@
 #'
 #' \foldend
 #'
-#' \foldstart{<big> Webdriver Settings </big>}
+#' \foldstart{ Webdriver Settings }
 #' 
 #' \tabular{ll}{
 #' [$chromeOptions][carbonate::carbon-chrome] \tab construct a chromeOptions object \cr

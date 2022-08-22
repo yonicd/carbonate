@@ -8,9 +8,7 @@ Status](https://travis-ci.org/yonicd/carbonate.svg?branch=master)](https://travi
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/yonicd/carbonate/master.svg)](https://codecov.io/github/yonicd/carbonate?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2020_02_17-yellowgreen.svg)](https://goo.gl/gNRcCb)
-
-# carbonate <img src="hextools/hex.gif" align="right" class="logo" style="height:150px;"/>
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2022_08_21-yellowgreen.svg)](https://goo.gl/gNRcCb)
 
 “[carbon.js](https://carbon.now.sh/about) is the easiest way to create
 beautiful images of your source code.”
@@ -138,14 +136,16 @@ Aesthetics of the carbon object that can be manipulated
 
 ``` r
 x$get_templates()
-#>  [1] "3024-night"       "a11y-dark"        "blackboard"       "base16-dark"     
-#>  [5] "base16-light"     "cobalt"           "dracula"          "duotone-dark"    
-#>  [9] "hopscotch"        "lucario"          "material"         "monokai"         
-#> [13] "night-owl"        "nord"             "oceanic-next"     "one-light"       
-#> [17] "one-dark"         "panda-syntax"     "paraiso-dark"     "seti"            
-#> [21] "shades-of-purple" "solarized dark"   "solarized light"  "synthwave-84"    
-#> [25] "twilight"         "verminal"         "vscode"           "yeti"            
-#> [29] "zenburn"
+#>  [1] "3024-night"       "a11y-dark"        "blackboard"      
+#>  [4] "base16-dark"      "base16-light"     "cobalt"          
+#>  [7] "dracula"          "duotone-dark"     "hopscotch"       
+#> [10] "lucario"          "material"         "monokai"         
+#> [13] "night-owl"        "nord"             "oceanic-next"    
+#> [16] "one-light"        "one-dark"         "panda-syntax"    
+#> [19] "paraiso-dark"     "seti"             "shades-of-purple"
+#> [22] "solarized dark"   "solarized light"  "synthwave-84"    
+#> [25] "twilight"         "verminal"         "vscode"          
+#> [28] "yeti"             "zenburn"
 ```
 
 ``` r
@@ -263,7 +263,9 @@ Or you can put the link directly on your clipboard
 
 ``` r
 x$tiny(clip = TRUE)
+#> [1] "https://tinyurl.com/2kvjyzlx"
 clipr::read_clip()
+#> [1] "https://tinyurl.com/2kvjyzlx"
 ```
 
 </details>

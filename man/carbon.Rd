@@ -41,7 +41,7 @@ in the following \link[=carbon-fields]{page}.
 
 \foldend
 
-\foldstart{<big> Aesthetics </big>}
+\foldstart{ Aesthetics }
 
 \tabular{ll}{
 \link[=carbon-set-fields]{$set_template} \tab set $template \cr
@@ -54,7 +54,7 @@ in the following \link[=carbon-fields]{page}.
 
 \foldend
 
-\foldstart{<big> URI Building </big>}
+\foldstart{ URI Building }
 
 \tabular{ll}{
 \link[=carbon-uri]{$uri} \tab construct valid carbon.js uri \cr
@@ -66,7 +66,7 @@ in the following \link[=carbon-fields]{page}.
 
 \foldend
 
-\foldstart{<big> Webdriver Settings </big>}
+\foldstart{ Webdriver Settings }
 
 \tabular{ll}{
 \link[=carbon-chrome]{$chromeOptions} \tab construct a chromeOptions object \cr
