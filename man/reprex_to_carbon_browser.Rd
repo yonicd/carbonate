@@ -28,9 +28,9 @@ Creates a Reprex of selected code (or from input) renders it and opens or downlo
 }
 \section{Functions}{
 \itemize{
-\item \code{reprex_to_carbon_download}: downloads the picture
-}}
+\item \code{reprex_to_carbon_download()}: downloads the picture
 
+}}
 \examples{
 \dontrun{
 reprex_to_carbon_browser(input = c("   x=1:  10", "   x"))

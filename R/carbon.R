@@ -15,7 +15,7 @@
 #'
 #' @section Fields:
 #'
-#' \foldstart{<big> Public Fields </big>}
+#' \foldstart{Public Fields}
 #'
 #' Description of fields of the R6 object that can be set by the user can be found
 #'  in the following [page][carbonate::carbon-fields].
@@ -24,7 +24,7 @@
 #'
 #' @section Methods:
 #'
-#' \foldstart{<big> Interacting with Browser </big>}
+#' \foldstart{Interacting with Browser}
 #'
 #' \tabular{ll}{
 #' [$carbonate][carbonate::carbon-carbonate] \tab Using RSelenium fetch the carbon image output \cr
