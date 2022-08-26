@@ -15,7 +15,7 @@
 #'
 #' @section Fields:
 #'
-#' \foldstart{<big> Public Fields </big>}
+#' \foldstart{Public Fields}
 #'
 #' Description of fields of the R6 object that can be set by the user can be found
 #'  in the following [page][carbonate::carbon-fields].
@@ -24,7 +24,7 @@
 #'
 #' @section Methods:
 #'
-#' \foldstart{<big> Interacting with Browser </big>}
+#' \foldstart{Interacting with Browser}
 #'
 #' \tabular{ll}{
 #' [$carbonate][carbonate::carbon-carbonate] \tab Using RSelenium fetch the carbon image output \cr
@@ -34,7 +34,7 @@
 #' \foldend
 #'
 #'
-#' \foldstart{<big> Aesthetics </big>}
+#' \foldstart{ Aesthetics }
 #' 
 #' \tabular{ll}{
 #' [$set_template][carbonate::carbon-set-fields] \tab set $template \cr
@@ -47,7 +47,7 @@
 #'
 #' \foldend
 #'
-#' \foldstart{<big> URI Building </big>}
+#' \foldstart{ URI Building }
 #' 
 #' \tabular{ll}{
 #' [$uri][carbonate::carbon-uri] \tab construct valid carbon.js uri \cr
@@ -59,7 +59,7 @@
 #'
 #' \foldend
 #'
-#' \foldstart{<big> Webdriver Settings </big>}
+#' \foldstart{ Webdriver Settings }
 #' 
 #' \tabular{ll}{
 #' [$chromeOptions][carbonate::carbon-chrome] \tab construct a chromeOptions object \cr

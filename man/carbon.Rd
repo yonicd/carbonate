@@ -21,7 +21,7 @@ A new 'Carbon'-object is initialized using the \code{new()} method on the genera
 \section{Fields}{
 
 
-\foldstart{<big> Public Fields </big>}
+\foldstart{Public Fields}
 
 Description of fields of the R6 object that can be set by the user can be found
 in the following \link[=carbon-fields]{page}.
@@ -32,7 +32,7 @@ in the following \link[=carbon-fields]{page}.
 \section{Methods}{
 
 
-\foldstart{<big> Interacting with Browser </big>}
+\foldstart{Interacting with Browser}
 
 \tabular{ll}{
 \link[=carbon-carbonate]{$carbonate} \tab Using RSelenium fetch the carbon image output \cr
@@ -41,7 +41,7 @@ in the following \link[=carbon-fields]{page}.
 
 \foldend
 
-\foldstart{<big> Aesthetics </big>}
+\foldstart{ Aesthetics }
 
 \tabular{ll}{
 \link[=carbon-set-fields]{$set_template} \tab set $template \cr
@@ -54,7 +54,7 @@ in the following \link[=carbon-fields]{page}.
 
 \foldend
 
-\foldstart{<big> URI Building </big>}
+\foldstart{ URI Building }
 
 \tabular{ll}{
 \link[=carbon-uri]{$uri} \tab construct valid carbon.js uri \cr
@@ -66,7 +66,7 @@ in the following \link[=carbon-fields]{page}.
 
 \foldend
 
-\foldstart{<big> Webdriver Settings </big>}
+\foldstart{ Webdriver Settings }
 
 \tabular{ll}{
 \link[=carbon-chrome]{$chromeOptions} \tab construct a chromeOptions object \cr

@@ -1,6 +1,6 @@
 Package: carbonate
 Title: Interact with 'carbon.js'
-Version: 0.2.0
+Version: 0.1.4
 Authors@R: 
     person(given = "Jonathan",
            family = "Sidi",
@@ -37,6 +37,5 @@ VignetteBuilder:
 RdMacros: 
     details
 Encoding: UTF-8
-LazyData: true
 Roxygen: list(markdown = TRUE,old_usage = TRUE,r6 = FALSE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
