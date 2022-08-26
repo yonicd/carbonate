@@ -1,6 +1,6 @@
 Package: carbonate
 Title: Interact with 'carbon.js'
-Version: 0.2.0
+Version: 0.1.4
 Authors@R: 
     person(given = "Jonathan",
            family = "Sidi",
@@ -21,7 +21,6 @@ Imports:
     httr,
     magick,
     R6,
-    reprex,
     RSelenium,
     rtweet,
     utils,

@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-21 August, 2022 21:08:08
+25 August, 2022 20:24:56
 
 -   <a href="#coverage" id="toc-coverage">Coverage</a>
 -   <a href="#unit-tests" id="toc-unit-tests">Unit Tests</a>
@@ -15,8 +15,7 @@ Coverage summary is created using the
 
 | Object                                              | Coverage (%) |
 |:----------------------------------------------------|:------------:|
-| carbonate                                           |    48.04     |
-| [R/addins.R](../R/addins.R)                         |     0.00     |
+| carbonate                                           |    51.46     |
 | [R/carbonate.R](../R/carbonate.R)                   |     0.00     |
 | [R/selenium_functions.R](../R/selenium_functions.R) |    20.00     |
 | [R/uri_functions.R](../R/uri_functions.R)           |    38.60     |
@@ -33,10 +32,10 @@ Unit Test summary is created using the
 
 | file                                |   n |  time | error | failed | skipped | warning | icon |
 |:------------------------------------|----:|------:|------:|-------:|--------:|--------:|:-----|
-| [test-port.R](testthat/test-port.R) |   3 | 0.044 |     0 |      0 |       0 |       0 |      |
-| [test-set.R](testthat/test-set.R)   |   3 | 0.953 |     0 |      0 |       0 |       0 |      |
-| [test-uri.R](testthat/test-uri.R)   |   8 | 1.662 |     0 |      0 |       2 |       0 | 🔶   |
-| [test-yml.R](testthat/test-yml.R)   |   6 | 2.619 |     0 |      0 |       0 |       0 |      |
+| [test-port.R](testthat/test-port.R) |   3 | 0.024 |     0 |      0 |       0 |       0 |      |
+| [test-set.R](testthat/test-set.R)   |   3 | 0.893 |     0 |      0 |       0 |       0 |      |
+| [test-uri.R](testthat/test-uri.R)   |   8 | 1.342 |     0 |      0 |       2 |       0 | 🔶   |
+| [test-yml.R](testthat/test-yml.R)   |   6 | 2.351 |     0 |      0 |       0 |       0 |      |
 
 <details open>
 <summary>
@@ -45,25 +44,25 @@ Show Detailed Test Results
 
 | file                                    | context | test                                     | status  |   n |  time | icon |
 |:----------------------------------------|:--------|:-----------------------------------------|:--------|----:|------:|:-----|
-| [test-port.R](testthat/test-port.R#L9)  | port    | port: init                               | PASS    |   1 | 0.033 |      |
-| [test-port.R](testthat/test-port.R#L14) | port    | port: reset                              | PASS    |   1 | 0.009 |      |
+| [test-port.R](testthat/test-port.R#L9)  | port    | port: init                               | PASS    |   1 | 0.011 |      |
+| [test-port.R](testthat/test-port.R#L14) | port    | port: reset                              | PASS    |   1 | 0.011 |      |
 | [test-port.R](testthat/test-port.R#L19) | port    | port: manual                             | PASS    |   1 | 0.002 |      |
-| [test-set.R](testthat/test-set.R#L8)    | set\_   | set functions: set_template              | PASS    |   1 | 0.585 |      |
-| [test-set.R](testthat/test-set.R#L13)   | set\_   | set functions: set_font_family           | PASS    |   1 | 0.366 |      |
-| [test-set.R](testthat/test-set.R#L18)   | set\_   | set functions: set_windows_control_theme | PASS    |   1 | 0.002 |      |
-| [test-uri.R](testthat/test-uri.R#L9)    | uri     | options: benchmark                       | PASS    |   1 | 0.238 |      |
-| [test-uri.R](testthat/test-uri.R#L17)   | uri     | uri: benchmark                           | PASS    |   1 | 0.245 |      |
-| [test-uri.R](testthat/test-uri.R#L21)   | uri     | uri: 200                                 | PASS    |   1 | 0.878 |      |
-| [test-uri.R](testthat/test-uri.R#L27)   | uri     | encode: encode character                 | PASS    |   1 | 0.003 |      |
-| [test-uri.R](testthat/test-uri.R#L31)   | uri     | encode: no encode character              | PASS    |   1 | 0.002 |      |
-| [test-uri.R](testthat/test-uri.R#L37)   | uri     | tiny: valid tiny                         | SKIPPED |   1 | 0.014 | 🔶   |
-| [test-uri.R](testthat/test-uri.R#L43)   | uri     | tiny: clipboard                          | SKIPPED |   1 | 0.015 | 🔶   |
-| [test-uri.R](testthat/test-uri.R#)      | uri     | bad template: error uri                  | PASS    |   1 | 0.267 |      |
-| [test-yml.R](testthat/test-yml.R#L24)   | yml     | yaml fields: rgba                        | PASS    |   1 | 0.526 |      |
-| [test-yml.R](testthat/test-yml.R#L29)   | yml     | yaml fields: template                    | PASS    |   1 | 0.420 |      |
-| [test-yml.R](testthat/test-yml.R#L34)   | yml     | yaml fields: bad font family             | PASS    |   1 | 0.543 |      |
-| [test-yml.R](testthat/test-yml.R#L39)   | yml     | yaml fields: pv                          | PASS    |   1 | 0.530 |      |
-| [test-yml.R](testthat/test-yml.R#L44)   | yml     | yaml fields: ph                          | PASS    |   1 | 0.598 |      |
+| [test-set.R](testthat/test-set.R#L8)    | set\_   | set functions: set_template              | PASS    |   1 | 0.529 |      |
+| [test-set.R](testthat/test-set.R#L13)   | set\_   | set functions: set_font_family           | PASS    |   1 | 0.363 |      |
+| [test-set.R](testthat/test-set.R#L18)   | set\_   | set functions: set_windows_control_theme | PASS    |   1 | 0.001 |      |
+| [test-uri.R](testthat/test-uri.R#L9)    | uri     | options: benchmark                       | PASS    |   1 | 0.325 |      |
+| [test-uri.R](testthat/test-uri.R#L17)   | uri     | uri: benchmark                           | PASS    |   1 | 0.235 |      |
+| [test-uri.R](testthat/test-uri.R#L21)   | uri     | uri: 200                                 | PASS    |   1 | 0.528 |      |
+| [test-uri.R](testthat/test-uri.R#L27)   | uri     | encode: encode character                 | PASS    |   1 | 0.002 |      |
+| [test-uri.R](testthat/test-uri.R#L31)   | uri     | encode: no encode character              | PASS    |   1 | 0.001 |      |
+| [test-uri.R](testthat/test-uri.R#L37)   | uri     | tiny: valid tiny                         | SKIPPED |   1 | 0.001 | 🔶   |
+| [test-uri.R](testthat/test-uri.R#L43)   | uri     | tiny: clipboard                          | SKIPPED |   1 | 0.002 | 🔶   |
+| [test-uri.R](testthat/test-uri.R#)      | uri     | bad template: error uri                  | PASS    |   1 | 0.248 |      |
+| [test-yml.R](testthat/test-yml.R#L24)   | yml     | yaml fields: rgba                        | PASS    |   1 | 0.525 |      |
+| [test-yml.R](testthat/test-yml.R#L29)   | yml     | yaml fields: template                    | PASS    |   1 | 0.432 |      |
+| [test-yml.R](testthat/test-yml.R#L34)   | yml     | yaml fields: bad font family             | PASS    |   1 | 0.439 |      |
+| [test-yml.R](testthat/test-yml.R#L39)   | yml     | yaml fields: pv                          | PASS    |   1 | 0.522 |      |
+| [test-yml.R](testthat/test-yml.R#L44)   | yml     | yaml fields: ph                          | PASS    |   1 | 0.431 |      |
 | [test-yml.R](testthat/test-yml.R#L59)   | yml     | namesless palette: fill in palette       | PASS    |   1 | 0.002 |      |
 
 | Failed | Warning | Skipped |
